@@ -50,3 +50,9 @@
 - Categories: steel pipes (24%), fabrication (18%), solar (14%), valves (13%)
 - CSV exported: results/bom.csv
 - Procurement notes for Sudan included
+
+## Session 11 - Final Report PDF
+- Report generated with WeasyPrint 69
+- Swiss design, cream + red-brown palette
+- 6 pages: cover, design, thermodynamics, components, BOM, status
+- Files: report.html (source), style.css (styles), solar-fridge-report.pdf
