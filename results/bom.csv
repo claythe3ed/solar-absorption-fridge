@@ -1,0 +1,36 @@
+#,Category,Item,Specification,Quantity,Unit,Unit Price (USD),Subtotal (USD),Subtotal (SDG),Notes
+1,Steel pipes,Generator/receiver pipe,"Carbon steel ASTM A106 Gr.B, 200 mm OD x 2.5 mm wall x 4 m",1,pc,180.00,180.00,108000,"High-pressure side, design P=16 bar"
+2,Steel pipes,Condenser tube,"Carbon steel, 15 mm OD x 2 mm wall x 1.5 m",5,pc,12.00,60.00,36000,"5 passes, will need fins welded"
+3,Steel pipes,Evaporator tube,"Carbon steel, 10 mm OD x 1.5 mm wall x 1.5 m",5,pc,8.00,40.00,24000,Coiled into 300 mm helix
+4,Steel pipes,Connecting pipes (assorted),"Carbon steel seamless, 8-15 mm OD, various lengths",1,set,85.00,85.00,51000,Piping per P&ID
+5,Steel pipes,"Fittings (elbows, tees, reducers)","Carbon steel, welded, 10-200 mm",1,set,120.00,120.00,72000,Per P&ID drawing
+6,Steel pipes,End caps for generator,"Carbon steel plate, 200 mm dia x 5 mm thick",2,pc,20.00,40.00,24000,Welded to pipe ends
+7,Solar collector,CPC mirror (acrylic or aluminum),"Reflective sheet, 400 mm x 4000 mm x 2 mm",1,pc,95.00,95.00,57000,Acrylic fragile; anodized Al preferred
+8,Solar collector,Solar cover glass,"Low-iron tempered, 4 mm x 500 x 4100 mm",1,pc,60.00,60.00,36000,High transmittance >90%
+9,Solar collector,Selective coating service,Black nickel or black chrome on receiver,1,set,40.00,40.00,24000,Workshop service
+10,Solar collector,Rock wool insulation,"50 mm thick, foil-faced, 100 kg/m^3",3,m^2,8.00,24.00,14400,Back of mirror + receiver
+11,Solar collector,Reflector frame,Galvanized steel profiles 40x40 mm,12,m,5.00,60.00,36000,Support structure
+12,Solar collector,Mounting bolts and brackets,"Stainless, assorted M8-M12",1,set,25.00,25.00,15000,—
+13,Insulation,Cold box cabinet,"Stainless 304 or painted steel, 700x700x800 mm",1,pc,150.00,150.00,90000,Custom fabricated
+14,Insulation,Polyurethane rigid foam,100 mm thick boards,3,m^2,30.00,90.00,54000,Walls + lid
+15,Insulation,Pipe insulation (Armaflex),"19 mm wall, 15 mm ID",5,m,8.00,40.00,24000,Low-temp lines
+16,Valves,Expansion capillary tube,"Stainless, 0.6 mm ID x 1.5 m, coiled",1,pc,25.00,25.00,15000,Sized for 15.5 -> 2.4 bar
+17,Valves,Throttle needle valve,"Stainless, 1/4 NPT",1,pc,45.00,45.00,27000,Poor solution expansion
+18,Valves,Safety relief valve,"Stainless, 25 bar set point, 1/4 NPT",2,pc,35.00,70.00,42000,On generator + condenser
+19,Valves,Check valve (non-return),"Stainless, 1/4 NPT, 0.2 bar cracking",2,pc,28.00,56.00,33600,Prevents backflow
+20,Valves,Ball valves (shut-off),"Stainless, 1/4 NPT",4,pc,18.00,72.00,43200,Isolation
+21,Valves,Schrader charging valve,"Stainless, 1/4 SAE",1,pc,15.00,15.00,9000,Ammonia charging
+22,Instruments,Pressure gauge,"0-25 bar, glycerin-filled, 63 mm dial",2,pc,30.00,60.00,36000,High + low side
+23,Instruments,Thermocouple Type-K,With digital display meter,4,pc,12.00,48.00,28800,"T_evap, T_cond, T_gen, T_abs"
+24,Instruments,Sight glass with moisture indicator,1/4 NPT,2,pc,22.00,44.00,26400,Liquid line check
+25,Fluids,Ammonia (NH3) anhydrous,"99.5% purity, agriculture grade",2,kg,25.00,50.00,30000,1 kg charge + purge cycles
+26,Fluids,Distilled water,"Deionized, >1 MOhm*cm",5,L,3.00,15.00,9000,Solution preparation
+27,Fluids,Nitrogen (N2) cylinder,"Dry, 99.99%, for pressure testing",1,rental,40.00,40.00,24000,Refundable deposit
+28,Fabrication,TIG welding service,"Stainless + carbon steel, certified welder",1,lot,200.00,200.00,120000,~10 hours at $20/h
+29,Fabrication,Pipe bending service,Hydraulic bender for coils,1,lot,50.00,50.00,30000,Condenser + evaporator
+30,Fabrication,Drilling and threading,"Holes, NPT threads, end caps",1,lot,60.00,60.00,36000,Workshop
+31,Fabrication,Pressure testing,Hydro test at 25 bar + N2 leak test,1,lot,80.00,80.00,48000,Certified test report
+32,Consumables,Silver brazing rods 5%,"1.6 mm x 500 mm, flux-coated",20,pc,5.00,100.00,60000,Copper-steel joints
+33,Consumables,Thread sealant,"Ammonia-compatible, PTFE tape + paste",1,set,15.00,15.00,9000,For all NPT joints
+34,Consumables,Anti-corrosion epoxy paint,"2-component, 1 L",1,can,20.00,20.00,12000,External surfaces
+35,Consumables,Solvent + cleaning rags,Acetone + lint-free cloths,1,set,10.00,10.00,6000,Pre-assembly cleaning
