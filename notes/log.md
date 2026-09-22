@@ -44,3 +44,9 @@
 - Assembly rendered (3 views)
 - FreeCAD 1.0 API notes: exportStl has no kwargs; use shape.tessellate + Mesh.Mesh
 - All files: cad/step/*.step, cad/stl/*.stl, results/plots/*.png
+
+## Session 10 - BOM Complete
+- Generated BOM: 35 items, $2,184 USD (1.31M SDG)
+- Categories: steel pipes (24%), fabrication (18%), solar (14%), valves (13%)
+- CSV exported: results/bom.csv
+- Procurement notes for Sudan included
