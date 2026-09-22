@@ -1,0 +1,34 @@
+name,domain,smiles,inchi_key,query match,sections
+refrigeration,Methods,,,0.000,title|description
+Ammonia,Chemical compound,N,QGZKDVFQNNGYKY-UHFFFAOYSA-N,0.000,description
+liquid,Substances,,,0.000,description
+inert gas,Substances,,,0.000,description
+ammonia,Inorganic materials,,,0.000,description
+butane,Substances,,,0.000,description
+n-butane,Chemical compound,CCCC,IJDNQMDRQITEOD-UHFFFAOYSA-N,0.000,description
+n-pentane,Natural products,CCCCC,OFBQJSOFQDEBGM-UHFFFAOYSA-N,0.000,description
+water,Substances,O,XLYOFNOQVPJJNP-UHFFFAOYSA-N,0.000,description
+absorption reaction,Methods,,,0.000,description
+gravity,Effects,,,0.000,description
+refrigerant,Substances,,,0.000,description
+coolant,Substances,,,0.000,description
+gaseous mixture,Substances,,,0.000,description
+cooling water,Substances,,,0.000,description
+Ammonium chloride,Substances,[NH4+].[Cl-],NLXLAEXVIDQMFP-UHFFFAOYSA-N,0.000,description
+Ammonium hydroxide,Chemical compound,[NH4+].[OH-],VHUUQVKOLVNVRT-UHFFFAOYSA-N,0.000,description
+ammonium hydroxide,Nutrition,,,0.000,description
+chemical substances by application,Substances,,,0.000,description
+cooling,Methods,,,0.000,description
+fluid,Substances,,,0.000,description
+gas,Substances,,,0.000,description
+Ziziphus mauritiana,Nutrition,,,0.000,description
+Ziziphus mauritiana,Species,,,0.000,description
+biosynthetic process,Effects,,,0.000,description
+evaporation,Methods,,,0.000,description
+heat treatment,Methods,,,0.000,description
+method,Methods,,,0.000,description
+mixture,Substances,,,0.000,description
+modification,Methods,,,0.000,description
+modification,Effects,,,0.000,description
+sorption measurement,Methods,,,0.000,description
+stratification,Methods,,,0.000,description

@@ -1,0 +1,689 @@
+                                           RESEARCH NOTE
+               SIMPLE FUNCTIONS FOR PREDICTING THE
+                  THERMODYNAMIC PROPERTIES OF
+                    AMMONIA - WATER MIXTURE
+
+                                                 G. Soleimani Alamdari
+                Department of Mechanical Engineering, Azarbaijan University of Tarbiat Moallem
+                    35 km Tabriz - Azarshahr Main-Road, Tabriz, Iran P.O. Box 53714-161
+                                            gsoleimani@dr.com
+
+                      (Received: September 17, 2005 – Accepted in Revised Form: January 18, 2007)
+
+            Abstract The engineering calculation and simulation of absorption refrigeration systems require
+            the availability of simple and efficient functions for the determination of thermodynamic property
+            values of the operating fluid. This work, presents a set of five simple and explicit functions for the
+            determination of the vapor-liquid equilibrium properties of the ammonia-water mixture. The
+            functions are constructed by the least square method for curve fitting using the valid available data
+            in the literature. The presented functions are valid for - 20 ≤ T ≤ 140º C, 0.2 ≤ P ≤ 100 bar, and the
+            entire composition range (i. e. 0 ≤ x ≤1), which cover the region within, and also by which
+            absorption cycles commonly operate. Obtained results are compared in detail with other
+            correlations in the literature in graphical and statistical forms and reasonable accuracy are
+            observed. Standard deviation of presented functions are 3.44 kJ/kg for the enthalpy of saturated
+            liquid mixture, 14.06 kJ/kg for the enthalpy of saturated vapor mixture, and 0.0123 kg - NH3/kg -
+            mix for ammonia mass fraction in vapor phase.
+
+            Keywords        Ammonia-Water Mixture, Thermodynamic Properties, Absorption Refrigeration
+            Systems
+
+            ‫ ﻻﺯﻡ ﺍﺳﺖ ﺗﻮﺍﺑﻊ ﺭﻳﺎﺿﯽ ﺳﺎﺩﻩ ﺑﻪ ﻣﻨﻈﻮﺭ ﻣﺤﺎﺳﺒﻪ‬،‫ﭼﮑﻴﺪﻩ ﺑﺮﺍﯼ ﺷﺒﻴﻪ ﺳﺎﺯﯼ ﺳﻴﺴﺘﻢ ﻫﺎﯼ ﺗﺒﺮﻳﺪ ﺟﺬﺑﯽ‬
+            ‫ ﺩﺭ ﺍﻳﻦ ﻣﻘﺎﻟﻪ ﭘﻨﺞ ﻣﻌﺎﺩﻟﻪ ﺳﺎﺩﻩ ﻭ ﺻﺮﻳﺢ ﺑﺮﺍﯼ ﻣﺤﺎﺳﺒﻪ‬.‫ﻣﺸﺨﺼﺎﺕ ﺗﺮﻣﻮﺩﻳﻨﺎﻣﻴﮑﯽ ﺳﻴﺎﻝ ﻋﺎﻣﻞ ﻣﻮﺟﻮﺩ ﺑﺎﺷﺪ‬
+            ‫ ﺁﺏ ﮐﻪ ﺩﺭ ﺁﻥ ﻓﺎﺯ ﺑﺨﺎﺭ ﻭﻣﺎﻳﻊ ﺩﺭ ﺷﺮﺍﻳﻂ ﺗﻌﺎﺩﻟﯽ ﻗﺮﺍﺭ ﺩﺍﺭﻧﺪ ﺍﺭﺍﺋﻪ‬- ‫ﻣﺸﺨﺼﺎﺕ ﺗﺮﻣﻮﺩﻳﻨﺎﻣﻴﮑﯽ ﻣﺨﻠﻮﻁ ﺁﻣﻮﻧﻴﺎﮎ‬
+            ‫ ﺗﻮﺍﺑﻊ ﺑﺮ ﺍﺳﺎﺱ ﺭﻭﺵ ﺑﻬﻴﻨﻪ ﻳﺎﺑﯽ ﮐﻤﺘﺮﻳﻦ ﻣﺮﺑﻌﺎﺕ ﺑﺮﺍﯼ ﺑﺮﺍﺯﺵ ﻣﻨﺤﻨﯽ ﻭ ﺑﺎ ﺑﮑﺎﺭ ﺑﺮﺩﻥ ﻧﺘﺎﻳﺞ ﻋﺪﺩﯼ‬.‫ﻣﯽ ﺷﻮﺩ‬
+            ‫ ﺗﻮﺍﺑﻊ ﺍﺭﺍﺋﻪ ﺷﺪﻩ ﺑﺮﺍﯼ ﻣﺤﺎﺳﺒﻪ ﻣﺸﺨﺼﺎﺕ ﺗﺮﻣﻮﺩﻳﻨﺎﻣﻴﮑﯽ‬.‫ ﺣﺎﺻﻞ ﻣﯽ ﺷﻮﺩ‬،‫ﻣﻌﺘﺒﺮﯼ ﮐﻪ ﺍﺧﻴﺮﺍ ﺍﺭﺍﺋﻪ ﺷﺪﻩ ﺍﺳﺖ‬
+            ‫ ﻭ ﻏﻠﻈﺖ ﺁﻣﻮﻧﻴﺎﮎ ﺍﺯ ﺻﻔﺮ ﺗﺎ‬۰/۲ ≤ P ≤ ۱۰۰bar ، -۲۰≤ Τ ≤۱۴۰°C ‫ ﺁﺏ ﺑﺮﺍﯼ ﻣﺤﺪﻭﺩﻩ‬- ‫ﻣﺨﻠﻮﻁ ﺁﻣﻮﻧﻴﺎﮎ‬
+            .‫ ﻣﻌﺘﺒﺮ ﺑﻮﺩﻩ ﻭ ﺍﻳﻦ ﻣﺤﺪﻭﺩﻩ ﺍﯼ ﺍﺳﺖ ﮐﻪ ﺳﻴﮑﻠﻬﺎﯼ ﺟﺬﺑﯽ ﺑﻄﻮﺭ ﻣﻌﻤﻮﻝ ﺩﺭﺁﻥ ﮐﺎﺭ ﻣﯽ ﮐﻨﻨﺪ‬۰ ≤ x ≤ ١ ‫ﻳﮏ ﻳﻌﻨﻲ‬
+            ‫ﻧﺘﺎﻳﺞ ﻋﺪﺩﯼ ﺣﺎﺻﻞ ﺍﺯ ﺗﻮﺍﺑﻊ ﺍﺭﺍﺋﻪ ﺷﺪﻩ ﺑﺎ ﻧﺘﺎﻳﺞ ﺗﻮﺍﺑﻊ ﻣﻮﺟﻮﺩ ﺩﺭ ﺍﺩﺑﻴﺎﺕ ﻓﻦ ﺑﺼﻮﺭﺕ ﺗﺮﺳﻴﻤﯽ ﻭ ﺁﻣﺎﺭﯼ ﻣﻘﺎﻳﺴﻪ‬
+            ‫ ﺍﻧﺤﺮﺍﻑ ﺍﺳﺘﺎﻧﺪﺍﺭﺩ ﺭﻭﺍﺑﻂ ﺣﺎﺻﻞ ﺑﺮﺍﯼ ﻣﺤﺎﺳﺒﻪ ﺍﻧﺘﺎﻟﭙﯽ‬.‫ﺷﺪﻩ ﻭ ﺩﻗﺖ ﻗﺎﺑﻞ ﻗﺒﻮﻝ ﺩﺭ ﻧﺘﺎﻳﺞ ﻣﻼﺣﻈﻪ ﻣﯽ ﺷﻮﺩ‬
+            ،۳/۴۴ kJ/kg ‫ ﺍﻧﺘﺎﻟﭙﯽ ﻣﺨﻠﻮﻁ ﺑﺨﺎﺭ ﺍﺷﺒﺎﻉ ﻭ ﮐﺴﺮ ﺟﺮﻣﯽ ﺁﻣﻮﻧﻴﺎﮎ ﺩﺭ ﻓﺎﺯ ﺑﺨﺎﺭ ﺑﺘﺮﺗﻴﺐ ﺑﺮﺍﺑﺮ‬،‫ﻣﺨﻠﻮﻁ ﻣﺎﻳﻊ ﺍﺷﺒﺎﻉ‬
+                                                                  .‫ ﺍﺳﺖ‬۰/۰۱۲۳ kg - NH3/kg - mix ‫ ﻭ‬۱۴/۰۶ kJ/kg
+
+
+              1. INTRODUCTION                                     based systems, but also related to energy efficient
+                                                                  heating and cooling technology. Recently,
+Due to the ozone depletion problem associated                     aqueous mixtures of natural substances have been
+with the use of CFC and HCFC refrigerants,                        considered as working fluids for various purposes
+increasing interest in absorption heat pumps and                  because of the lack of negative effects on the
+refrigeration systems has taken place in recent                   natural environment and excellent materials
+years. More and more, they are regarded not only                  suitable for future communities with most
+as environmentally friendly alternatives to CFC                   material recycled as desired in the 21st century.
+
+
+IJE Transactions A: Basics                                                             Vol. 20, No. 1, February 2007 - 95
+For example, ammonia-water mixtures have                 explicitly expressed in terms of two independent
+attracted much attention due to its potential as a       variables. The validity of the obtained functions is
+working fluid in a solar assisted absorption             suitable for operation conditions of absorption
+refrigeration system. Also, in conventional steam        refrigeration cycles. The predicted results from the
+power cycles, water is used as the working fluid.        present work are compared with available
+One way to improve the thermal efficiency is to          correlations in the literature.
+replace the one-component fluid with a binary
+fluid. The most well-known power cycle with a
+binary working fluid (an ammonia-water mixture)
+is the Kalina cycle. This cycle has been shown to              2. AVAILABLE CORRELATIONS
+be more efficient than conventional power cycles
+for several applications [1-2]. For theoretical          The availability of new experimental data,
+performance simulation of ammonia-water power            especially of the thermodynamic properties of the
+cycles and absorption refrigeration cycles,              mixture, has allowed the formulation of unified
+thermodynamics properties are necessary. For this        and conceptually simple equations based upon the
+purpose, correlations for calculating of                 Helmholtz or Gibbs free energies. A correlation for
+thermodynamic properties of binary mixtures              calculation of the thermodynamic properties of the
+have been presented by researchers [3-5].                ammonia-water mixture was developed by Stecco
+Recently, in 1998 the newly sophisticated                and Desideri [7]. Their correlation is based on
+correlation for the thermodynamic properties of          work presented by Ziegler and Trepp [8].
+ammonia-water mixture has been presented by              Expressions for the Gibbs free energy, for which
+Tillner-Roth and Friend [6]. As mentioned in the         pressure, temperature, and mole fraction of
+literature, and as far as the author has found in the    ammonia are independent variables, are used as the
+literature, this correlation provides reliable           fundamental function. Different equations are used
+information on the thermodynamic properties of           for the vapor and liquid phases. The vapor is
+an ammonia-water mixture for the entire                  assumed to be an ideal mixture of real gases, while
+composition range and in a wide range of                 the properties of the liquid phase are corrected by a
+temperatures and pressures and has the-state-of-         term calculated from the Gibbs excess energy. The
+the-art accuracy. From the viewpoint of                  same correlations as suggested by Stecco and
+mathematical structure, their formulation is very        Desideri have also been presented and used by Xu
+complicated and requires more computational              and Goswami [9]. Another correlation, also used in
+time for calculation and is not suitable for             power cycle simulations, is the one presented by
+simulation and engineering applications.                 Ibrahim and Klein [10]. They use the same
+    In the present work, based on the obtained           equations as Ziegler and Trepp. The constants in
+numerical data from Tillner-Roth and Friend              the function for the Gibbs excess energy have,
+formulation and the best fitted equation procedure, a    however, been recalculated with experimental data
+set of five simple and explicit equations describing     at higher pressures and temperatures.
+the vapor-liquid equilibrium properties of the               The presented correlation by Tillner-Roth and
+ammonia-water mixture necessary for absorption           Friend [6] is based on a fundamental equation of
+cycle design, have been presented. The set               state for the Helmholtz free energy. In this new
+comprises of the functions for calculating: the          correlation, the entire thermodynamic space of the
+enthalpy of saturated liquid of mixture, the enthalpy    mixture is described by one single equation, and
+of saturated vapor of mixture, the mass fraction of      the independent variables are volume, temperature,
+ammonia in the vapor phase as a function of              and a mole fraction of ammonia. The importance
+pressure and mass fraction of ammonia in the liquid      of the development work down in the new
+phase. Also, a function is developed for calculating     formulations is excellently demonstrated by the
+the saturated pressure of the mixture as a function of   International Association for the Properties of
+temperature and compositions which is necessary          Water and Steam (IAPWS) [11] for the calculation
+for construction of the Dühring diagram. The             of power cycles operating with the ammonia-water
+enthalpy of saturated ammonia-water mixture is           mixture. The formulation of the equation is
+
+
+96 - Vol. 20, No. 1, February 2007                                                IJE Transactions A: Basics
+illustrated by Equation 1, where a is the molar                           the functions with two variables are constructed for
+Helmholtz free energy and v is the molar volume.                          the calculation of some thermodynamic properties
+The superscript r stands for residual.                                    of the ammonia-water mixture by the least squares
+                                                                          method. A mathematical procedure for finding the
+a ( T, v, ζ ) = (1 − ζ ) a H 2O (T, v ) + ζ a NH 3 ( T, v ) +             best fitting equation to a give a set of points are
+                                                                    (1)   constructed by minimizing the sum of the squares of
+          RT [ (1 − ζ ) ln (1 − ζ ) + ζ ln ζ ] + Δa r ( T, v, ζ )         the offsets (the residuals) of the points from the
+                                                                          fitted equation. While there are methodical
+The functions for the pure components, a H 2O and                         procedures for fitting equations to data, the process
+                                                                          is also an art. The art of intuition is particularly
+a NH 3 , consist of a function for ideal-gas properties
+                                                                          needed in deciding upon the form of the equation,
+and a residual part correcting to the real -                              namely, the choice of independent variables to be
+component behavior. The term for the departure                            included and the form in which these variables
+from non-ideal mixture behavior, Δar (T , v , ζ ) , is                    should appear. There are no fixed rules for knowing
+correlated with the most reliable, available                              the variables’ form in the equation, but making at
+experimental data for the ammonia-water mixture.                          least a rough plot of the data will often provide
+Reduced properties are used in the correlations for                       some insight. A requirement for keeping the
+the ammonia-water mixture as well. For a mixture                          equation simple is to choose the proper terms
+liquid and vapor phase in equilibrium, the chemical                       (polynomial, exponential, etc.) to include in the
+potential of each component is the same in both the                       equations. It is possible, of course, to include all the
+liquid and the vapor phase. By setting up equations                       terms that could possibly be imagined and evaluate
+for this equality and solving them iteratively, the                       the coefficient by the method of least squares.
+saturation properties for the mixture can be                                  In general, an approximating function of a
+calculated. In the correlations both by Ibrahim and                       thermodynamic quantity z depending on two
+Klein and by Tillner-Roth and Friend, this                                independent variables u and v was sought in the
+procedure for calculating the saturation properties                       form of:
+is used. It should be noted that in the correlation by
+Tillner-Roth and Friend, a different reference state                                      n   ⎡ mi                      ⎤
+for ammonia is used than in the other correlations.                       z ( u , v) =   ∑ ∑  ⎢      ψ j ( α i, j , v ) ⎥ φi (u )               (2)
+                                                                                         i =0 ⎢
+                                                                                              ⎣ j= 0                    ⎥⎦
+Therefore enthalpies calculated from the different
+correlations cannot be directly compared. Finally a
+set of five simple functions for fast calculations of                     Where φi (u) and ψj (αi,j, v) are suitable functions
+selected thermodynamic properties of the                                  which describes mathematical the behavior of data
+ammonia-water mixture have been presented by                              points. For the data points z (u, vk) with vk = cte it
+Patek and Klomfar [12]. Their equations are                               is assumed that the best fitted equations has the
+suitable for the industrial design of absorption                          form of:
+refrigeration equipment.
+                                                                                               n
+                                                                          z ( u, v k ) =   ∑ β i φi ( u )               for         v k = cte   (3)
+                                                                                              i =0
+
+
+        3. DERIVATION OF FUNCTIONS                                        Where the β constants are calculated from the
+                                                                          nonlinear least squares fitting method using
+The task of finding suitable equations to represent                       respective thermodynamic properties data from
+the thermodynamic properties of the ammonia-                              Ref. 6. For m pairs of data points the sum of the
+water mixture are a simple analytical form, fast                          squares of the offsets and minimization relations
+evaluation, and a reasonable accuracy for industrial                      can be written as:
+calculations. The vapor-liquid equilibrium data for
+the ammonia-water mixture from Tillner-Roth and                                  ⎡                           n               ⎤
+                                                                                                                                         2
+
+Friend [6] have been taken into consideration and                         sk =  ∑⎢z (u m , v k ) Re f .6 −          ∑
+                                                                                                                βi φi ( u m )⎥                  (4)
+calculation in the present work. Based on this data,                           m ⎢
+                                                                                 ⎣                         i =0              ⎥⎦
+
+
+IJE Transactions A: Basics                                                                           Vol. 20, No. 1, February 2007 - 97
+∂s k
+                                                                                                 (                                )
+                                                                                           3
+     = 0 , i = 0, 1, ... n                                             (5)   P ( T, x ) = ∑ a i + b i T + c i T 2 + d i T 3 x i                 (9)
+∂β i
+                                                                                          i =0
+
+
+A similar procedure can be followed for the                                  Range of validity: - 20 ≤ T ≤ 160° C and 0.1 ≤ x ≤ 1
+thermodynamic properties values for vk = cte (k =                            • The enthalpy of saturated vapor of ammonia-
+1, 2, … l) and then the corresponding β constants                            water mixture (mixture dew point enthalpy) hG
+are calculated. Next the b constants are fitted as a                         (y,T), as a function of ammonia mass fraction in
+function in terms of v and could have the form of:                           vapor phase, y, and pressure, P:
+       mi
+                                                                                                           2
+b i = ∑ ψ j (α i , j , v )
+       j= 0
+                                                                       (6)    h G ( y, P) = a 0 P b 0 +   ∑ (a i + b i P + c i P 2 ) y i       (10)
+                                                                                                      i =1
+
+
+Finally, the α constants are calculated by applying
+                                                                                                 2
+                                                                                                                     [
+                                                                             + (a 3 +b 3 P+ c 3 P + d 3 P 3). exp a 4 (0.95 − y) e b 4 P   ]
+the nonlinear least squares method again. The
+obtained functions are arranged for the ammonia-                             Range of validity: 0.2 ≤ P ≤ 100 bar and 0 ≤ y ≤ 1
+water mixture in the next section.                                           • The mass fraction of ammonia in vapor phase, y
+                                                                             (x,P), as a function of ammonia mass fraction in
+                                                                             liquid phase, x, and pressure, P:
+
+                                                                                                              d
+              4. RESULTING FUNCTIONAL                                        y( x , P) = 1 − exp[aP b x + (c + ) x 2 ]                         (11)
+                                                                                                              P
+                       FORMS
+                                                                             Range of validity: 0.2 ≤ P ≤ 100 bar and 0 ≤ x ≤ 1
+The resulting functions for fast calculation of the                             The respective coefficient of Equations 7-11 are
+thermodynamic properties of the ammonia-water                                given in Tables 1-5.
+mixture have the following structure:
+
+• The enthalpy of saturated liquid of ammonia-
+water mixture (mixture bubble point enthalpy), hL
+                                                                                                     5. DISSCUSION
+(x,T), as a function of ammonia mass fraction, x,
+and temperature, T, :
+                                                                             The presented functions provide reliable
+                                                                             information on the thermodynamic properties of
+                       (                          )
+                 4
+h L ( x , T ) = ∑ a i + b i T + ci T 2 + d i T 3 x i                   (7)   the ammonia-water mixture for the entire
+                i =0                                                         composition range and in a wide range of
+                                                                             temperature and pressure. Specifically, the
+Range of validity: -20 ≤ T ≤ 140° C and 0 ≤ x ≤1                             functions provide property data for all
+• The enthalpy of saturated liquid of the                                    compositions from pure water to pure ammonia,
+ammonia-water mixture, hL (x,P), as a function of                            vapor-liquid equilibrium properties between (-20
+ammonia mass fraction, x, and pressure, P:                                   to 140° C) and up to 100 bar.
+                                                                                Although the presented functions are of
+                              4                                              completely mathematical nature, they allow the
+h L ( x , P ) = a 0 P b 0 + ∑ (a i + b i P + c i P 2 + d i P 3 ) x i   (8)   determination of the property of the ammonia -
+                             i =1                                            water mixture with accuracy acceptable for
+                                                                             industrial use. The numerical solution of the
+Range of validity corrected to range of validity:                            present equations is simpler than that of the
+0.2 ≤ P ≤ 100 bar and 0 ≤ x ≤ 1                                              formulation recently adopted by the IAPWS based
+• The Pressure of saturated ammonia-water                                    on the fundamental equations of state for
+mixture, P (T,x) as a function of ammonia mass                               Helmholts free energy developed by Tillner - Roth
+fraction, x, and temperature, T:                                             and Friend. These equations also easily solved.
+
+
+98 - Vol. 20, No. 1, February 2007                                                                                IJE Transactions A: Basics
+                                           TABLE 1. Coefficients of Equation 7.
+
+        i                     ai                           bi                      ci                     di
+
+
+        0               - 1.8056 × 10 1             + 5.3693 × 10 0         - 2.0134 × 10 - 2      +9.8404 × 10 - 5
+        1                -7.2789×10 2                - 1.2381 × 10 1        + 2.2495 × 10 - 1      -1.1315 × 10 -3
+        2               - 1.2275 × 10 2             + 4.1312 × 10 1         - 7.4557 × 10 - 1      + 4.1910 × 10 - 3
+        3               + 1.6910 × 10 3              - 5.0338 × 10 1        + 9.9641 × 10 - 1      - 6.1301 × 10 - 3
+        4               - 8.1873 × 10 2             + 2.0859 × 10 1         - 4.6552 × 10 - 1      + 3.1072 × 10 - 3
+
+
+
+
+                                           TABLE 2. Coefficients of Equation 8.
+
+         i                   ai                           bi                        ci                    di
+
+
+        0               4.0425 × 10 2              + 2.6901 × 10 - 1                -                      -
+                                       3                           1                         -1
+        1              - 1.8413 × 10               + 1.8051 × 10             - 2.9172 × 10         + 1.3765 × 10 - 3
+        2              + 3.9039 × 10 2              - 1.2775×10 2            + 2.7181 × 10 0       - 1.4477 × 10 - 2
+        3              + 1.6424 × 10 3             + 1.9137 × 10 2           - 4.5360 × 10 0       + 2.5426 × 10 - 2
+        4              - 7.4546 × 10 2              - 9.0498 × 10 1          + 2.2689 × 10 0       - 1.3208 × 10 - 2
+
+
+
+
+                                           TABLE 3. Coefficients of Equation 9.
+
+         i                    ai                          bi                       ci                     di
+
+         0              + 1.2328 × 10 0            + 1.8947 × 10 - 2        - 7.5905 × 10 - 4      + 5.5294 × 10 - 6
+         1              - 9.9394 × 10 0            - 1.9512 × 10 - 1        + 2.5043 × 10 - 3      + 3.1725 × 10 - 6
+         2              + 2.6586 × 10 1            + 7.1830 × 10 - 1        + 3.8511 × 10 - 3      - 1.4522 × 10 - 5
+         3              - 1.3512 × 10 1            - 3.8253 × 10 - 1        -3.5429 × 10 -3        + 2.7155 × 10 - 5
+
+
+
+
+Equation 7 reproduces the data of Tillner-Roth and               Concentration diagram for the saturated liquid
+Friend for the specific enthalpy of the liquid phase             mixture of ammonia-water at various temperatures
+with root mean square deviation 3.44 kJ/kg. The                  while Figure 2 illustrates various isobars on the
+comparison of the predicted saturation properties                Enthalpy - Concentration diagram. As it is evident
+for the liquid ammonia-water mixture is shown in                 from Figures 1 and 2, the comparison of predicted
+Figures 1-4. Figure 1 shows the Enthalpy-                        data from the present work and other correlations
+
+
+IJE Transactions A: Basics                                                         Vol. 20, No. 1, February 2007 - 99
+                                              TABLE 4. Coefficients of Equation 10.
+
+         i                     ai                             bi                            ci                         di
+
+         0               + 2.6602 × 10 3               - 1.2760 × 10 - 2                      -                        -
+         1               - 1.1221 × 10 3               + 5.4142 × 10 0                -5.0529 × 10 2                   0
+                                         2                             0                           -2
+         2               - 1.5884 × 10                 - 6.4770 × 10               + 5.9400 × 10                       0
+                                         -1                            -2                          -3
+         3               - 1.2815 × 10                 - 2.7021 × 10               + 1.0632 × 10               - 1.3020 × 10 - 4
+         4               - 1.4100 × 10 2               - 1.8000 × 10 - 2                      -                        -
+
+
+
+
+                                              TABLE 5. Coefficients of Equation 11.
+
+             a                                  b                                 c                                d
+
+       - 1.2527 × 10 1               - 2.6700 × 10 - 1                      - 2.2106 × 10 0                  + 2.7246 × 10 0
+
+
+
+
+show reasonable accuracy.                                            and not worse than 4 % for a concentration of less
+   The predicted enthalpy for the mixture have                       than 0.2. The Patek and Klomfar function for
+been compared at a temperature of 177 [°C] and                       predicting vapor-liquid equilibrium conditions is
+pressure of 108.2 bar with different correlations.                   suitable for 0.2 < P < 20 bar, while the presented
+As shown in Figure 3, at higher temperatures and                     equation is applicable for 0.2 < P < 100 bar.
+pressures, the presented equations still show good                   Values of enthalpy of the gas phase have been
+agreement with other correlations. Figure 4 depicts                  computed from Equation 10. The resultant
+the Dühring diagram i.e. ln P vs. - 1/T, (also called                values have been compared with those calculated
+PTX diagram) for the ammonia-water mixture for                       from the formulation of Tillner-Roth and Friend
+a pressure of up to 100 bar which is suitable for the                and Patek and Klomfar. In both cases the
+presentation of the processes of absorption                          differences are less than 2 % over the entire
+refrigeration cycles. Figure 5 shows the vapor-                      region from 0.2 to 100 bar. The part of the
+liquid equilibrium curves at 1, 20 and 60 bar.                       resultant      enthalpy-concentration      diagram
+    To obtain a simple functional form for the y                     concerning the gas phase is shown in Figures 6
+(x,P) relation, its region of validity has to be                     and 7. The enthalpy of saturated ammonia vapor
+curtailed to the ammonia mass fraction in the                        shows a maximum near 20 bar. This is why all
+liquid phase greater than 0.02 and a pressure                        isobars corresponding to a higher pressure
+above 0.2 bar. However, this limitation is not very                  intersect those of lower pressure, as seen on the
+onerous, since on the low temperature side of                        isobars for 20 bar in Figure 7.
+refrigeration    systems     a    pressure     above                    Figures 8-12 show the deviation between the
+atmospheric is preferred to avoid leakage of air                     calculated data for the fitted equations and values
+into them, and to increase the capacity of the                       calculated    from     helmholtz     free   energy
+cycle. The numerical consistency of the equations                    formulation by Tillner-Roth and Friend [6]. To
+for P (x,T) and y (x,P) has been checked and                         prove that these assessments are still
+found to be better than 1 % in y for x above 0.2                     conservative, Figure 8 shows deviations between
+
+
+100 - Vol. 20, No. 1, February 2007                                                                    IJE Transactions A: Basics
+            1000
+                                          Present work [Eq. (7)]                        demonstrated respectively.
+                          Δ    Δ     Δ
+                                          Patek & klomfar [12]
+                                          Tillner-Roth & Friend [6]
+                                                                                            After using graphical methods to evaluate the
+                                                                                        goodness of fit, the goodness-of-fit statistics
+                                                                                        should be examined. For this purpose the root
+                    500
+                                                                                        mean square error (RMSE) has been used to obtain
+  hL(x,T) [kJ/kg]
+
+
+
+
+                                             0
+                                         140 C
+
+                                                                                        data from the fitted equations. The RMSE is an
+                                                 100                                    estimate of the standard deviation of the calculated
+                                                             60                         values from the fit to the values of Ref. 6 and is
+                      0
+                                                                                        defined as:
+                                                                  20
+                                                                   0
+                                                                                                                                                  1
+                                                                  -20
+                                                                                                 ⎛ n                         ⎞2
+              -500
+                  0           0.25                 0.5                  0.75        1            ⎜
+                                                                                                                    ∑
+                                                                                                 ⎜ (z cal, i − z Ref.6,i ) 2 ⎟
+                                                                                                                             ⎟
+                                                       x                                  RMSE = ⎜ i =1                      ⎟                                                     (12)
+                                                                                                 ⎜           n               ⎟
+Figure 1. Enthalpy - Concentration Diagram for saturated                                         ⎜                           ⎟
+liquid of ammonia-water mixture at various temperatures.                                         ⎝                           ⎠
+
+
+
+             1500                                                                                         1500
+                                                           Present work [Eq. (8)]                                                          Present work [Eqs. (7 & 8)]
+                                         Δ   Δ     Δ Tillner-Roth &Friend [6]                                                              Ibrahim & Klein [10]
+                                                                                                                                           Tillner-Roth & Friend [6]
+
+             1000
+
+                                                                                                          1000                          P=108.2 bar
+hL(x,P) [kJ/kg]
+
+
+
+
+                                                   100 bar
+                                                                                        hL(x,P) [kJ/kg]
+
+
+
+
+                                                        60
+                    500
+                                                        40                                                                        T=177 oC
+                                                       20
+                                                                                                           500
+                                                       10
+                      0                                 6
+                                                       2
+                                                       0.6
+                                                       0.2
+                  -500                                                                                         0
+                      0       0.25                 0.5                  0.75        1                           0        0.2             0.4           0.6                 0.8        1
+                                                       x                                                                                         x
+Figure 2. Enthalpy-Concentration Diagram for saturated                                  Figure 3. Enthalpy of saturated liquid of ammonia - water
+liquid of ammonia-water mixture at various pressures.                                   mixture at pressure 108.2 bar and temperature 177 [°C].
+
+
+                                                                                               100
+                                                                                                80                      Present work [Eq.(9)]
+the calculated enthalpy of saturated liquid mixture                                             60
+                                                                                                                        Patek & Klomfar [12]
+
+from Equation 7 and highly accurate results from
+                                                                                                      40
+Ref. 6 which cover the range - 20 ≤ T ≤ 140° C                                                                                     Pure NH3
+
+and 0 ≤ x ≤ 1. With very few exceptions, all of
+                                                                                                                                            1
+                                                                                                                                          x=
+
+
+
+
+                                                                                                      20
+                                                                                                                                                     7
+
+
+
+
+these data are represented within ± 10 kJ/kg.
+                                                                                                                                                   0.
+                                                                                                                                                 0.6
+                                                                                        P [bar]
+
+
+
+
+                                                                                                                                                0.5
+
+
+
+
+                                                                                                          16
+                                                                                                                                                         0.4
+
+
+
+
+Deviation between the calculated enthalpy of the
+                                                                                                                                                               0.3
+
+
+
+
+                                                                                                          12
+                                                                                                                                                                     0.2
+
+                                                                                                                                                                             0.1
+
+
+
+
+saturated liquid mixture from Equation 8 and
+                                                                                                                                                                           x=
+                                                                                                                                    9
+                                                                                                                                  0.
+
+
+
+
+                                                                                                           8
+those values from Ref. 6 are depicted in Figure 9.
+                                                                                                                              8
+                                                                                                                            0.
+
+
+
+
+Deviations for this enthalpy remain within - 15 to
+                                                                                                           4
+25 kJ/kg. In Figures 10, 11, and 12 deviations
+between the calculated saturation pressure,
+                                                                                                           2
+enthalpy of saturated vapor, and ammonia mass                                                              -20 -10 0    10 20             50 ο        80 100 120             160    220
+                                                                                                                                          T [ C]
+fraction in the vapor phase from the fitted
+Equations 9-11 with those values from Ref. 6 are                                        Figure 4. Dühring (PTX) diagram of ammonia-water mixture.
+
+
+
+IJE Transactions A: Basics                                                                                               Vol. 20, No. 1, February 2007 - 101
+                   1
+                                                                                                    The number of data points, n, used for the equation
+                          P=1 bar
+                                                                                                    fitting, together with the root mean square error are
+             0.8                                                                                    summarized in Table 6. These deviations enable
+                                                   P=20 bar
+                                                                                                    one to estimate the accuracy of the equations. The
+             0.6                     P=60 bar                                                       precision of a particular set of data is evident from
+                                                                                                    its band of deviations.
+y
+
+
+
+
+             0.4
+
+
+             0.2                                                  Presnt work [Eq. (11)]
+                                                                  Patek & Klomfar [12]                                    20
+                                                                  Tillner-Roth & Friend [6]
+
+
+
+
+                                                                                                   hcal- hRef.6 [kJ/kg]
+                   0                                                                                                      10
+                    0           0.2                0.4              0.6           0.8         1
+                                                            x
+                                                                                                                           0
+Figure 5. Vapor - liquid equilibrium curves at 1, 20 and 60
+bar.
+                                                                                                                          -10
+
+                                                                                                                          -20
+                                                                                                                                  0         40          o       80              120
+                                                                                                                                                     T [ C]
+                   2750
+                                                                                                    Figure 8. Deviations between the calculated enthalpy of
+                   2500                                                                             saturated liquid mixture from Equation 7 and those values
+                                                   20
+                                                                    40, 60, 80, 100 bar             from Ref. 6.
+                   2250                                 2
+hG (y,T) [kJ/kg]
+
+
+
+
+                                                    0.2 bar
+                   2000
+                                                                                                                          30
+                   1750
+                                                                                                  hcal- hRef.6 [kJ/kg]
+
+
+
+
+                                                                                                                          15
+                   1500
+                                                                        Region "A"                                         0
+                   1250
+
+                        0              0.25                   0.5              0.75           1                          -15
+                                                              y
+Figure 6. Enthalpy-Concentration Diagram for saturated                                                                   -30 -1
+vapor of ammonia - water mixture at various pressures.                                                                     10             100        P [bar]        101               102
+                                                                                                    Figure 9. Deviations between the calculated enthalpy of
+                                                                                                    saturated liquid mixture from Equation 8 and those values
+                                                                                                    from Ref. 6.
+
+                   1600
+                                              20
+
+                                       2
+                                                                                                                           2
+                                                                                                  P cal- P Ref.6 [bar]
+hG (y,T) [kJ/kg]
+
+
+
+
+                                    0.2 bar                                             20
+                                                                                       40                                  1
+                   1400                                                              60
+                                                                                    80
+                                                                                                                           0
+                                                                                 100
+
+
+                                                                                                                          -1
+                   1200
+                                                                                                                          -2
+                                                                                                                           -40        0         40     T       80         120         160
+                        0.9           0.925                 0.95              0.975           1
+                                                              y                                     Figure 10. Deviations between the calculated saturated
+                                                                                                    pressure of mixture from Equation 9 and those values from
+Figure 7. Enlargement of region "A" in Figure 6.                                                    Ref. 6.
+
+
+102 - Vol. 20, No. 1, February 2007                                                                                                              IJE Transactions A: Basics
+                           40                                                 TABLE 6. The Goodness-of-Fit Statistics.
+  h cal- h Ref.6 [kJ/kg]
+
+
+
+                           20                                                    Eqs.             n      RMSE
+                             0
+                                                                                 (7)             349      3.44           kJ/kg
+                           -20
+                                                                    (8) for 0.2 < P < 100        132     11.75           kJ/kg
+                           -40 -1
+                             10       100     P[ bar]   101   102       (8) for 0.2 < P < 60     132      8.45           kJ/kg
+     Figure 11. Deviations between the calculated enthalpy of
+     saturated vapor mixture from Equation 10 and those values                   (9)             396     0.991            bar
+     from Ref. 6.
+                                                                                 (10)            190     14.06           kJ/kg
+
+                                                                                 (11)            190     0.0123          kg/kg
+                           0.05
+
+
+                     0.025
+y cal- y Ref.6
+
+
+
+
+                              0
+
+
+                  -0.025                                                                7. NOMENCLATURE
+
+                       -0.05                                        a                   Molar Helmholtz free energy
+                             10-1      10 0   P[ bar]   101   102                       [kJ/kmol]
+                                                                    a, b, c, d          coefficient
+     Figure 12. Deviations between the calculated vapor mass        h                   Specific enthalpy of mixture [kJ/kg]
+     fractions y form Equation 11 and those values from Ref. 6.
+                                                                    n                   number of data points
+                                                                    p                   pressure [bar]
+                                                                    R                   gas constant [kJ/kg.K]
+                                                                    RMSE                Root Mean Square Error
+                                                                    T                   temperature [°C]
+                                    6. CONCLUSIONS                  u, ν                independent variables
+                                                                    x                   Mass fraction of ammonia in liquid
+     The fitted equations for calculation of the                                        phase
+     thermodynamic properties of the ammonia-water                  y                   Mass fraction of ammonia in vapor
+     mixture are intended for use in the design of                                      phase
+     absorption refrigeration cycles. Using dependent               z                   Thermodynamic property quantity
+     variables of technical relevance, the equations make           α, β                Coefficient
+     it possible to avoid iterative evaluations. The                ζ                   Mole fraction of ammonia in liquid
+     presented equations have a simple mathematical                                     phase
+     form, while also having relevant accuracy in                   ν                   Molar volume [m3/kmol]
+     comparison with other complicated correlations.
+     These models can be implemented with easiness in               Subscripts:
+     all types of language and program that are required
+     of the calculation of these properties. As well as             cal                 calculated value from present work
+     avoiding iterative calculation, the merit of the fast          G                   Saturated vapor
+     approximation functions consists in their simplicity,          L                   Saturated liquid
+     which facilitates their incorporation in any computer          r                   residual
+     code.                                                          Ref. 6              Calculated value from Reference [6]
+
+
+     IJE Transactions A: Basics                                                          Vol. 20, No. 1, February 2007 - 103
+                   8. REFERENCES                                     energy formulation of the thermodynamic properties
+                                                                     of the mixture {ammonia - water}”, J. Phys. Chem.
+1.    Kalina, A. L., “Combined cycle system with novel               Ref. Data, Vol. 27, No. 1, (1998), 63-96.
+      bottoming cycle”, ASME Journal of Engineering for        7.    Stecco, S. and Desideri, U., “Thermodynamic
+      Power, Vol. 106, No. 4, (1984), 737-742.                       Analysis of the Kalina Cycles: Comparisons”,
+2.    Thorin, E., Dejfors, C. and Svedberg, G.,                      Problems, Perspectives, ASME Paper 89-GT-149,
+      “Thermodynamic properties of ammonia-water                     (1989).
+      mixture for power cycles”, International Journal of      8.    Ziegler, B. and Trepp, C., “Equation of state for
+      Thermophysics, Vol. 19, No. 2, (1998), 501-509.                ammonia-water mixture”, International Journal of
+3.    Thorin, E., “Comparison of correlations for predicting         Refrigeration, Vol. 7, No. 2, (1984), 101-106.
+      thermodynamic       properties   of    ammonia-water     9.    Xu, F. and Goswami, Y., “Thermodynamic properties
+      mixture”, International Journal of Thermophysics,              of ammonia-water mixture for power cycle
+      Vol. 21, No. 4, (2000), 853-870.                               applications”, Energy, Vol. 24, No. 6, (1999), 525-536.
+4.    Thorin, E., “Thermophysical properties of ammonia-       10.   Ibrahim, O. M., and Klein, S. A., “Thermodynamic
+      water mixture for prediction of heat transfer areas in         properties of water-ammonia mixtures”, ASHRAE
+      power     cycles”,     International     Journal    of         Transactions, Vol. 99, (1993), 1495-1502.
+      Thermophysics, Vol. 22, No. 1, (2001), 201-214.          11.   IAPWS, Guideline on the IAPWS Formulation 2001
+5.    Suzuki, J. and Uematsu, M., “Equation of state for             for the Thermodynamic Properties of Ammonia-Water
+      fluid mixtures based on the principle of corresponding         Mixture, Gaithersburg, MD, USA, (2001).
+      states with a two-fluid model: Application to fluid      12.   Patek, J. and Klomfar J., “Simple functions for fast
+      mixtures of water-ammonia”, Heat Transfer-Asian                calculations of selected thermodynamic properties of
+      Research, Vol. 31, No. 4, (2002), 320-330.                     he ammonia-water system”, International Journal of
+6.    Tillner-Roth, R. and Friend, D., “A Helmholts free             Refrigeration, Vol. 31, No. 4, (1995), 228-234.
+
+
+
+
+104 - Vol. 20, No. 1, February 2007                                                        IJE Transactions A: Basics
+

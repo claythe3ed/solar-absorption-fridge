@@ -1,0 +1,155 @@
+<mxfile host="app.diagrams.net" modified="2026-09-22T00:00:00.000Z" agent="Termux-Ubuntu" version="22.0.0" type="device">
+  <diagram id="solar-absorption-pid" name="P&amp;ID - NH3-H2O Absorption Cycle">
+    <mxGraphModel dx="1422" dy="798" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- Title -->
+        <mxCell id="title" value="P&amp;ID — NH₃-H₂O Solar Absorption Refrigeration Cycle" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=20;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="200" y="20" width="800" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="subtitle" value="200 W Cooling · COP = 0.424 · T_gen = 135°C · P_high = 15.5 bar" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=2" vertex="1" parent="1">
+          <mxGeometry x="200" y="60" width="800" height="30" as="geometry" />
+        </mxCell>
+
+        <!-- ==== Equipment ==== -->
+
+        <!-- Solar CPC + Generator -->
+        <mxCell id="V101" value="&lt;b&gt;V-101 / E-101&lt;/b&gt;&lt;br&gt;Solar CPC + Generator&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;200 mm OD × 4 m steel&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff7d6;strokeColor=#222222;strokeWidth=2;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="320" y="140" width="200" height="100" as="geometry" />
+        </mxCell>
+
+        <!-- Condenser -->
+        <mxCell id="E102" value="&lt;b&gt;E-102&lt;/b&gt;&lt;br&gt;Condenser&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;15 mm finned, 7.5 m&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d6eaf8;strokeColor=#222222;strokeWidth=2;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="640" y="150" width="160" height="90" as="geometry" />
+        </mxCell>
+
+        <!-- SHX -->
+        <mxCell id="E103" value="&lt;b&gt;E-103&lt;/b&gt;&lt;br&gt;SHX&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;Solution HX&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#222222;strokeWidth=2;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="360" y="360" width="140" height="80" as="geometry" />
+        </mxCell>
+
+        <!-- Absorber -->
+        <mxCell id="V102" value="&lt;b&gt;V-102&lt;/b&gt;&lt;br&gt;Absorber&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;integrated with V-101&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5f5e3;strokeColor=#222222;strokeWidth=2;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="200" y="500" width="180" height="100" as="geometry" />
+        </mxCell>
+
+        <!-- Evaporator / Cold Box -->
+        <mxCell id="E104" value="&lt;b&gt;E-104&lt;/b&gt;&lt;br&gt;Evaporator&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;10 mm finned, 6.4 m&lt;br&gt;in 150 L cold box&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8daef;strokeColor=#222222;strokeWidth=2;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="800" y="500" width="180" height="100" as="geometry" />
+        </mxCell>
+
+        <!-- Rich tank -->
+        <mxCell id="V103" value="&lt;b&gt;V-103&lt;/b&gt;&lt;br&gt;Rich tank&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;3 L, 40% NH₃&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#aed6f1;strokeColor=#222222;strokeWidth=2;fontSize=11" vertex="1" parent="1">
+          <mxGeometry x="340" y="700" width="120" height="80" as="geometry" />
+        </mxCell>
+
+        <!-- Poor tank -->
+        <mxCell id="V104" value="&lt;b&gt;V-104&lt;/b&gt;&lt;br&gt;Poor tank&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;2.3 L, 25% NH₃&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5b7b1;strokeColor=#222222;strokeWidth=2;fontSize=11" vertex="1" parent="1">
+          <mxGeometry x="540" y="700" width="120" height="80" as="geometry" />
+        </mxCell>
+
+        <!-- ==== Valves ==== -->
+
+        <!-- Expansion valve -->
+        <mxCell id="VLV101" value="Exp.&lt;br&gt;valve" style="shape=triangle;direction=east;whiteSpace=wrap;html=1;fillColor=#9467bd;strokeColor=#222222;strokeWidth=2;fontSize=9;rotation=180" vertex="1" parent="1">
+          <mxGeometry x="900" y="270" width="60" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- Throttle valve -->
+        <mxCell id="VLV102" value="Throttle" style="shape=triangle;direction=east;whiteSpace=wrap;html=1;fillColor=#d62728;strokeColor=#222222;strokeWidth=2;fontSize=9;rotation=180" vertex="1" parent="1">
+          <mxGeometry x="580" y="470" width="60" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- ==== Instrumentation ==== -->
+
+        <mxCell id="TIC101" value="&lt;b&gt;TIC-101&lt;/b&gt;&lt;br&gt;T sensor" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffcccc;strokeColor=#222222;strokeWidth=1.5;fontSize=9" vertex="1" parent="1">
+          <mxGeometry x="540" y="110" width="60" height="60" as="geometry" />
+        </mxCell>
+
+        <mxCell id="PI102" value="&lt;b&gt;PI-102&lt;/b&gt;&lt;br&gt;P sensor" style="ellipse;whiteSpace=wrap;html=1;fillColor=#cce5ff;strokeColor=#222222;strokeWidth=1.5;fontSize=9" vertex="1" parent="1">
+          <mxGeometry x="720" y="110" width="60" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- ==== Streams (Rich solution - blue) ==== -->
+        <mxCell id="s_abs_rich" value="Rich 40%" style="endArrow=classic;html=1;strokeColor=#1f77b4;strokeWidth=3;fontSize=10;fontColor=#1f77b4" edge="1" parent="1" source="V102" target="V103">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="s_rich_shx" value="Rich to SHX" style="endArrow=classic;html=1;strokeColor=#1f77b4;strokeWidth=3;fontSize=10;fontColor=#1f77b4" edge="1" parent="1" source="V103" target="E103">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="s_shx_gen" value="To generator" style="endArrow=classic;html=1;strokeColor=#1f77b4;strokeWidth=3;fontSize=10;fontColor=#1f77b4" edge="1" parent="1" source="E103" target="V101">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- ==== Streams (Vapor - green) ==== -->
+        <mxCell id="s_gen_cond" value="NH₃ vapor y=0.906" style="endArrow=classic;html=1;strokeColor=#2ca02c;strokeWidth=3;fontSize=10;fontColor=#2ca02c" edge="1" parent="1" source="V101" target="E102">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- ==== Streams (Liquid NH3 - purple) ==== -->
+        <mxCell id="s_cond_valve" value="Liquid NH₃" style="endArrow=classic;html=1;strokeColor=#9467bd;strokeWidth=3;fontSize=10;fontColor=#9467bd" edge="1" parent="1" source="E102" target="VLV101">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="s_valve_evap" value="Expanded" style="endArrow=classic;html=1;strokeColor=#9467bd;strokeWidth=3;fontSize=10;fontColor=#9467bd" edge="1" parent="1" source="VLV101" target="E104">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- ==== Streams (NH3 vapor return - green) ==== -->
+        <mxCell id="s_evap_abs" value="NH₃ vapor return" style="endArrow=classic;html=1;strokeColor=#2ca02c;strokeWidth=3;fontSize=10;fontColor=#2ca02c" edge="1" parent="1" source="E104" target="V102">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- ==== Streams (Poor solution - red) ==== -->
+        <mxCell id="s_gen_shx" value="Poor 25%" style="endArrow=classic;html=1;strokeColor=#d62728;strokeWidth=3;fontSize=10;fontColor=#d62728" edge="1" parent="1" source="V101" target="E103">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="s_shx_valve" value="" style="endArrow=classic;html=1;strokeColor=#d62728;strokeWidth=3" edge="1" parent="1" source="E103" target="VLV102">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="s_valve_poor" value="To poor tank" style="endArrow=classic;html=1;strokeColor=#d62728;strokeWidth=3;fontSize=10;fontColor=#d62728" edge="1" parent="1" source="VLV102" target="V104">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="s_poor_abs" value="To absorber" style="endArrow=classic;html=1;strokeColor=#d62728;strokeWidth=3;fontSize=10;fontColor=#d62728" edge="1" parent="1" source="V104" target="V102">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- ==== Legend ==== -->
+        <mxCell id="leg_title" value="&lt;b&gt;Legend&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=14" vertex="1" parent="1">
+          <mxGeometry x="1100" y="140" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="leg1" value="Rich solution (40% NH₃)" style="endArrow=none;html=1;strokeColor=#1f77b4;strokeWidth=3;fontSize=10;fontColor=#1f77b4" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1100" y="190" as="sourcePoint" />
+            <mxPoint x="1140" y="190" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="leg2" value="Poor solution (25% NH₃)" style="endArrow=none;html=1;strokeColor=#d62728;strokeWidth=3;fontSize=10;fontColor=#d62728" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1100" y="220" as="sourcePoint" />
+            <mxPoint x="1140" y="220" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="leg3" value="NH₃ vapor" style="endArrow=none;html=1;strokeColor=#2ca02c;strokeWidth=3;fontSize=10;fontColor=#2ca02c" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1100" y="250" as="sourcePoint" />
+            <mxPoint x="1140" y="250" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="leg4" value="Liquid NH₃" style="endArrow=none;html=1;strokeColor=#9467bd;strokeWidth=3;fontSize=10;fontColor=#9467bd" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1100" y="280" as="sourcePoint" />
+            <mxPoint x="1140" y="280" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- ==== Notes ==== -->
+        <mxCell id="notes" value="&lt;b&gt;Notes:&lt;/b&gt;&lt;br&gt;• V-101 = Generator (solar receiver, 200 mm OD, 4 m)&lt;br&gt;• V-102 = Absorber (integrated with generator)&lt;br&gt;• E-102 = Condenser (15 mm finned, 7.5 m)&lt;br&gt;• E-103 = SHX (solution heat exchanger)&lt;br&gt;• E-104 = Evaporator (10 mm finned, 6.4 m, in cold box)&lt;br&gt;• V-103/V-104 = Solution buffer tanks (3 L / 2.3 L)" style="text;html=1;strokeColor=#888888;fillColor=#fafafa;align=left;verticalAlign=top;whiteSpace=wrap;rounded=1;fontSize=10;spacing=8" vertex="1" parent="1">
+          <mxGeometry x="20" y="900" width="500" height="150" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

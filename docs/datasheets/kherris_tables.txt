@@ -1,0 +1,588 @@
+Kherris, S., et al.: Contribution Study of the Thermodynamics Properties of ...
+THERMAL SCIENCE: Year 2013, Vol. 17, No. 3, pp. 891-902                                          891
+
+
+
+
+             CONTRIBUTION STUDY OF THE THERMODYNAMICS
+             PROPERTIES OF THE AMMONIA-WATER MIXTURES
+                                                       by
+                   Sahraoui KHERRIS a, b*, Mohammed MAKHLOUF b,
+                       Djallel ZEBBAR a, and Omar SEBBANE c
+ a Institute of Sciences and Technology, University of Tissemsilt, Tissemilt, Sidi Bel Abbes, Algeria
+            b Reactifs Systems and Materials Laboratory, Djillali LIABES University, Algeria
+   c Materials and Renewable Energy Laboratory, Abou Bekr Belkaid University, Tlemcen, Algeria
+
+                                            Original scientific paper
+                                         DOI: 10.2298/TSCI110206083K
+
+            The full thermodynamic study of the absorption refrigeration units requires the
+            knowledge of the thermodynamic properties of the used mixture. The present work
+            deals with the mathematical modeling of the thermodynamic properties of ammo-
+            nia-water mixtures using various models. The presented model covers high va-
+            por-liquid equilibrium pressures up to 110 bar and temperatures from 230 to 600 K.
+            Furthermore, the calculation of the thermodynamic properties of the ammonia-wa-
+            ter mixtures and their pure components was carried out. The obtained results were
+            compared with results given in the literature. This shows a good concordance.
+            Key words: ammonia-water, binary solution, thermodynamics properties,
+                          Merkel's, diagram Oldham's diagram
+
+Introduction
+           The mathematical models of calculation and simulation of the systems with absorption
+require the knowledge of a great number of operating fluids thermodynamic properties [1]. To
+achieve this goal, a great number of experimental research was carried out, where the results
+were presented in a series of tables and diagrams; the known (H, x) diagram is well realized by
+Merkel and Bošnjakovi} [2].
+           When calculating the performance of an ammonia-water absorption refrigeration cy-
+cle, thermodynamic properties of the ammonia-water mixtures need to be known. These proper-
+ties are usually obtained from equations of states and other general equations [3].
+           The correlations for thermodynamic properties of ammonia-water mixtures found in
+literature, can be divided into nine groups: cubic equations of state [4-17], virial equations of
+state [16, 18-20], Gibbs excess energy [7, 10, 13, 15-17, 19, 21-36], corresponding states
+method [37-42], perturbation theory [35, 43], group contribution theory [12, 44], Leung-
+-Griffiths model [45], Helmoltz free energy [46], and polynomial functions [47, 48].
+           Different correlations for the thermodynamic properties of ammonia-water mixtures
+have been used in studies of ammonia-water absorption refrigeration cycles presented in litera-
+ture; they were obtained using a library of subroutines developed by Stecco and Desideri [29].
+Their correlations are based on work presented by Ziegler and Trepp [26] and El-Sayed and
+Tribus [31]. Different equations are used for the vapor and liquid phases. The vapor is supposed
+to be an ideal mixture of real gases while the properties of the liquid phase are corrected by a
+
+* Corresponding author; e-mail: kherris_sahraoui@yahoo.fr
+                               Kherris, S., et al.: Contribution Study of the Thermodynamics Properties of ...
+892                                            THERMAL SCIENCE: Year 2013, Vol. 17, No. 3, pp. 891-902
+
+
+term calculated from the Gibbs excess energy. The functions presented by Ziegler and Trepp
+[26] have been correlated to experimental data for the mixture up to 240 °C and 52 bar while
+El-Sayed and Tribus [31] have taken into account data up to 316 °C and 210 bar. The maximum
+pressure for the correlations from Stecco and Desideri [29] has been set to 115 bar, which is
+slightly above the critical pressure of ammonia. The critical pressure and temperature of the
+mixture change with the mass fraction of ammonia. Rainwater and Tillner-Roth [45] presented a
+model based on the so-called Leung-Griffiths model for the ammonia-water mixture critical re-
+gion vapor-liquid equilibrium. They conclude that their model is a reasonable representation of
+the high-pressure phase boundary for the ammonia-water mixture but that more experimental
+data would be valuable to confirm the model. Furthermore, they mention that there are inconsis-
+tencies among the experimental data available today for the ammonia-water mixture in the criti-
+cal region.
+           Besides, the correlations presented and used by Xu and Goswami [28] are the same as
+the correlations of Stecco and Desideri [29]. All but Park [39] and Enick et al. [41] use different
+equations for the liquid and vapor phases. Just as for the correlations of Stecco and Desideri [29]
+the vapor is supposed to be an ideal mixture of real gases and the properties for the liquid phase
+are corrected by a term calculated from the Gibbs excess energy for the correlations by El-Sayed
+and Tribus [31], Kouremenous and Rogdakis [25] and Ibrahim and Klein [27]. Ibrahim and
+Klein use the equations presented by Ziegler and Trepp [26].
+           However, the constants in the functions for the Gibbs excess energy have been recal-
+culated with experimental data at higher temperatures and pressures (up to 210 bar and 316 °C).
+Ziegler and Trepp [26] have modified the correlations presented by Schulz [20]. By these modi-
+fications the correlations are extended from a maximum pressure of 25 bar to 50 bar.
+Kouremenos and Rogdakis [25] also use the equations of Ziegler and Trepp [26]. For pressures
+higher than 50 bar, they use an expression for the heat capacity given by El-Sayed and Tribus
+[31] to calculate enthalpy and entropy. Nag and Gupta [32] use the Peng-Robinson equation for
+the vapor-liquid equilibrium and the Gibbs free energy equations presented by Zielger and
+Trepp [26] for the vapor and liquid phase properties.
+           Park [39] uses a generalized equation of state based on the law of corresponding states
+to calculate the thermodynamic properties of the mixture. Corrections for non-ideal and polar
+behavior are included. Enick et al. [44] use a cubic equation of state, the Peng-Robinson equa-
+tion of state, with binary interaction parameters estimated from a group contribution model and
+Gibbs excess energy equations.
+           Tillner-Roth and Friend [46] presented a new correlation for the ammonia-water mix-
+ture thermodynamic properties. It is based on a fundamental equation of state for the Helmholtz
+free energy and, like the correlation by Park [39]; the entire thermodynamic space of the mixture
+is described by one single equation. This is formed by the fundamental equations of state of the
+pure components and a mixing rule for the independent variables, reduced temperature, and re-
+duced density. The term for the departure from non-ideal mixture behavior is fitted to the most
+reliable, available experimental data for the ammonia-water mixture and also to data for the crit-
+ical region from the modified Leung-Griffiths model presented by Rainwater and Tillner-Roth
+[45].
+           Weber [38] has presented a model in order to estimate the second and the third virial
+coefficient of the ammonia-water mixtures. Rukes and Dooley [32] have calculated the free en-
+ergy of Helmotz of the components for the derivation after the thermodynamic properties at sat-
+uration.
+Kherris, S., et al.: Contribution Study of the Thermodynamics Properties of ...
+THERMAL SCIENCE: Year 2013, Vol. 17, No. 3, pp. 891-902                                          893
+
+           Many researchers have used the calculation of the free enthalpy of Gibbs to formulate
+the thermodynamic properties of the ammonia-water mixtures [15-17, 19, 21-35].
+           Moreover, Barhoumi et al. [34], for the liquid phase, have used a three constant
+Margules model of the excess free enthalpy. The vapor phase is considered as a perfect mixture
+of real gases, each pure gas being described by a pressure virial equation of state truncated after
+the third term. Mejbri and Bellagi [35] have used three different theoretical approaches for the
+modelling of thermodynamic properties of the ammonia-water mixtures. A comparison of these
+three methods proves the superiority of Perturbed Chain Statistical Associating Fluid Theory
+(PC-SAFT) in predicting and extrapolating the thermodynamic properties of ammonia-water
+system up to very high temperatures and pressures.
+           Among the mentioned models, we have chosen in this study the one of Feidt [36],
+which combines the Gibbs free energy method for the thermal properties and the equations cal-
+culating the bubble point and the dew point of the mixture [31]. This method combines the ad-
+vantages of the both methods. In the same time it avoids the need to make iterations in order to
+have the equilibrium conditions of phases. The suggested correlations cover equilibrium condi-
+tions of phases at high pressures and temperatures: 230 < T < 600 K and 0.2 < 110 bar.
+           This field is under the critical points of all the components, so that the determination of
+the equation of state for the mixture, does not take into account features referred to the critical
+state field. The equation of state does not describe the state in which the solution is in the
+solid-state aggregation.
+           The organization of the paper is as follows. The properties of working fluids of the
+chosen model are given in Properties of working fluids. The results of calculation of the thermo-
+dynamics properties of ammonia-water mixtures and their pure components are presented in Re-
+sults and discussions. A comparative study of the obtained results with the results provided by
+the International Institute of Refrigeration (IIR) [49] and Sun [50] for the mixtures, and those
+provided by Ranjevi} [51] and Haar et al. [52] for the pure components are carried out in the
+same section. Conclusions are drawn in the last section.
+Properties of working fluids
+Pure components
+Gibbs free energy
+         The fundamental equation of the Gibbs energy is given in an integral form as [26-28]:
+                                          T        P         T Cp
+                         G = H 0 - TS 0 + ò CpdT + òVdP - T ò dT                            (1)
+                                          T0       P0        T0 T
+         The volume V and the heat capacity at constant pressure Cp for the liquid and vapor
+phase of both pure water and pure ammonia are assumed to be empirically correlated by the fol-
+lowing expression [26]:
+                                       V L = a1 + a 2 P + a 3T + a 2T 2                           (2)
+                                           RT          c    c      c P2
+                                    Vg =       + c1 + 2 + 3 + 4                                   (3)
+                                            P         T 3 T 11      T 11
+                                           Cp L = b1 + b2T + b3T 2                                (4)
+                                                               P
+                                                                 æ ¶ 2V ö
+                                 Cp g = d1 + d 2T + d 3T 2 - T ò ç       ÷ dP                     (5)
+                                                               0 è ¶T ø
+                                                                       2
+                                        Kherris, S., et al.: Contribution Study of the Thermodynamics Properties of ...
+894                                                     THERMAL SCIENCE: Year 2013, Vol. 17, No. 3, pp. 891-902
+
+
+          The development of eq. (1) with the help of eqs. (2-5) leads to the following equations:
+– liquid phase
+                                                        B2 2                     B                                  æ T ö
+  GrL = H rL, 0 - T r S r,0
+                        L + B (T – T
+                                1    r       r ,0 ) +       (T r - T r2, 0 ) + 3 (T r3 - T r3, 0 ) - B1T r lnçç r ÷÷ -
+                                                         3                        3                                 è Tr,0 ø
+                                       B3
+           -B 2T r (T r - T r , 0 ) -       T r (T r2 - T r2, 0 ) + ( A1 + A3T r + A4T r2 )( Pr - Pr , 0 ) +
+                                         2
+                                                        A
+                                                    + 2 ( Pr2 - Pr2, 0 )                                                     (6)
+– vapor phase                                            2
+                                                       D                         D                                  æ T ö
+  G rg = H r,0
+           g
+               - T r S r,0
+                       g
+                            + D1 (T r - T r , 0 ) + 2 (T r2 - T r2, 0 ) + 3 (T r3 - T r3, 0 ) - D1T r lnçç r ÷÷ -
+                                                         2                        3                                 è Tr,0 ø
+                                          D                    2 ) + T lnç
+                                                                               æ  Pr       ö
+              -D2T r (T r - T r,0 ) - 3 T r (T r2 - T r,0                                  ÷ + C1 ( Pr - Pr , 0 ) +
+                                           2
+                                                                            r  ç           ÷
+                                                                               è Pr , 0 ø
+                       æP           P            P T ö                æ P              P          P T ö
+                 +C 2 ç r - 4 r,0 + 3 r,0 r ÷ + C 3 ç r - 12 r , 0 + 11 r , 0 r ÷ +
+                       ç T r3          3
+                                    T r,0             4
+                                                   T r,0   ÷          ç T r11            11
+                                                                                       T r,0        T r12, 0 ÷ø
+                       è                                   ø          è
+                                          C æ P3                P3            P 3 Tr ö
+                                       + 4 ç r - 12 r,0 + 11 r , 0 ÷                                                         (7)
+                                           3 çè T r11          T r11, 0        T r12, 0 ÷ø
+
+       The reduced thermodynamic properties                              Table 1. Coefficients for eqs. (6) and (7)
+(subscript r) are Tr = T/TB, Pr = P/PB, Gr = G/RTB,                                      Ammonia                 Water
+Hr = H/RTB, Sr = S/R, and Vr = VPB/RTB. The values
+                                                                           A1         3.971423×10–2         2.748796×10–2
+of the constants R, TB, and PB are R = 8.314
+kJ/kmolK, TB = 100 K, and PB = 10 bar. Coefficients                        A2         –1.790557×10–5       –1.016665×10–5
+for eqs. (6) and (7) are given in tab. 1.                                  A3         –1.308905×10–2       –4.452025×10–3
+                                                                           A4         3.752836×10–3         8.389246×10–4
+Thermodynamic properties
+                                                                           B1         1.634519×101           1.214557×10
+     The molar specific enthalpy, entropy and                              B2           –6.508119             –1.898065
+volume are related to Gibbs free energy by:
+                                                                           B3            1.448937           2.911966×10–1
+                              é æ G r öù                                   C1         –1.049377×10–2        2.136131×10–2
+                              ê ¶ çç      ÷ú
+                              ê    è T r ÷ø ú                              C2           –8.288224           –3.169291×10
+                 H = -RTBT r2                                    (8)
+                              ê ¶Tr ú                                      C3         –6.647257×102         –4.634611×104
+                              ê             ú                              C4         –3.045352×103                0
+                              ë             û Pr
+                                                                           D1            3.673647              4.019170
+                            é ¶G r ù
+                     S = -R ê        ú                           (9)       D2         9.989629×10–2        –5.175550×10–2
+                            ë ¶T r û P      r                              D3         3.617622×10–2         1.951939×10–2
+                            RTB é ¶ G r ù                                  H Lr,0        4.878573             21.821141
+                     V=                                        (10)
+                            PB êë ¶ Pr úû T                                H gr,0       26.468879             60.965058
+                                                r
+                                                                           S Lr,0        1.644773              5.733498
+Mixture of ammonia and water
+                                                                           S gr,0        8.339026             13.453430
+Ammonia-water liquid mixture
+                                                                             Tr,0         3.2252                5.0705
+      According to the analysis given by Ziegler                             Pr,0             2                    3
+and Trepp [26], the liquid mixture Gibbs function
+Kherris, S., et al.: Contribution Study of the Thermodynamics Properties of ...
+THERMAL SCIENCE: Year 2013, Vol. 17, No. 3, pp. 891-902                                                                 895
+
+of ammonia-water is given by the ideal solution mixture relation plus the Gibbs excess energy.
+This excess energy is limited to three terms and takes into account the deviation from ideal solu-
+tion behavior:
+                          G rE = x (1 - x )[F1 + F2 (2x - 1) + F3 (2x - 1) 2 ]                   (11)
+where
+                                                                    E    E
+                          F1 = E1 + E 2 Pr + ( E 3 + E 4 Pr )T r + 5 + 6                         (12)
+                                                                    T r T r2
+                                                                    E     E
+                         F2 = E 7 + E 8 Pr + (E 9 + E10 Pr )T r + 11 + 12                        (13)
+                                                                    Tr    T r2
+                                                         E       E
+                                  F3 = E13 + E14 Pr + 15 + 16                                    (14)
+                                                         Tr      T r2
+       Coefficients for eqs. (12)-(14) are given in tab. 2. Table 2. Coefficients for eqs. (12)-(14)
+The excess specific enthalpy, entropy and volume of the
+                                                                   E1 –41.733398 E9      0.387983
+liquid mixture can be derived as eqs. (8-10).
+                                                                                         E2    0.02414     E10    0.004772
+                              æ G rE ö                                                   E3    6.702285    E11   –4.648107
+                              ç¶     ÷
+                 H = -RTBT r
+                  E         2 ç  Tr ÷
+                                                                  (15)
+                                                                                         E4   –0.011475    E12    0.836376
+                              ç ¶T ÷                                                     E5   63.608967    E13   –3.553627
+                                   r
+                              ç      ÷
+                              è      ø Pr,x                                              E6   –62.490768   E14    0.000904
+                                                                                         E7    1.761064    E15   24.361723
+                              æ ¶ G rE ö
+                     S E = -Rçç        ÷÷                         (16)                   E8    0.008626    E16   –20.736547
+                              è ¶T r ø Pr ,x
+                                            RTB æ ¶G rE ö
+                                           VE =  ç      ÷                                  (17)
+                                             PB çè ¶Pr ÷ø T
+                                                           r, x
+           Therefore, the specific enthalpy, entropy, and volume of the liquid mixture become:
+                                    H mL = xH NH
+                                              L  + (1 - x ) H HL O + H E                                                (18)
+                                                   3                         2
+
+
+                                  S mL = xS NH
+                                            L  + (1 - x )S HL O + S E + S ml                                            (19)
+                                               3                   2
+
+
+                                      V mL = xVNH
+                                               L  + (1 - x )VHL O + V E                                                 (20)
+                                                      3                  2
+where
+                                    S ml = -R[ x ln( x ) + (1 - x ) ln(1 - x )]                                         (21)
+Ammonia-water vapor mixture
+          The vapor phase is considered as an ideal solution, so the excess Gibbs function is
+equal to zero. The specific enthalpy, entropy, and volume of the vapor mixture are calculated
+from:
+                                 H mg = yH NH
+                                           g
+                                                + (1 - y)H Hg O                          (22)
+                                                            3                        2
+
+
+                                     S mg = yS NH
+                                               g
+                                                          + (1 - y) S Hg O + S mg                                       (23)
+                                                  3                     2
+
+
+                                         V mg = yVNH
+                                                  g
+                                                     + (1 - y)VHg O                                                     (24)
+                                                            3                    2
+
+where
+                                   S mg = -R[ y ln( y) + (1 - y) ln(1 - y)]                                             (25)
+                                 Kherris, S., et al.: Contribution Study of the Thermodynamics Properties of ...
+896                                              THERMAL SCIENCE: Year 2013, Vol. 17, No. 3, pp. 891-902
+
+
+Results and discussions
+Comparison of the results
+         The comparison is carried out for the calculated thermodynamic properties for the
+mixtures and pure components.
+Ammonia-water mixtures
+          Comparison between results given by the chosen model and the experimental results
+provided by IIR [49] and Sun [50] data's of ammonia-water mixtures are presented in tab. 3. The
+comparison is made for the saturated pressure and saturated volume for the two states liquid and
+vapor, in case of two references values of temperatures: low one equal to 283.15 K and high
+temperature equal to 525.15 K.
+          From tab. 3 it is clear that the average error between the calculated saturated pressure
+and those given by the model 1 and 2 is up to 3.6 % for low temperatures and up to 3.1% for high
+temperatures. On the other hand, the average error in case of specific liquid volume is up to 2.8%
+for low temperatures and up to 9.4% for high temperatures. This can be explained by the fact
+that most of the elaborated models are appropriate for the vapor phase rather than for the liquid
+phase. Finally, the average error for specific vapor volume is up to 4.5% for low temperatures
+and up to 4.1% for high temperature.
+
+Table 3. Average error for comparative study in case of mixtures
+                                                           Average error [%]
+                                        T = 283.15 K                            T = 525.15 K
+                                                   Model 2:                                   Model 2:
+                              Model 1: IIR                            Model 1: IIR
+                                                   Sun [49]                                   Sun [49]
+  Saturated pressure                         3.6                                        3.1
+  Saturated volume liquid                    2.8                                        9.4
+  Saturated volume vapor                     4.5                                        4.1
+
+Pure components
+         The chosen model allows calculating the enthalpy, latent heat, entropy, and volume of
+ammonia and water in case of vapor and liquid states for pure components. The results are com-
+pared with the Ranjevi} [51] and Haar et al. [52] datas and represented in figs. (1-8).
+
+
+
+
+Figure 1. Latent heat of vaporization of ammonia          Figure 2. Latent heat of vaporization of water
+Kherris, S., et al.: Contribution Study of the Thermodynamics Properties of ...
+THERMAL SCIENCE: Year 2013, Vol. 17, No. 3, pp. 891-902                                                    897
+
+          The obtained variation of latent heat of vaporization for ammonia and water is com-
+pared with Ranjevi} [51] and Haar et al. [52] datas and shown in the figs. (1 and 2). As can be
+seen, the latent heat of vaporization decreases when the temperature is increasing. However, be-
+yond the temperature value of 540 K a little difference is observed. The correlation coefficient
+between the results of simulation and those of Ranjevi} [51] and Haar et al. [52] is equal to
+0.9999, 0.9977 for ammonia and water respectively. This coefficient is nearly the same for the
+other results shown in figs (3)-(8).
+          Finally, the comparative study shows a good agreement of the results of simulation
+with those of the authors [51, 52].
+
+
+
+
+    Figure 3. Entropy variation of ammonia                          Figure 4. Entropy variation of water
+
+
+
+
+Figure 5. Saturated liquid volume of ammonia                 Figure 6. Saturated liquid volume of water
+
+
+
+
+Figure 7. Saturated vapor volume of ammonia                     Figure 8. Saturated vapor volume of water
+                               Kherris, S., et al.: Contribution Study of the Thermodynamics Properties of ...
+898                                            THERMAL SCIENCE: Year 2013, Vol. 17, No. 3, pp. 891-902
+
+
+Exploring simulation results of the thermodynamic
+properties of ammonia-water mixtures for the
+elaboration of the Merkel's and Oldham's diagrams
+Merkel's diagram
+          Merkel's diagram allows doing a full study of the absorption machine, as it provides
+the heat balances of the various parts of the circuit by direct reading of enthalpy differences. As
+shown in fig. 9, the x-axis is dedicated to the concentration of the liquid phase and the y-axis to
+the enthalpy.
+                                                                         It includes at its lower
+                                                                     part, networks of isobars and
+                                                                     isotherms, as well as curves
+                                                                     of vapor-liquid equilibrium at
+                                                                     equal concentration. At the
+                                                                     upper part, the reference
+                                                                     curves allow to establish the
+                                                                     characteristics of the vapor
+                                                                     phase, starting from a deter-
+                                                                     mined point of equilibrium in
+                                                                     the lower part.
+                                                                         Oldham's diagram
+                                                                             This diagram is the most
+                                                                         used and most convenient for
+                                                                         the absorption machine study.
+                                                                         As shown in fig.10, the x-axis
+                                                                         is scaled in (1/T) and the
+                                                                         y-axis in (log P). In this sys-
+                                                                         tem of co-ordinates, the
+                                                                         curves reflecting the balance
+                                                                         of the binary system in the va-
+                                                                         por as well as in the liquid
+                                                                         phase are approximately
+                                                                         straight lines. The straight
+                                                                         line with 100% of concentra-
+                                                                         tion corresponds to the va-
+                                                                         por-liquid equilibrium of
+                                                                         pure ammonia, and the one
+                                                                         with 0% of concentration cor-
+                                                                         respond to vapor-liquid equi-
+                   Figure 9. Merkel's diagram                            librium of pure water.
+Conclusions
+          The ammonia-water mixture was the principal binary couple used in the absorption re-
+frigerating machines for several years. As in many studies, this one is conducted on vapor-liquid
+balance and the thermo-physical properties of mixture. For that the following conclusions were
+drawn:
+Kherris, S., et al.: Contribution Study of the Thermodynamics Properties of ...
+THERMAL SCIENCE: Year 2013, Vol. 17, No. 3, pp. 891-902                                                  899
+
+
+
+
+                                         Figure 10. Oldham's diagram
+
+· a method that combines the Gibbs free energy method for mixture properties and bubble and
+  dew point temperature equations for phase equilibrium is used; this method combines the
+  advantages of the two and avoids the need for iterations for phase equilibrium,
+· the proposed correlations cover high vapor-liquid equilibrium pressures and temperatures,
+· it is necessary to note the good agreement of the calculated of the thermodynamic properties
+  for the mixture from the chosen model with the IIR and Sun [49] data's, and
+· the comparative analysis for the calculated enthalpy, latent heat, entropy and volume of
+  ammonia and water in case of vapor and liquid states for pure components with Ranjevi}
+  [51] and Haar et al. [52] datas shows a good agreement. This is confirmed by the values of
+  the correlation coefficient equal to 0.999 for ammonia and water.
+Nomenclature
+A, B, C,                                                     V        – molar volume, [m3kmol–1]
+D, E, F – dimensionless coefficients, [–]                    x        – liquid ammonia mole fraction,
+a, b, c, d – coefficients, [–]                                        – [kmol of NH3 kmol–1 of liquid mixture]
+Cp         – heat capacity at constant                       y        – vapor ammonia mole fraction,
+           – pressure, [kJkg–1K–1]                                    – [kmol of NH3 kmol–1 of vapor mixture]
+G          – Gibbs free energy, [kJkmol–1]
+H          – molar enthalpy, [kJkmol–1]                      Subscripts
+P          – pressure, [bar]                                 H2O      – water
+R          – molar gas constant, [kJkmol–1K–1]               NH3      – ammonia
+S          – molar entropy, [kJkmol–1K–1]                    r        – reduced
+T          – temperature, [°C, K]                            0        – reference state
+                                  Kherris, S., et al.: Contribution Study of the Thermodynamics Properties of ...
+900                                               THERMAL SCIENCE: Year 2013, Vol. 17, No. 3, pp. 891-902
+
+Superscripts
+E       – excess                                           m        – mixture
+g       – vapor                                            mg       – vapor mixture
+L       – liquid                                           ml       – liquid mixture
+
+References
+[1]  Sathyabhama, A., Ashok Babu, T. P., Thermodynamic Simulation of Ammonia-Water Absorption Refrig-
+     eration System, Thermal Science, 12 (2008), 3, pp. 45-53
+[2] Rapin, P., Form of the Cold, 13th ed., DUNOD, Paris, 2006
+[3] Thorin, E., Power Cycles with Ammonia-Water Mixtures as Working Fluid, Ph. D. thesis, Royal Institute
+     of Technology, Stockholm, 2000
+[4] Peng, D., Robinson, D., Two and Three Phase Equilibrium Calculations for Coal Gasification and Related
+     Processes, Thermodynamics of Aqueous Systems with Industrial Applications, ACS Symposium Series,
+     No. 133, American Chemical Society, Washington, DC, 1980
+[5] Skogestad, S., Experience in Norsk-Hydro with Cubic Equations of State, Fluid Phase Equilibria, 13
+     (1983), 2, pp.179-188
+[6] Renon, H., et al., A Cubic Equation of State Representation of Ammonia-Water Vapor-Liquid Equilib-
+     rium Data, International Journal of Refrigeration, 9 (1986), 2, pp. 70-73
+[7] Iseli, M., Experimental and Thermodynamic Study of the Boiling Equilibrium of the System NH3-H2O, at
+     High Pressures (in German), Ph. D. thesis, No. 7743, Swiss Federal Institute of Technology, Zurich, Swit-
+     zerland, 1985
+[8] Stryjek, R., Vera, J. H., An Improved Peng-Robinson Equation of State for Pure Compounds and Mix-
+     tures, Can. J. Chem. Eng., 64 (1986), 2, pp. 323-333
+[9] Sturnfield Ballard, E., Matherne, J. L., Modeling of a Complex Polar System with a Modified
+     Soave-Redlich-Kwong Equation, Chemical Engineering Communication, 84 (1989), 1, pp. 81-95
+[10] Huang, H., A New Mixing Rule for the Patel-Teja Equation of State, Study of Vapor-Liquid Equilibria,
+     Fluid Phase Equilibria, 58 (1990), 1-2, pp. 93-115
+[11] Smolen, T. M., et al., Vapor-Liquid Equilibrium Data for the NH3-H2O System and its Description with a
+     Modified Equation of State, J. Chem. Eng. Data, 36 (1991), 2, pp. 202-208
+[12] Moshfeghian, M., et al., Prediction of Refrigerant Thermodynamic Properties by Equations of State: Va-
+     por Liquid Equilibrium Behavior of Binary Mixtures, Fluid Phase Equilibria, 80 (1992), pp. 33-44
+[13] Peters, R., Keller, J. U., A Model for the Calculation of Association Phase Equilibrium States in the Fuel
+     System Ammonia-Water (in German), DKV-Tagungsber, 2 (1993), 1, pp. 183-196
+[14] Zhao, E., et al., Calculation of Vapor-Liquid Equilibria and Saturated Liquid Volumes for Water-Ammo-
+     nia Mixtures, Chemical Engineering Communication, 129 (1994), 1, pp. 99-108
+[15] Vidal, J., Equations of State-Reworking the Old Forms, Fluid Phase Equilibria, 13 (1983), pp. 15-33
+[16] Gillespie, P. C., et al., Vapor-Liquid Equilibrium Measurements on the Ammonia-Water System from 313
+     K to 589 K, AICHE Symposium Series, 83 (1987), 254, pp. 97-127
+[17] Thomsen, K., Rasmussen, P., Thermodynamic Model for the Ammonia-Water System, Steam, Water, and
+     Hydrothermal Systems: Physics and Chemistry Meeting the Needs of Industry, Proceedings, 13th Interna-
+     tional Conference on the Properties of Water and Steam, ISBN 0-660-17778-1, Toronto, Canada, 1999,
+     pp. 118-125
+[18] Duan, Z., et al., Equation of State for the NH3-H2O System, Journal of Solution Chemistry, 25 (1996), 1,
+     pp. 43-50
+[19] Harms-Watzenberg, F., Measurement and Correlation of the Thermodynamic Properties of Water-Ammo-
+     nia Mixtures (in German), VDI Progress Reports, Series 3: Process Technolgy, No. 380, VDI-Verlag,
+     Dusseldorf, Germany, 1995
+[20] Schulz, S. C. G., Equations of State for the System Ammonia-Water for Use with Computers, Proceed-
+     ings, 13th International Congress of Refrigeration, 1973, Vol. 2, pp. 431-436
+[21] Enick, R. M., et al., The Modeling of LEBS Kalina Power Cycles, Proceedings, Joint Power Generation
+     Conference, ASME, 1997, Vol. 2, pp. 55-67
+[22] Tochigi, K., et al., Prediction of Phase Equilibria for the Systems Containing Ammonia Using PRASOG,
+     Journal of Supercritical Fluids, 13 (1998), 1, pp. 61-67
+Kherris, S., et al.: Contribution Study of the Thermodynamics Properties of ...
+THERMAL SCIENCE: Year 2013, Vol. 17, No. 3, pp. 891-902                                                 901
+
+[23] Enick, R. M., et al., Modeling the High-Pressure Ammonia-Water System with WATAM and the
+     Peng-Robinson Equation of State for Kalina Cycle Studies, Ind. Eng. Chem. Res., 37 (1998), 5, pp.
+     1644-1650
+[24] Edwards, T. J., et al., Thermodynamics of Vapor-Liquid Equilibria for the Ammonia-Water System, In-
+     dustrial & Engineering Chemistry Fundamentals, 17 (1978), 4, pp. 264-269
+[25] Kouremenos, D. A., Rogdakis E. D., The Temperature-Entropy (or Enthalpy) and the Enthalpy-Entropy
+     (Mollier) Diagram of the Kalina Cycle, ASME AES, New York, USA, Vol. 19, 1990, pp. 13-19
+[26] Ziegler, B., Trepp, C., Equation of State for Ammonia-Water Mixtures, International Journal of Refriger-
+     ation, 7 (1984), 2, pp. 101-106
+[27] Ibrahim, O. M., Klein, S. A, Thermodynamic Properties of Ammonia-Water Mixtures, ASHRAE Trans.
+     Symposia, 21 (1993), 2, pp. 1495-1502
+[28] Xu, F., Yogi Goswami, D, Thermodynamic Properties of Ammonia-Water Mixtures for Power-Cycle Ap-
+     plications, Energy, 24 (1999), 6, pp. 525-536
+[29] Stecco, S. S., Desideri, U., Thermodynamic Analysis of the Kalina Cycles: Comparisons, Problems, Per-
+     spectives, ASME paper, American Society of Mechanical Engineers, 89 (1989), GT, pp. 149
+[30] Nag, P. K., Gupta, A. V. S. S. K. S.,Exergy Analysis of the Kalina Cycle, Applied Thermal Engineering,
+     18 (1997), 6, pp. 427-439
+[31] El-Sayed, Y. M., Tribus, M., Thermodynamic Properties of Water-Ammonia Mixtures Theoretical Imple-
+     mentation for Use in Power Cycles Analysis, ASME paper AES, Vol. 1, 1985, pp. 89-95
+[32] Rukes, B., Dooley, R. B, Guideline on the IAPWS Formulation 2001 for the Thermodynamic Properties of
+     Ammonia-Water Mixtures, The International Association for the Properties of Water and Steam (IAPWS),
+     2001, Gaithersburg, Md.,USA
+[33] Jordan, D. P, Aqua-Ammonia Properties, Department of Mechanical Engineering, 1997, Texas Tech Uni-
+     versity, Lubbock, Tex., USA, pp. 19
+[34] Barhoumi, M., et al., Modelling of the Thermodynamic Properties of the Ammonia-Water Mixture, Inter-
+     national Journal of Refrigeration, 27 (2004), 3, pp. 271-283
+[35] Mejbri, Kh., Bellagi, A., Modelling of Thermodynamic Properties of the Water-Ammonia Mixture by
+     Three Different Approaches, International Journal of Refrigeration, 29 (2006), 3, pp. 211-218
+[36] Amer, H. T., et al., Thermodynamic Properties of Ammonia-Water Mixtures, International Congress of
+     Refrigeration, 2003, Washington, DC, pp. 0113 -2003
+[37] Kalina, A., et al., A Theoretical Approach to the Thermophysical Properties of Two-Miscible-Component
+     Mixtures For the Purpose of Power-Cycle Analysis, ASME paper, Vol. 86, 1986, WA/HT, pp. 54
+[38] Weber, L. A, Estimating the virial Coefficients of the Ammonia-Water Mixture, Fluid Phase Equilibria,
+     162 (1999), 1-2, pp. 31-49
+[39] Park, Y. M., A Generalized Equation of State Approach to the Thermodynamic Properties of Ammo-
+     nia-Water Mixtures with Applications, Ph. D. thesis, University of Michigan, Ann Arbor, Mich., USA,
+     1988
+[40] Kegami, Y., et al., Thermophysical Properties of Ammonia/Water by the BWR Equation of State, Pro-
+     ceedings, 13th Japan Symposium on Thermophysical Properties, Tokio, 1992, pp. 213-216
+[41] Friend, D. G., et al., Standard Thermophysical Properties of the Ammonia-Water Binary Fluid, Proceed-
+     ings, 12th International Conference on the Properties of Water and Steam, Orlando, Fla., USA, 1994
+[42] Nowarski, A., Friend, D. G., Application of the Extended Corresponding State Method to the Calculation
+     of the Ammonia-Water Mixture Thermodynamic Surface, International Journal of Thermophysics, 19
+     (1998), 4, pp. 1133-1142
+[43] Abovsky, V., Thermodynamics of Ammonia-Water Mixture, Fluid Phase Equilibria, 116 (1996), 1, pp.
+     170-176
+[44] Rizvi, S. S. H., Measurement and Correlation of Ammonia-Water Equilibrium Data, Ph. D. thesis, Univer-
+     sity of Calgary, Calgary, Alb., Canada, 1985
+[45] Rainwater, J. C., Tillner-Roth, R., Critical Region Vapor-Liquid Equilibrium Model of Ammonia-Water,
+     Steam, Water, and Hydrothermal Systems: Physics and Chemistry Meeting the Needs of Industry, Pro-
+     ceedings,13th International Conference on the Properties of Water and Steam, ISBN 0-660-17778-1, To-
+     ronto, Canada, 1999, pp. 110-117
+[46] Tillner-Roth, R., Friend, D. G., A Helmholtz Free Energy Formulation of the Thermodynamic Properties
+     of the Mixture {Water+Ammonia}, Journal of Physical and Chemical Reference Data, 27 (1998), 1b, pp.
+     63-69
+                                    Kherris, S., et al.: Contribution Study of the Thermodynamics Properties of ...
+902                                                 THERMAL SCIENCE: Year 2013, Vol. 17, No. 3, pp. 891-902
+
+[47] Patek, J., Klomfar, J., Simple Functions for Fast Calculations of Selected Thermodynamic Properties of
+     the Ammonia-Water System, International Journal of Refrigeration, 18 (1995), 4, pp. 228-234
+[48] Jain, P. C., Gable, G. K., Equilibrium Property Data Equations for Aqua-Ammonia Mixtures, ASHRAE
+     Transactions, 77 (1971), 1, pp.149-151
+[49] ***, Thermodynamic and Physical Properties of NH3-H20, (IIR) International Institute of Refrigeration,
+     Paris, 1994, pp. 88
+[50] Sun, D. W., Comparison of the Performance of NH3-H2O, NH3-LiNO3 and NH3-SCN Absorption Refrig-
+     eration Systems, Energy Conversion, 39 (1998), 5/6, pp. 357-368
+[51] Ranjevi}, K., Thermodynamic Tables and Charts, Edition EYROLES, Paris, 1970
+[52] Hear, L., Gallagher, J. S., Thermodynamic Properties of Ammonia, Journal of Physical Chemistry, 7
+     (1978), pp. 635-792
+
+
+
+
+Paper submitted: February 6, 2011
+Paper revised: February 25, 2012
+Paper accepted: March 11, 2012
+

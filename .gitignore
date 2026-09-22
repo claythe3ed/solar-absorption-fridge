@@ -1,0 +1,35 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.env
+.venv/
+venv/
+*.egg-info/
+
+# Build artifacts
+build/
+dist/
+
+# Large CAD binaries (regenerate from scripts)
+*.step
+*.stl
+
+# PDFs (too large / license unclear)
+*.pdf
+
+# Raw data
+data/raw/
+data/processed/
+
+# Books directory (PDFs)
+docs/books/
+
+# Logs (regenerated)
+results/logs/
+
+# OS files
+.DS_Store
+Thumbs.db
+*.swp

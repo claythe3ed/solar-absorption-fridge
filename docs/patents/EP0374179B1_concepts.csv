@@ -1,0 +1,83 @@
+name,domain,smiles,inchi_key,query match,sections
+Ammonia,Chemical compound,N,QGZKDVFQNNGYKY-UHFFFAOYSA-N,0.000,title|claims|abstract|description
+absorption reaction,Methods,,,0.000,title|claims|abstract|description
+ammonia,Inorganic materials,,,0.000,title|claims|abstract|description
+absorbent,Substances,,,0.000,claims|abstract|description
+absorbent,Effects,,,0.000,claims|abstract|description
+liquid,Substances,,,0.000,claims|abstract|description
+refrigerant,Substances,,,0.000,claims|abstract|description
+radiation,Effects,,,0.000,claims|abstract|description
+refrigeration,Methods,,,0.000,claims|abstract|description
+compounds,Chemical class,,,0.000,claims|abstract|description
+water,Substances,O,XLYOFNOQVPJJNP-UHFFFAOYSA-N,0.000,claims|description
+Ammonium hydroxide,Chemical group,[NH4+].[OH-],VHUUQVKOLVNVRT-UHFFFAOYSA-N,0.000,claims|description
+ammonium hydroxide,Nutrition,,,0.000,claims|description
+reduction,Effects,,,0.000,claims|description
+combustion reaction,Methods,,,0.000,claims|description
+nitrogen hydride,Inorganic materials,,,0.000,abstract|description
+cooling,Methods,,,0.000,abstract|description
+design,Methods,,,0.000,description
+solid,Substances,,,0.000,description
+fluid,Substances,,,0.000,description
+method,Methods,,,0.000,description
+construction,Methods,,,0.000,description
+liquid phase,Substances,,,0.000,description
+material,Substances,,,0.000,description
+Methanol,Chemical compound,OC,OKKJLVBELUTLKV-UHFFFAOYSA-N,0.000,description
+absorbing agent,Substances,,,0.000,description
+benefit,Effects,,,0.000,description
+change,Effects,,,0.000,description
+manufacturing process,Methods,,,0.000,description
+solid phase,Substances,,,0.000,description
+transfer,Methods,,,0.000,description
+Methylamine,Chemical compound,NC,BAVYZALUXZFZLV-UHFFFAOYSA-N,0.000,description
+Sulphur dioxide,Chemical compound,O=S=O,RAHZWNYVWXNFOC-UHFFFAOYSA-N,0.000,description
+action,Effects,,,0.000,description
+dust,Substances,,,0.000,description
+evaporation,Methods,,,0.000,description
+evaporation,Effects,,,0.000,description
+gravity,Effects,,,0.000,description
+insulation,Methods,,,0.000,description
+phase,Substances,,,0.000,description
+stainless steel,Inorganic materials,,,0.000,description
+stainless steel,Substances,,,0.000,description
+Calcium chloride,Chemical compound,[Cl-].[Cl-].[Ca+2],UXVMQQNJUSDDNG-UHFFFAOYSA-L,0.000,description
+Low-carbon steel,Inorganic materials,,,0.000,description
+Methyl methacrylate,Chemical compound,COC(=O)C(C)=C,VVQNEPGJFQJSBK-UHFFFAOYSA-N,0.000,description
+aluminium,Chemical compound,[Al],XAGFODPZIPBFFR-UHFFFAOYSA-N,0.000,description
+aluminium,Inorganic materials,,,0.000,description
+boiling,Methods,,,0.000,description
+calcium chloride,Substances,,,0.000,description
+calcium chloride,Inorganic materials,,,0.000,description
+calcium chloride,Nutrition,,,0.000,description
+cement,Substances,,,0.000,description
+combined effect,Effects,,,0.000,description
+communication,Methods,,,0.000,description
+concentrate,Substances,,,0.000,description
+condensation,Methods,,,0.000,description
+condensation,Effects,,,0.000,description
+decrease,Effects,,,0.000,description
+decreasing effect,Effects,,,0.000,description
+desorption,Methods,,,0.000,description
+electricity,Effects,,,0.000,description
+fabric,Substances,,,0.000,description
+fibreglass,Substances,,,0.000,description
+halocarbons,Chemical class,,,0.000,description
+hydrostatic effect,Effects,,,0.000,description
+investigation,Methods,,,0.000,description
+isolation,Methods,,,0.000,description
+mechanism,Effects,,,0.000,description
+mixing,Methods,,,0.000,description
+mixture,Substances,,,0.000,description
+particle,Substances,,,0.000,description
+peripheral effect,Effects,,,0.000,description
+polycarbonate,Polymers,,,0.000,description
+polycarbonate,Substances,,,0.000,description
+potassium thiocyanate,Chemical compound,[K+].[S-]C#N,ZNNZYHKDIALBAK-UHFFFAOYSA-M,0.000,description
+research,Methods,,,0.000,description
+sodium azane thiocyanate,Chemical compound,N.[Na]SC#N,HAAFARYZKVVJHG-UHFFFAOYSA-M,0.000,description
+strontium chloride,Inorganic materials,,,0.000,description
+strontium dichloride,Chemical compound,[Cl-].[Cl-].[Sr+2],AHBGXTDRMVNFER-UHFFFAOYSA-L,0.000,description
+swelling,Effects,,,0.000,description
+testing method,Methods,,,0.000,description
+transmittance,Methods,,,0.000,description
