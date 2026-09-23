@@ -33,3 +33,8 @@ results/logs/
 .DS_Store
 Thumbs.db
 *.swp
+
+
+# Exception: allow project report PDFs
+!docs/report/*.pdf
+!docs/report/*.PDF
