@@ -38,3 +38,4 @@ Thumbs.db
 # Exception: allow project report PDFs
 !docs/report/*.pdf
 !docs/report/*.PDF
+*.AppImage
