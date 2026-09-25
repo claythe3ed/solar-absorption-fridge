@@ -58,3 +58,11 @@
 - Files: report.html (source), style.css (styles), solar-fridge-report.pdf
 Tue Sep 22 22:36:53 CAT 2026
 Fri Sep 25 11:13:15 AM CAT 2026
+
+## Session 12 - OpenFOAM Tested Successfully
+- OpenFOAM v1912 (Ubuntu package) installed
+- Tutorials at /usr/share/doc/openfoam-examples/examples/
+- Custom environment at ~/.openfoam_env
+- pitzDaily test case: converged in 282 iterations, 8.29 s
+- Test case saved at sim/openfoam/pitzDaily_test/
+- Ready for condenser CFD case
