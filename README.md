@@ -8,6 +8,7 @@ Designed for household deployment in Sudan and similar climates.
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python 3.13+](https://img.shields.io/badge/python-3.13+-blue.svg)](https://www.python.org/downloads/)
 [![CoolProp](https://img.shields.io/badge/CoolProp-8.0-green.svg)](http://www.coolprop.org/)
+[![teqp](https://img.shields.io/badge/teqp-0.23.2-purple.svg)](https://github.com/usnistgov/teqp)
 [![Release](https://img.shields.io/badge/release-v0.1.0-blue.svg)](https://github.com/claythe3ed/solar-absorption-fridge/releases/tag/v0.1.0)
 [![Status](https://img.shields.io/badge/status-design--complete-brightgreen)]()
 
@@ -197,3 +198,40 @@ MIT — see LICENSE.
 Author
 
 Muhammad Ali (@claythe3ed)
+
+---
+
+## Testing Notes
+
+Three independent approaches were tested. Results:
+
+| Approach | Status | Result |
+|---|---|---|
+| **CoolProp** (pure components) | Works | NIST-traceable, < 0.1% error |
+| **Ziegler-Trepp** (this repo) | Works | Max 0.63 degC error vs CoolProp |
+| **teqp** AmmoniaWaterTillnerRoth | Loads | API functional, get_Ar01 verified |
+| **teqp VLE solvers** | Unstable | 56 grid attempts, 0 physical results |
+| **CoolProp HEOS mixture** | No data | No binary pair for NH3-H2O |
+
+### Details
+
+- **CoolProp** does not include binary interaction parameters for
+  NH3-H2O. Documented at [Issue #341](https://github.com/CoolProp/CoolProp/issues/341).
+- **teqp 0.23.2** loads AmmoniaWaterTillnerRoth and exposes the
+  full API. However, the mixture VLE solvers (mixture_VLE_px,
+  mix_VLE_Tp) fail to converge for NH3-H2O with physically
+  plausible initial guesses. Documented at
+  [teqp Issue #193](https://github.com/usnistgov/teqp/issues/193).
+- **Ziegler-Trepp** (this repository) is the validated engineering
+  alternative.
+
+### Validation Summary
+
+- 12 pure-component points (P = 1 to 25 bar) validated against
+  CoolProp: max error 0.63 degC, mean error 0.32 degC
+- Full cycle model: COP = 0.424, energy balance closed to 0.00 W
+- Cross-validated coefficients between Kherris (2013) and
+  Sadhukhan et al.: 100% agreement
+
+See src/thermo/comparison/teqp_vs_zt.py and
+results/logs/teqp_vs_zt_*.txt for details.
