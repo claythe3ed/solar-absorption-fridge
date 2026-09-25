@@ -162,17 +162,14 @@ Bill of Materials
 Full list in results/bom.csv. Generator script: src/geometry/bom_quantities.py.
 Documentation
 
-    Design Report (PDF) — 6-page Swiss-design report
+    ## Documentation
 
-    Wiki — Detailed design notes
-
-    CoolProp Issue #341 — Workaround discussion
-
-    teqp Issue #193 — ARM64 build report
-
-    Design Summary — Components and cycle data
-
-    Session Summary — Development log
+- [Design Report (PDF)](docs/report/solar-fridge-report.pdf) — 6-page Swiss-design report
+- [Wiki](https://github.com/claythe3ed/solar-absorption-fridge/wiki) — Detailed design notes
+- [CoolProp Issue #341](https://github.com/CoolProp/CoolProp/issues/341) — NH3-H2O binary pair gap
+- [teqp Issue #193](https://github.com/usnistgov/teqp/issues/193) — ARM64 build + VLE findings
+- [Design Summary](docs/DESIGN_SUMMARY.md) — Components and cycle data
+- [Session Summary](docs/SESSION_SUMMARY.md) — Development log
 
 References
 
