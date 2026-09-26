@@ -1,0 +1,49 @@
+
+###############################################################################################
+#  teqp VLE vs Ziegler-Trepp — FULL BUBBLE POINT COMPARISON
+#  for CoolProp Issue #341
+###############################################################################################
+
+
+===============================================================================================
+  DETAILED SINGLE-POINT TEST
+===============================================================================================
+
+  Input: P = 15.5 bar, x_NH3 = 0.4 (mass fraction)
+  Ziegler-Trepp T_bub: 98.76 C
+  teqp: FAILED
+===============================================================================================
+  VLE COMPARISON: teqp (IAPWS-2001) vs Ziegler-Trepp (1984)
+===============================================================================================
+
+  P(bar)   x_NH3    T_ZT(C)    T_teqp(C)   Delta(C)   y_NH3    rho_L      rho_V     
+-----------------------------------------------------------------------------------------------
+  2.40     0.25     61.69      FAILED      -          -        -          -         
+  2.40     0.40     32.96      FAILED      -          -        -          -         
+  2.40     0.60     4.92       FAILED      -          -        -          -         
+  5.00     0.25     85.88      FAILED      -          -        -          -         
+  5.00     0.40     55.63      FAILED      -          -        -          -         
+  5.00     0.60     26.07      FAILED      -          -        -          -         
+  10.00    0.25     112.54     FAILED      -          -        -          -         
+  10.00    0.40     80.73      FAILED      -          -        -          -         
+  10.00    0.60     49.57      FAILED      -          -        -          -         
+  15.50    0.25     131.63     FAILED      -          -        -          -         
+  15.50    0.40     98.76      FAILED      -          -        -          -         
+  15.50    0.60     66.50      FAILED      -          -        -          -         
+-----------------------------------------------------------------------------------------------
+
+===============================================================================================
+  INTERPRETATION
+===============================================================================================
+
+  - Ziegler-Trepp and teqp should agree within ~1 C for the mixture
+    if both models are physically correct.
+  - y_NH3 (vapor composition) tells us how selective the boiling is.
+    Higher y = more ammonia enriched in vapor.
+  - Liquid/vapor density ratio should be ~100-300x for a typical
+    absorption cycle operating point.
+  - Any disagreement > 2 C indicates either:
+    * A real physical difference between models
+    * A convergence issue in either solver
+    * A unit conversion error
+

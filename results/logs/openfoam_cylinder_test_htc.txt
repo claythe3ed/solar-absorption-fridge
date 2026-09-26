@@ -1,0 +1,20 @@
+Cylinder patch: 4060 faces, startFace=159728
+T internal: uniform=None, cells=48904
+T cylinder: 4060 faces, mean=340.00 K
+nut at wall: 0.000e+00 m²/s
+
+============================================================
+  RESULTS SUMMARY
+============================================================
+  Cylinder wall T:        340.15 K (67.00 C)
+  Air reference T:        313.15 K (40.00 C)
+  ΔT:                     27.00 K
+  Molecular α:            2.113e-05 m²/s
+  Turbulent α_t (avg):    0.000e+00 m²/s
+  Effective α:            2.113e-05 m²/s
+  Estimated BL thickness: 1.00 mm
+
+  >> Estimated h:         21.23 W/m²·K
+  >> Design U (baseline): 15.0 W/m²·K
+  >> Ratio h/U_design:    1.415
+============================================================
