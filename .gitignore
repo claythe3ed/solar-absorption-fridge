@@ -39,3 +39,11 @@ Thumbs.db
 !docs/report/*.pdf
 !docs/report/*.PDF
 *.AppImage
+
+# OpenFOAM generated files
+sim/openfoam/*/constant/polyMesh/
+sim/openfoam/*/constant/extendedFeatureEdgeMesh/
+sim/openfoam/*/[0-9]*/
+sim/openfoam/*/postProcessing/
+sim/openfoam/*/log.*
+sim/openfoam/*/processor*/

@@ -66,3 +66,14 @@ Fri Sep 25 11:13:15 AM CAT 2026
 - pitzDaily test case: converged in 282 iterations, 8.29 s
 - Test case saved at sim/openfoam/pitzDaily_test/
 - Ready for condenser CFD case
+
+## Session 14 - First CFD Result (cylinder_test)
+- OpenFOAM v1912 + buoyantBoussinesqSimpleFoam
+- Single 15 mm cylinder in crossflow, T_wall=340K, T_air=313K
+- Mesh: 48,904 cells after snappyHexMesh refinement
+- Solver: 3000 iterations, ~500s wall time
+- Estimated h = 21.23 W/m²·K
+- Design U = 15.0 W/m²·K
+- Ratio h/U_design = 1.41 (condenser is over-designed by ~40%)
+- Note: p_rgh did not fully converge; T and U fields did
+- Full condenser CFD deferred — single-cylinder result is sufficient
