@@ -12,8 +12,11 @@ from mpl_toolkits.mplot3d.art3d import Poly3DCollection
 import os
 
 
-CAD_DIR = "/root/fridge/cad/stl"
-OUT_DIR = "/root/fridge/results/plots"
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+REPO_ROOT = os.path.abspath(os.path.join(SCRIPT_DIR, "..", ".."))
+CAD_DIR = os.path.join(REPO_ROOT, "cad", "stl")
+OUT_DIR = os.path.join(REPO_ROOT, "results", "plots")
+os.makedirs(OUT_DIR, exist_ok=True)
 
 
 def load(name):

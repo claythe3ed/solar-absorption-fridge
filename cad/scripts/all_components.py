@@ -6,8 +6,10 @@ import Mesh
 import os
 
 
-OUT_STEP = "/root/fridge/cad/step"
-OUT_STL = "/root/fridge/cad/stl"
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+REPO_ROOT = os.path.abspath(os.path.join(SCRIPT_DIR, "..", ".."))
+OUT_STEP = os.path.join(REPO_ROOT, "cad", "step")
+OUT_STL = os.path.join(REPO_ROOT, "cad", "stl")
 os.makedirs(OUT_STEP, exist_ok=True)
 os.makedirs(OUT_STL, exist_ok=True)
 

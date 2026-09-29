@@ -85,7 +85,9 @@ for direction, pos in ports:
 # ============================================================
 # Export
 # ============================================================
-out_dir = "/root/fridge/cad"
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+REPO_ROOT = os.path.abspath(os.path.join(SCRIPT_DIR, "..", ".."))
+out_dir = os.path.join(REPO_ROOT, "cad")
 os.makedirs(os.path.join(out_dir, "step"), exist_ok=True)
 os.makedirs(os.path.join(out_dir, "stl"), exist_ok=True)
 
