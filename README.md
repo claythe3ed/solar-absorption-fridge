@@ -10,14 +10,23 @@ Designed for household deployment in Sudan and similar climates.
 [![CoolProp](https://img.shields.io/badge/CoolProp-8.0-green.svg)](http://www.coolprop.org/)
 [![teqp](https://img.shields.io/badge/teqp-0.23.2-purple.svg)](https://github.com/usnistgov/teqp)
 [![Release](https://img.shields.io/badge/release-v0.1.0-blue.svg)](https://github.com/claythe3ed/solar-absorption-fridge/releases/tag/v0.1.0)
-[![Status](https://img.shields.io/badge/status-design--complete-brightgreen)]()
+[![Status](https://img.shields.io/badge/status-pre--production%20review-orange)]()
 
 ---
 
 ## Overview
 
-A complete, validated design for a solar-powered absorption refrigerator
-that runs entirely on heat — no mechanical compressor, no moving parts.
+A research-stage design and simulation repository for a solar-powered
+absorption refrigerator. Its stated performance values are model targets,
+not independently demonstrated prototype results or a released build design.
+
+> **Not approved for fabrication, pressure testing, ammonia charging, or
+> operation.** This project contains unresolved pressure, material, geometry,
+> and safety issues. Do not build from the repository; see the
+> [build-release gate](docs/BUILD_RELEASE_GATE.md).
+
+We welcome independent technical review from engineers and researchers
+worldwide. See the [engineering validation call](docs/ENGINEERING_VALIDATION_CALL.md).
 
 | Parameter | Value |
 |---|---|

@@ -1,0 +1,67 @@
+name: Engineering validation review
+description: Submit a sourced, reproducible review of a project calculation, specification, model, or drawing
+title: "[Validation] "
+body:
+  - type: markdown
+    attributes:
+      value: >
+        The repository is preliminary and on HOLD. This form is for independent review only, not fabrication or operating instructions. A submitted review does not approve the design.
+  - type: dropdown
+    id: discipline
+    attributes:
+      label: Review discipline
+      options:
+        - Pressure systems and code
+        - Ammonia refrigeration and thermodynamics
+        - Heat transfer and solar thermal
+        - Mechanical design and CAD
+        - Materials and compatibility
+        - Safety, inspection, and quality
+        - CFD or computational validation
+        - Other
+    validations:
+      required: true
+  - type: input
+    id: jurisdiction
+    attributes:
+      label: Applicable jurisdiction or code context
+      description: Include the jurisdiction and code/standard editions relevant to this review, if applicable.
+      placeholder: Country/region and standard edition
+    validations:
+      required: false
+  - type: textarea
+    id: scope
+    attributes:
+      label: Files and scope reviewed
+      description: Identify paths, revision/commit if known, and the specific question reviewed.
+      placeholder: "docs/COMPONENT_SPECS.md, V-101 pressure basis..."
+    validations:
+      required: true
+  - type: textarea
+    id: finding
+    attributes:
+      label: Finding or review result
+      description: Separate confirmed findings, assumptions, estimates, and unresolved questions. Include units.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: References and evidence
+      description: Cite primary sources, editions/dates, relevant sections/clauses, calculations, tests, or reproducible code.
+    validations:
+      required: true
+  - type: textarea
+    id: limitations
+    attributes:
+      label: Limitations and follow-up required
+      description: State what this review does not establish and what qualified review or evidence remains necessary.
+    validations:
+      required: true
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Safety and review status
+      options:
+        - label: I understand this repository is on HOLD and my submission does not approve fabrication, testing, charging, or operation.
+          required: true
