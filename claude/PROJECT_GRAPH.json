@@ -1,0 +1,128 @@
+{
+  "$comment": "Canonical structured project state for solar-absorption-fridge: claude/PROJECT_GRAPH.json. Preserve any other local copies unless they are explicitly reconciled. The repo's formal governance layer (Decision Register, Design Basis, Build Release Gate) is the canonical open-items tracker; this file carries supplemental context.",
+  "project": "solar-absorption-fridge",
+  "repo": "https://github.com/claythe3ed/solar-absorption-fridge",
+  "last_updated": "2026-10-05",
+  "graph_reconciliation": {
+    "canonical_path": "claude/PROJECT_GRAPH.json",
+    "other_local_copies": [
+      "PROJECT_GRAPH(1).json",
+      "Downloads/PROJECT_GRAPH.json"
+    ],
+    "disposition": "This file is the copy being published. Other local copies have not been overwritten or deleted."
+  },
+  "mission": "Off-grid NH3-H2O solar absorption cooling for Sudan: households, and hospital/clinic cold chain for medicine during grid outages caused by the war.",
+  "status": "HOLD - not approved for fabrication, pressure testing, ammonia charging, or operation. See docs/BUILD_RELEASE_GATE.md (the repo's own disposition, set 2026-09-30).",
+
+  "governance_layer_2026_09_30": {
+    "what_changed": "Between the 2026-09-29 ls snapshot and this 2026-09-30 archive, the repo gained a full governance layer: docs/DECISION_REGISTER.md (D-001..D-007, open conflicts), docs/DESIGN_BASIS.md (DB-01..DB-13, all TBD pending a licensed engineer), docs/BUILD_RELEASE_GATE.md (repo-wide HOLD disposition + evidence checklist), docs/ENGINEERING_VALIDATION_CALL.md (public call for outside review), .github/ISSUE_TEMPLATE/engineering-validation.yml (structured submission form). This now supersedes the OQ-1..OQ-9 list this file used to carry - track new open items against their D-/DB- numbers, not a parallel list here.",
+    "authorship": "Produced by Google Antigravity (Gemini 3 agent IDE) per Clay, alongside the 13-sheet FreeCAD TechDraw 'revision B' drawing pack under private/Copilot/ and copilot_drowings/.",
+    "claude_cross_check_2026_09_30": [
+      "Flat end caps (5mm) confirmed in BOTH CAD code paths - cad/scripts/generator.py (CAP_THICK=5.0) and the new src/geometry/production_cad.py (CadQuery). A UG-34 screening fails this at EITHER open design-pressure candidate: needs ~12.1mm at 16 bar, ~15.1mm at 25 bar, have 5.0mm. This means D-001 (16 vs 25 bar) does not by itself clear the cap - the geometry needs to change either way. Full numbers in design_audit.py's new check_pressure_candidates().",
+      "The 16 bar candidate (results/bom.csv item #1 note) leaves only 2.9% margin over the cycle model's own 15.55 bar operating pressure, and is reached by NH3 saturation pressure alone at just 32C ambient (10K approach) - ordinary for the target climate, not an upset case. 25 bar is not reached until ~49C ambient in the same screening.",
+      "D-002's second port-protrusion value (60mm) traced to a concrete source: src/geometry/production_cad.py V101_SPEC['port_protrusion_mm'] = 60.0, vs COMPONENT_SPECS.md's 40mm.",
+      "D-005 says the copper-steel silver-brazing line was 'removed from ammonia-system BOM pending review' (dated 2026-09-30) - but results/bom.csv item #32 ('Silver brazing rods 5%... Copper-steel joints', 20pc) is still present as reviewed. Register and artifact are out of sync on this one item.",
+      "src/thermo/ammonia_water_iapws.py (new) wraps the real iapws.ammonia.H2ONH3 (IAPWS-2001 standard formulation) - a legitimate independent check for D-007's mixture-validation gap, stronger than the self-comparison of two secondary literature sources or the non-converging teqp path. Not yet run against Ziegler-Trepp's state points.",
+      "A validation issue draft matching .github/ISSUE_TEMPLATE/engineering-validation.yml, carrying the above as a sourced submission, was prepared - see VALIDATION_ISSUE_DRAFT.md."
+    ],
+    "cannot_verify_here": "This sandbox has no network, so CadQuery/iapws-backed scripts (production_cad.py, ammonia_water_iapws.py) could not be executed here - reviewed as source only. Clay or Antigravity need to actually run them locally to confirm they execute as written."
+  },
+
+  "simulation_validation_2026_10_04": {
+    "track": "Simulation/model validation selected as the next software workstream; hardware remains on HOLD.",
+    "cycle_model_changes": [
+      "src/thermo/cycle_model.py now rejects non-finite inputs, nonpositive cooling load, invalid rich/poor concentration ordering, SHX effectiveness outside [0,1], invalid temperature ordering, invalid generator vapor composition, and generator temperature below the poor-solution bubble point.",
+      "tests/test_cycle_model.py adds regression cases for those input guards; targeted result: 9 passed. The existing nominal outputs are unchanged."
+    ],
+    "limitations": "These are software input checks, not physical/property validation. The baseline still uses the simplified Ziegler-Trepp/CoolProp assumptions described in docs/wiki/Thermodynamic-Model.md; D-007 remains OPEN and the overall project remains HOLD.",
+    "pytorch": "Not found in tracked project manifests or code, and import fails in the project venv. No PyTorch dependency or ML calculation was added."
+  },
+
+  "reference_review_2026_10_04": {
+    "reviewed_materials": [
+      "ASME BPVC Section VIII, Division 1, 2017 edition: extracted searchable text across all 778 PDF pages.",
+      "API 520 Part I, Eighth Edition (December 2008): all 146 pages OCR-reviewed.",
+      "Duffie & Beckman, Solar Engineering of Thermal Processes, Second Edition: all 469 pages OCR-reviewed.",
+      "Incropera et al., Fundamentals of Heat and Mass Transfer, Sixth Edition: all 999 pages OCR-reviewed.",
+      "García & Rosa (2019), Sustainability 11(12):3346: all 18 pages."
+    ],
+    "not_available_or_not_reviewed": [
+      "ASME Section V, API 521, and API 520 Part II are not present in the project and were not reviewed.",
+      "ASME Section IX, 2019 edition: reviewed in multiple ranges, but not a verified complete line-by-line review; extraction/OCR gaps remain and qualification-table values were not checked against a controlled copy. The local copy is third-party sourced.",
+      "m112content.pdf is a separate 32-page PDHonline course, Selection and Sizing of Pressure Relief Valves (Randall W. Whitesides, 2026); identity checked but its contents have not yet been reviewed."
+    ],
+    "edition_status": "The local API 520 Part I copy is the Eighth Edition (December 2008). API's official page confirms that the Tenth Edition has been published and is the current offering; the page fetched does not state its publication year, so the year is not confirmed here.",
+    "ocr_caveat": "API 520 Part I, Duffie & Beckman, and Incropera are scanned copies reviewed via OCR. Page coverage was complete, but equation/table/figure OCR can be inaccurate; verify exact technical values against authoritative source pages before use. These readings do not constitute code approval.",
+    "relief_guidance_caveat": "Google AI text supplied by the user proposing 37.8% operating margin, a 25-bar setpoint, generic chatter/backpressure thresholds, a specific thermal-relief valve size, or a selected two-phase method is unverified and must not be treated as a project decision or code requirement. 25 bar is not an approved MAWP; DB-05/DB-09 and D-001/D-006 remain OPEN.",
+    "project_hold": "Reading references and adding model input guards do not close DB/D/build-release items or authorize fabrication, pressure testing, ammonia charging, or operation."
+  },
+
+  "sudan_geography_weather_foundation_2026_10_03": {
+    "handoff": "claude/SUDAN_DATA_HANDOFF.md",
+    "source_register_and_gate": "docs/SUDAN_GEOGRAPHY_AND_WEATHER_DATA.md",
+    "status": "HOLD - no Sudan-wide performance simulations have been run; data are not yet approved simulation inputs.",
+    "implemented": [
+      "Source-traceable OCHA/HDX ADM0-ADM2 boundary acquisition and validation: 1 ADM0, 19 ADM1 features including Abyei PCA, and 189 ADM2 records.",
+      "Separate OCHA 2020 and HOTOSM/OSM 2026-09-06 settlement inventories with source IDs preserved and no automated matching or deduplication.",
+      "NASA POWER daily 2021-2025 dataset acquired: 180/180 tile/parameter/year chunks; manifest checksums verified.",
+      "Acquisition, settlement preparation, validation code, documentation, and tests added."
+    ],
+    "local_paths": {
+      "repository_root": ".",
+      "handoff": "claude/SUDAN_DATA_HANDOFF.md",
+      "source_register": "docs/SUDAN_GEOGRAPHY_AND_WEATHER_DATA.md",
+      "acquisition_script": "scripts/data/acquire_sudan_data.py",
+      "raw_inputs": "data/raw/sudan/",
+      "processed_settlements": "data/processed/sudan/",
+      "metadata": "data/metadata/sudan/"
+    },
+    "settlement_outputs": {
+      "ocha_records": 11980,
+      "hotosm_selected_points": 36919,
+      "hotosm_missing_or_empty_names": 23878,
+      "output_directory": "data/processed/sudan/",
+      "caveat": "Separate source inventories, not a complete official gazetteer; OCHA Arabic fields need encoding review."
+    },
+    "weather_status": {
+      "nasa_power_daily": "180/180 expected chunks present and checked; UTC/date shape and numeric daily values validated; this is not station validation or complete unit/fill-value quality review.",
+      "era5_land_hourly": "0/60 expected monthly files present; blocked until CDS is configured locally. No credentials belong in the repository or handoff.",
+      "validation_command": "./venv/bin/python scripts/data/acquire_sudan_data.py validate",
+      "validation_result": "Currently exits nonzero because all 60 ERA5-Land months are missing; NASA POWER and geography checks pass.",
+      "tests": "./venv/bin/python -m pytest -q tests — 10 passed on 2026-10-03."
+    },
+    "sources": {
+      "ocha_boundaries": "https://data.humdata.org/dataset/cod-ab-sdn",
+      "ocha_settlements": "https://data.humdata.org/dataset/sudan-settlement-26-july-2020",
+      "hotosm_places": "https://data.humdata.org/dataset/hotosm_sdn_populated_places",
+      "nasa_power": "https://power.larc.nasa.gov/docs/services/api/temporal/daily/",
+      "era5_land": "https://cds.climate.copernicus.eu/datasets/reanalysis-era5-land",
+      "github_repository": "https://github.com/claythe3ed/solar-absorption-fridge"
+    },
+    "review_gate": "Claude source/code and data-quality review plus qualified local geospatial and climate/solar engineering review, including station comparisons and documented transformations, before any simulation inputs are approved."
+  },
+
+  "open_questions": [
+    {
+      "id": "OQ-0",
+      "severity": "blocking",
+      "title": "Cycle architecture: intermittent batch vs. continuous-with-pump vs. true 3-fluid Einstein-Szilard",
+      "status": "still open - confirmed by private/Copilot/data/02-V-102_Absorber...md itself: 'Absorber ports/internals: Not specified', 'Confirm low-side pressure design, solution distribution, drainage and venting with the engineer'. Matches BUILD_RELEASE_GATE.md's own 'V-102 integration' row.",
+      "recommendation_unchanged": "Intermittent batch, single generator/absorber vessel, no solution pump - still the recommendation (no moving parts was the project's own session-1 goal; no pump is in the BOM; hospital 24h need is served by a small ice/PCM buffer, not continuous circulation). This is a genuine engineering decision the project needs, not something either Claude or Antigravity should silently assume.",
+      "cascades_to": ["V-102", "V-103", "V-104", "E-103", "drawings 2-13 of the revB pack"]
+    }
+  ],
+
+  "components": {
+    "V-101": {"name": "Generator / solar receiver", "status": "Rev B drawing + 2 STEP files (cad/step + cad/production, different port_protrusion) exist. Flat end caps confirmed failing UG-34 screening at both open design-pressure candidates - see cross-check above."},
+    "V-102": {"name": "Absorber", "status": "Rev B sheet drafted but explicitly TBD internals - blocked on OQ-0."}
+  },
+
+  "tooling": {
+    "freecad_local": "FreeCAD 1.0.2 AppImage. Google Antigravity (Gemini 3) drove it directly for the Rev B 13-sheet TechDraw pack (private/Copilot/revB-freecad/).",
+    "production_cad": "New: src/geometry/production_cad.py, CadQuery-based, optional (pip install cadquery). Generates cad/production/V-101_generator.{step,stl}. Uses flat caps, 60mm port protrusion - differs from the legacy cad/scripts/generator.py (also flat caps, different protrusion value).",
+    "thermo_validation": "New: src/thermo/ammonia_water_iapws.py wraps the real IAPWS-2001 ammonia-water formulation (iapws package) - unused so far, real candidate to close D-007.",
+    "audit_script": "src/audit/design_audit.py (give Claude's copy, not yet in the repo) - recomputes cycle, ASME shell/head/hydro stress at both D-001 candidates, mass, HX area, CPC geometry, hot-ambient margin. Run after any spec change.",
+    "freecad_mcp_bridge": "Robust MCP Bridge (pip freecad-robust-mcp) - alternative for a local Claude Code session to drive FreeCAD directly. Setup steps given 2026-09-28, status unconfirmed.",
+    "graphiti": "Researched 2026-09-29 as a shared-memory option across tools (Claude, Antigravity) via MCP. Needs a graph DB + its own LLM API key - real infrastructure. This file remains the zero-infrastructure alternative; worth it only if the project outgrows one JSON file."
+  }
+}
