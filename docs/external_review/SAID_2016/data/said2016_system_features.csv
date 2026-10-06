@@ -1,0 +1,14 @@
+feature,value,unit,source_note
+working_pair,NH3/H2O,,Said et al. 2016
+cycle_type,continuous pumped,,Said et al. 2016
+solution_pump,diaphragm,,Said et al. 2016
+rectification,explicit dephlegmator and packed rectification zone,,Said et al. 2016
+rectification_packing,stainless steel,,Said et al. 2016
+solar_collectors,14,collectors,CPC-18 evacuated tubular
+collector_area,42,m2,Said et al. 2016
+maximum_heating_power,20,kW,at 140 C
+ice_storage,0.41,m3,Said et al. 2016
+cold_water_storage,0.41,m3,Said et al. 2016
+cold_storage_per_tank,40,kWh,Said et al. 2016
+main_hall_max_load,10,kW,Said et al. 2016
+data_acquisition_interval,30,s,Said et al. 2016

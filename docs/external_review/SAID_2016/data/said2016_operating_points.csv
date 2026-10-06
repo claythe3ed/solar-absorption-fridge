@@ -1,0 +1,6 @@
+id,date,t_gen_in_C,t_cond_abs_in_C,t_evap_out_C,cooling_kW,cop,source
+SP-01,2014-02-09,114,23,-2,10.1,0.69,Said et al. 2016 Table 1
+SP-02,2014-02-10,140,45,-4,4.5,0.42,Said et al. 2016 Table 1
+SP-03,2014-02-10,121,30,-5,4.8,0.46,Said et al. 2016 Table 1
+SP-04,2014-02-11,129,25,-7,4.8,0.30,Said et al. 2016 Table 1
+SUMMARY,2014-02,115,23,-2,10.5,0.71,Said et al. 2016 summary text
