@@ -1,0 +1,33 @@
+{
+  "acquired_utc": "2026-10-03T10:30:06.698060+00:00",
+  "sources": {
+    "ocha_boundaries": {
+      "url": "https://data.humdata.org/dataset/a66a4b6c-92de-4507-9546-aa1900474180/resource/018af991-4aa7-4043-a0d5-e429a55851fb/download/sdn_admin_boundaries.geojson.zip",
+      "dataset": "OCHA/HDX Sudan COD-AB v03; resource updated 2026-01-26",
+      "license": "CC BY-IGO",
+      "file": "data/raw/sudan/geography/ocha_cod_ab_sdn_geojson_2026.zip",
+      "sha256": "75330d4e12e53f966df0e5683e04f0919e9964952fbbf827f3729038e603c95e"
+    },
+    "ocha_settlements": {
+      "url": "https://data.humdata.org/dataset/1862de60-eb45-4373-ad8a-efb2facc44f5/resource/b068b383-34c9-43b2-9b32-213509f78e34/download/sudan_settlement_26july20.zip",
+      "dataset": "OCHA/HDX Sudan: Settlements; layer date 2020-07-26",
+      "license": "CC BY",
+      "file": "data/raw/sudan/geography/ocha_sudan_settlements_2020.zip",
+      "sha256": "3799ad439abc09a2a26668475d9826c61b0528f3bffa470e256fa32a24fd400b"
+    },
+    "hotosm_places": {
+      "url": "https://production-raw-data-api.s3.amazonaws.com/ISO3/SDN/populated_places/hotosm_sdn_populated_places_osm_geojson.zip",
+      "dataset": "HOTOSM populated places from OpenStreetMap; snapshot 2026-09-06",
+      "license": "ODC-ODbL",
+      "file": "data/raw/sudan/geography/hotosm_sudan_populated_places_2026_geojson.zip",
+      "sha256": "dfed550283539f93163a69ee655130f907e5db7ce3bd4e06f2e4415a1f55859b"
+    },
+    "hotosm_metadata": {
+      "url": "https://production-raw-data-api.s3.amazonaws.com/ISO3/SDN/populated_places/hotosm_sdn_populated_places_osm_metadata.json",
+      "dataset": "HOTOSM source snapshot metadata; 2026-09-06",
+      "license": "ODC-ODbL",
+      "file": "data/raw/sudan/geography/hotosm_sudan_populated_places_2026_metadata.json",
+      "sha256": "62d95a2edcc22c348735cf6b5008cb77c2b59e41fab6c7a37c6bd9c19650cd62"
+    }
+  }
+}

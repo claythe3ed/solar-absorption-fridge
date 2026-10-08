@@ -1,9 +1,9 @@
 # Solar Absorption Fridge
 
-![Solar Absorption Fridge — Engineering Diagram](docs/images/solar-fridge-diagram.png)
+![Illustrative solar absorption refrigerator system overview; preliminary, not for fabrication](docs/images/solar-fridge-diagram.png)
 
 Solar-powered NH₃-H₂O absorption refrigeration system for off-grid use.
-Designed for household deployment in Sudan and similar climates.
+Research-stage study for potential off-grid use in Sudan and similar climates.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python 3.12+](https://img.shields.io/badge/python-3.12+-blue.svg)](https://www.python.org/downloads/)
@@ -38,7 +38,7 @@ worldwide. See the [engineering validation call](docs/ENGINEERING_VALIDATION_CAL
 | Generator temperature | 135 °C |
 | Operating pressures | 2.36 bar (low) / 15.55 bar (high) |
 
-Full design in [`docs/DESIGN_SUMMARY.md`](docs/DESIGN_SUMMARY.md).
+Current design targets are summarized in [`docs/DESIGN_SUMMARY.md`](docs/DESIGN_SUMMARY.md). They are not an approved build specification. See the [draft Design Basis](docs/DESIGN_BASIS.md), [Decision Register](docs/DECISION_REGISTER.md), and [Build Release Gate](docs/BUILD_RELEASE_GATE.md).
 
 ---
 
@@ -60,8 +60,11 @@ CoolProp's scope is limited to reference-grade formulations (Helmholtz
 free energy, IAPWS-2001). The Gibbs-excess class of models — including
 Ziegler-Trepp — is explicitly out of scope.
 
-**This project provides a validated engineering alternative** for users
-who need ammonia-water mixture properties without a REFPROP license.
+This repository contains a research implementation of an alternative
+ammonia-water property model. Its mixture predictions have not been
+independently validated against a reference-grade model or experimental VLE
+data in the checked-in evidence. It is not, by itself, a validated engineering
+design method.
 
 ---
 
@@ -71,26 +74,29 @@ who need ammonia-water mixture properties without a REFPROP license.
 |---|---|---|---|
 | **CoolProp** (pure components) | Works today | NIST-traceable, < 0.1% | MIT |
 | **teqp** `AmmoniaWaterTillnerRoth` | Works on x86_64 | IAPWS-2001 reference | MIT |
-| **Ziegler-Trepp** (this repo) | Validated | ±0.63 °C vs CoolProp | MIT |
+| **Ziegler-Trepp** (this repo) | Research implementation | Pure-fluid comparison only; mixture validation open | MIT |
 
 ---
 
-## Validation Results
+## Recorded Comparison Evidence
 
-The Ziegler-Trepp implementation was validated against CoolProp for pure
-components and published literature for the mixture.
+The recorded 12-state comparison is for pure ammonia and water against
+CoolProp. It does not validate ammonia-water mixture VLE or the refrigerator
+design. The saved teqp mixture-VLE attempt failed to converge at all 12 tested
+points; an independent experimental mixture-data comparison remains open.
 
 | Test | Computed | Reference | Error |
 |---|---|---|---|
 | Pure NH₃ at 15.5 bar | 39.70 °C | 40.0 °C (CoolProp) | 0.30 °C |
 | Pure NH₃ at 10 bar | 24.65 °C | 24.9 °C (CoolProp) | 0.25 °C |
 | Pure H₂O at 1 bar | 98.98 °C | 99.6 °C (NIST) | 0.62 °C |
-| y_NH₃ at 15.5 bar, x=0.25 | 0.9059 | 0.90–0.92 (Herold) | in band |
-| Cycle COP (T_gen = 135 °C) | 0.424 | 0.4–0.6 (published) | within band |
-| Energy balance closure | 0.00 W | 0.00 W (ideal) | exact |
+| y_NH₃ at 15.5 bar, x=0.25 | 0.9059 | 0.90–0.92 (Herold) | Single reported spot check; source conditions need review |
+| Cycle COP (T_gen = 135 °C) | 0.424 | 0.4–0.6 (published range) | Model output; not experimental validation |
+| Energy balance closure | 0.00 W | 0.00 W (ideal) | Internal accounting check only |
 
-**Full numerical comparison against teqp (IAPWS-2001):** 12 points,
-P = 1 to 25 bar, max error **0.63 °C**, mean error **0.32 °C**.
+**Pure-fluid comparison:** 12 states, P = 1 to 25 bar, maximum absolute
+temperature difference **0.63 °C**, mean absolute difference **0.32 °C**.
+This is a limited correlation comparison, not validation of the mixture model.
 
 See [`src/thermo/comparison/teqp_vs_zt.py`](src/thermo/comparison/teqp_vs_zt.py)
 and [`results/logs/`](results/logs/) for details.
@@ -104,7 +110,7 @@ Five independent approaches were tested. Full summary:
 | Approach | Status | Notes |
 |---|---|---|
 | **CoolProp** (pure components) | ✅ Works | NIST-traceable, < 0.1% error |
-| **Ziegler-Trepp** (this repo) | ✅ Validated | Max 0.63 °C error vs CoolProp |
+| **Ziegler-Trepp** (this repo) | ⚠️ Partial comparison | Pure-fluid states only; mixture validation unresolved |
 | **teqp** `AmmoniaWaterTillnerRoth` | ✅ Loads | API functional, `get_Ar01()` verified |
 | **teqp** VLE solvers | ⚠️ Unstable | 56 grid attempts, 0 physical results |
 | **CoolProp** HEOS mixture | ❌ No data | No binary pair for NH₃-H₂O |
@@ -118,12 +124,34 @@ Five independent approaches were tested. Full summary:
   API. However, the mixture VLE solvers (`mixture_VLE_px`, `mix_VLE_Tp`)
   fail to converge for NH₃-H₂O with physically plausible initial guesses.
   Documented at [teqp Issue #193](https://github.com/usnistgov/teqp/issues/193).
-- **Ziegler-Trepp** (this repository) is the validated engineering
-  alternative. It is a Gibbs-excess model, not a Helmholtz reference
-  formulation, which is why it is not suitable for direct inclusion in
-  CoolProp.
+- The repository's Ziegler-Trepp code is a Gibbs-excess research
+  implementation, not a Helmholtz reference formulation. The checked-in
+  evidence does not establish mixture VLE accuracy or validate the system
+  design; it is not suitable for direct inclusion in CoolProp.
 
 ---
+
+## Production CAD stack
+
+This repo now includes an optional production-CAD path for fabrication-driven design generation using open-source tooling.
+
+Recommended stack:
+- FreeCAD / TechDraw for final drawing export and workshop-ready sheet generation
+- CadQuery for script-based parametric geometry generation
+- Build123D as an optional alternative Python-first modeling path
+
+The production model entry point is in [`src/geometry/production_cad.py`](src/geometry/production_cad.py), and the design notes are in [`docs/PRODUCTION_CAD_INTEGRATION.md`](docs/PRODUCTION_CAD_INTEGRATION.md).
+
+```bash
+source venv/bin/activate
+pip install -r requirements.txt
+python -m src.geometry.production_cad
+```
+
+This exports the V-101 model to `cad/production/V-101_generator.step` and
+`cad/production/V-101_generator.stl`. The geometry is a CAD starting point, not
+a fabrication release or pressure-vessel design approval; see
+[`docs/PRODUCTION_CAD_INTEGRATION.md`](docs/PRODUCTION_CAD_INTEGRATION.md).
 
 ## Quick Start
 
@@ -186,8 +214,8 @@ Thermodynamic Model
 
 · Pure components (NH₃, H₂O): CoolProp 8.0 (NIST-accurate)
 · Mixture (NH₃-H₂O): Ziegler-Trepp (1984) Gibbs-excess model
-  · Coefficients E1–E16 cross-validated between two independent
-    sources (Kherris 2013, Sadhukhan et al.)
+  · Coefficient values compared between two sources (Kherris 2013,
+    Sadhukhan et al.); this is source cross-checking, not prediction validation
   · Bubble and dew points: Patek & Klomfar (1995)
 · Reference validation: teqp 0.23.2 (AmmoniaWaterTillnerRoth)
   · 12 pure-component points, max error 0.63 °C

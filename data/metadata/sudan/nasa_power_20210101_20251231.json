@@ -1,0 +1,1673 @@
+{
+  "source": "NASA POWER Daily API, regional spatial option",
+  "api": "https://power.larc.nasa.gov/api/temporal/daily/regional",
+  "start": "20210101",
+  "end": "20251231",
+  "time_standard": "UTC",
+  "community": "RE",
+  "parameters": [
+    "ALLSKY_SFC_SW_DWN",
+    "ALLSKY_SFC_SW_DNI",
+    "ALLSKY_SFC_SW_DIFF",
+    "T2M",
+    "T2M_MAX",
+    "T2M_MIN",
+    "RH2M",
+    "WS10M",
+    "PRECTOTCORR"
+  ],
+  "tiles": [
+    {
+      "name": "southwest",
+      "lat_min": 8.5,
+      "lat_max": 18.5,
+      "lon_min": 21.5,
+      "lon_max": 31.5
+    },
+    {
+      "name": "southeast",
+      "lat_min": 8.5,
+      "lat_max": 18.5,
+      "lon_min": 31.5,
+      "lon_max": 38.75
+    },
+    {
+      "name": "northwest",
+      "lat_min": 18.5,
+      "lat_max": 23.5,
+      "lon_min": 21.5,
+      "lon_max": 31.5
+    },
+    {
+      "name": "northeast",
+      "lat_min": 18.5,
+      "lat_max": 23.5,
+      "lon_min": 31.5,
+      "lon_max": 38.75
+    }
+  ],
+  "note": "Bounding-box grid includes non-Sudan points; clip only in a logged downstream step.",
+  "responses": [
+    {
+      "tile": "southwest",
+      "parameter": "ALLSKY_SFC_SW_DWN",
+      "start": "20210101",
+      "end": "20211231",
+      "feature_count": 121,
+      "file": "data/raw/sudan/weather/nasa_power/southwest_ALLSKY_SFC_SW_DWN_20210101_20211231.json.gz",
+      "sha256": "c96b4d395c83e06a62fa2f924438e27d4ccbdc11b89f4b71ce1dfe37664d214a"
+    },
+    {
+      "tile": "southwest",
+      "parameter": "ALLSKY_SFC_SW_DWN",
+      "start": "20220101",
+      "end": "20221231",
+      "feature_count": 121,
+      "file": "data/raw/sudan/weather/nasa_power/southwest_ALLSKY_SFC_SW_DWN_20220101_20221231.json.gz",
+      "sha256": "bc236cdf55508585a7f17131a155f488d9e074c56b3b6521d855984ff9d93265"
+    },
+    {
+      "tile": "southwest",
+      "parameter": "ALLSKY_SFC_SW_DWN",
+      "start": "20230101",
+      "end": "20231231",
+      "feature_count": 121,
+      "file": "data/raw/sudan/weather/nasa_power/southwest_ALLSKY_SFC_SW_DWN_20230101_20231231.json.gz",
+      "sha256": "2248b376a8c7e92b1c74f9013a9747e9ba3a9b7db333c04155859fe9309446c6"
+    },
+    {
+      "tile": "southwest",
+      "parameter": "ALLSKY_SFC_SW_DWN",
+      "start": "20240101",
+      "end": "20241231",
+      "feature_count": 121,
+      "file": "data/raw/sudan/weather/nasa_power/southwest_ALLSKY_SFC_SW_DWN_20240101_20241231.json.gz",
+      "sha256": "76f46297dcbd66357ad6cb3e222eb131310871b3aa7da07e8d60a755d747be49"
+    },
+    {
+      "tile": "southwest",
+      "parameter": "ALLSKY_SFC_SW_DWN",
+      "start": "20250101",
+      "end": "20251231",
+      "feature_count": 121,
+      "file": "data/raw/sudan/weather/nasa_power/southwest_ALLSKY_SFC_SW_DWN_20250101_20251231.json.gz",
+      "sha256": "02760dc227de9d5cee43c7a4685039d8f59daed8037785935a235d85fee6c706"
+    },
+    {
+      "tile": "southwest",
+      "parameter": "ALLSKY_SFC_SW_DNI",
+      "start": "20210101",
+      "end": "20211231",
+      "feature_count": 121,
+      "file": "data/raw/sudan/weather/nasa_power/southwest_ALLSKY_SFC_SW_DNI_20210101_20211231.json.gz",
+      "sha256": "a28f058cf71731f9dd6ef29aa05a2c4d17bd94f2347a28c8a51d140597f38c81"
+    },
+    {
+      "tile": "southwest",
+      "parameter": "ALLSKY_SFC_SW_DNI",
+      "start": "20220101",
+      "end": "20221231",
+      "feature_count": 121,
+      "file": "data/raw/sudan/weather/nasa_power/southwest_ALLSKY_SFC_SW_DNI_20220101_20221231.json.gz",
+      "sha256": "0dc8858ba83b3b8fce0661ab59aae8498939e1508dbcc55732d19ca19ca181fa"
+    },
+    {
+      "tile": "southwest",
+      "parameter": "ALLSKY_SFC_SW_DNI",
+      "start": "20230101",
+      "end": "20231231",
+      "feature_count": 121,
+      "file": "data/raw/sudan/weather/nasa_power/southwest_ALLSKY_SFC_SW_DNI_20230101_20231231.json.gz",
+      "sha256": "d2a7965a33a2acc5ad23fc616bf2357aace0684732367a94f1767fc0b92fd813"
+    },
+    {
+      "tile": "southwest",
+      "parameter": "ALLSKY_SFC_SW_DNI",
+      "start": "20240101",
+      "end": "20241231",
+      "feature_count": 121,
+      "file": "data/raw/sudan/weather/nasa_power/southwest_ALLSKY_SFC_SW_DNI_20240101_20241231.json.gz",
+      "sha256": "f14429681d30c99efda3c6eb3bf0c83818a6bb875f5967d0b2e5e715a29b8b81"
+    },
+    {
+      "tile": "southwest",
+      "parameter": "ALLSKY_SFC_SW_DNI",
+      "start": "20250101",
+      "end": "20251231",
+      "feature_count": 121,
+      "file": "data/raw/sudan/weather/nasa_power/southwest_ALLSKY_SFC_SW_DNI_20250101_20251231.json.gz",
+      "sha256": "c8077601e480705c1ce5c2ad46a4121de9879c6ac9fb5269451803a1bcfdb3e0"
+    },
+    {
+      "tile": "southwest",
+      "parameter": "ALLSKY_SFC_SW_DIFF",
+      "start": "20210101",
+      "end": "20211231",
+      "feature_count": 121,
+      "file": "data/raw/sudan/weather/nasa_power/southwest_ALLSKY_SFC_SW_DIFF_20210101_20211231.json.gz",
+      "sha256": "eaf774890faf8700747b1fb20041ec5eababf688dd58acf3e69d3cff7b079064"
+    },
+    {
+      "tile": "southwest",
+      "parameter": "ALLSKY_SFC_SW_DIFF",
+      "start": "20220101",
+      "end": "20221231",
+      "feature_count": 121,
+      "file": "data/raw/sudan/weather/nasa_power/southwest_ALLSKY_SFC_SW_DIFF_20220101_20221231.json.gz",
+      "sha256": "d2b1e5dc8f41a672418ce6526c5ef526e73249d4dc2d090297a0e198478532f6"
+    },
+    {
+      "tile": "southwest",
+      "parameter": "ALLSKY_SFC_SW_DIFF",
+      "start": "20230101",
+      "end": "20231231",
+      "feature_count": 121,
+      "file": "data/raw/sudan/weather/nasa_power/southwest_ALLSKY_SFC_SW_DIFF_20230101_20231231.json.gz",
+      "sha256": "8f1b26b96610f4f29743093d24330560e271464c85a156346a58a13bebfc2aac"
+    },
+    {
+      "tile": "southwest",
+      "parameter": "ALLSKY_SFC_SW_DIFF",
+      "start": "20240101",
+      "end": "20241231",
+      "feature_count": 121,
+      "file": "data/raw/sudan/weather/nasa_power/southwest_ALLSKY_SFC_SW_DIFF_20240101_20241231.json.gz",
+      "sha256": "dacac0cdeec839026de7cf566177e2c81be2328b9dca642485d5dff11aa4892f"
+    },
+    {
+      "tile": "southwest",
+      "parameter": "ALLSKY_SFC_SW_DIFF",
+      "start": "20250101",
+      "end": "20251231",
+      "feature_count": 121,
+      "file": "data/raw/sudan/weather/nasa_power/southwest_ALLSKY_SFC_SW_DIFF_20250101_20251231.json.gz",
+      "sha256": "545e31ac6926113fbb80891bb25484c676ecc035efffea3eec7716aa6256aee0"
+    },
+    {
+      "tile": "southwest",
+      "parameter": "T2M",
+      "start": "20210101",
+      "end": "20211231",
+      "feature_count": 336,
+      "file": "data/raw/sudan/weather/nasa_power/southwest_T2M_20210101_20211231.json.gz",
+      "sha256": "d572c12b28194715b4f7c54621d764c49df1fc06ed6e179e67dda2e5d73bf9a8"
+    },
+    {
+      "tile": "southwest",
+      "parameter": "T2M",
+      "start": "20220101",
+      "end": "20221231",
+      "feature_count": 336,
+      "file": "data/raw/sudan/weather/nasa_power/southwest_T2M_20220101_20221231.json.gz",
+      "sha256": "daf139daefb629d49270b6109f2b18dac565493d8495ffaec25dd8d80cd93e63"
+    },
+    {
+      "tile": "southwest",
+      "parameter": "T2M",
+      "start": "20230101",
+      "end": "20231231",
+      "feature_count": 336,
+      "file": "data/raw/sudan/weather/nasa_power/southwest_T2M_20230101_20231231.json.gz",
+      "sha256": "f5442d7e32c5627707f5e4cab293b182dfbf381919490c6e90b8fc597563d2d2"
+    },
+    {
+      "tile": "southwest",
+      "parameter": "T2M",
+      "start": "20240101",
+      "end": "20241231",
+      "feature_count": 336,
+      "file": "data/raw/sudan/weather/nasa_power/southwest_T2M_20240101_20241231.json.gz",
+      "sha256": "9fb44653ce1c63614989733c8d6a3165b41901b86cd40ecce2f3f825349107ba"
+    },
+    {
+      "tile": "southwest",
+      "parameter": "T2M",
+      "start": "20250101",
+      "end": "20251231",
+      "feature_count": 336,
+      "file": "data/raw/sudan/weather/nasa_power/southwest_T2M_20250101_20251231.json.gz",
+      "sha256": "846c228472cd4cc5d1c911319426463d5ca2f2ffaadb56e3d9dfb4e91866283a"
+    },
+    {
+      "tile": "southwest",
+      "parameter": "T2M_MAX",
+      "start": "20210101",
+      "end": "20211231",
+      "feature_count": 336,
+      "file": "data/raw/sudan/weather/nasa_power/southwest_T2M_MAX_20210101_20211231.json.gz",
+      "sha256": "4957dd0e24aac355c2f6682e31a381873d803398d95e86078172206c8720bd82"
+    },
+    {
+      "tile": "southwest",
+      "parameter": "T2M_MAX",
+      "start": "20220101",
+      "end": "20221231",
+      "feature_count": 336,
+      "file": "data/raw/sudan/weather/nasa_power/southwest_T2M_MAX_20220101_20221231.json.gz",
+      "sha256": "15c4fb34fa82472cd4d85ef3f292fa1da4a84a3f205c10e9884b96dda0977053"
+    },
+    {
+      "tile": "southwest",
+      "parameter": "T2M_MAX",
+      "start": "20230101",
+      "end": "20231231",
+      "feature_count": 336,
+      "file": "data/raw/sudan/weather/nasa_power/southwest_T2M_MAX_20230101_20231231.json.gz",
+      "sha256": "19cf42aa03f56a7e5ee30df9e43b727e47385e4a393d4f08e4f96521e9e3d63f"
+    },
+    {
+      "tile": "southwest",
+      "parameter": "T2M_MAX",
+      "start": "20240101",
+      "end": "20241231",
+      "feature_count": 336,
+      "file": "data/raw/sudan/weather/nasa_power/southwest_T2M_MAX_20240101_20241231.json.gz",
+      "sha256": "584f24baf1051f97a3a009c92d46c9c7ef77ff699fe3a6ed0f9ab757aa3441cb"
+    },
+    {
+      "tile": "southwest",
+      "parameter": "T2M_MAX",
+      "start": "20250101",
+      "end": "20251231",
+      "feature_count": 336,
+      "file": "data/raw/sudan/weather/nasa_power/southwest_T2M_MAX_20250101_20251231.json.gz",
+      "sha256": "9dfdf2444763007d2e11d95abd211795d0258fee13317eaf67f63c910c0735f0"
+    },
+    {
+      "tile": "southwest",
+      "parameter": "T2M_MIN",
+      "start": "20210101",
+      "end": "20211231",
+      "feature_count": 336,
+      "file": "data/raw/sudan/weather/nasa_power/southwest_T2M_MIN_20210101_20211231.json.gz",
+      "sha256": "4eaa0fd4b5dbf54def07ee265b701b714833558f67ab295f1540b1551097b288"
+    },
+    {
+      "tile": "southwest",
+      "parameter": "T2M_MIN",
+      "start": "20220101",
+      "end": "20221231",
+      "feature_count": 336,
+      "file": "data/raw/sudan/weather/nasa_power/southwest_T2M_MIN_20220101_20221231.json.gz",
+      "sha256": "813f3217bee49c50b5506967d3be60f537b299f07784c3978df367d896512130"
+    },
+    {
+      "tile": "southwest",
+      "parameter": "T2M_MIN",
+      "start": "20230101",
+      "end": "20231231",
+      "feature_count": 336,
+      "file": "data/raw/sudan/weather/nasa_power/southwest_T2M_MIN_20230101_20231231.json.gz",
+      "sha256": "5a672e85666245850ef7086e6aacb14975f3cb9f9269e3a8b04d80aebf6ab2fe"
+    },
+    {
+      "tile": "southwest",
+      "parameter": "T2M_MIN",
+      "start": "20240101",
+      "end": "20241231",
+      "feature_count": 336,
+      "file": "data/raw/sudan/weather/nasa_power/southwest_T2M_MIN_20240101_20241231.json.gz",
+      "sha256": "5de965ed4152c99c05fc8cb226995817dc242df48af332ad6b69b1db68dea13c"
+    },
+    {
+      "tile": "southwest",
+      "parameter": "T2M_MIN",
+      "start": "20250101",
+      "end": "20251231",
+      "feature_count": 336,
+      "file": "data/raw/sudan/weather/nasa_power/southwest_T2M_MIN_20250101_20251231.json.gz",
+      "sha256": "e3a736f09ac053fb30a4027fd0d69291722d0de3a6c28c52beef7ef66380ba61"
+    },
+    {
+      "tile": "southwest",
+      "parameter": "RH2M",
+      "start": "20210101",
+      "end": "20211231",
+      "feature_count": 336,
+      "file": "data/raw/sudan/weather/nasa_power/southwest_RH2M_20210101_20211231.json.gz",
+      "sha256": "77e4a385ab0723a1bce2ef18d1a37de2b548f9a762743f934c6642b6a618e6f1"
+    },
+    {
+      "tile": "southwest",
+      "parameter": "RH2M",
+      "start": "20220101",
+      "end": "20221231",
+      "feature_count": 336,
+      "file": "data/raw/sudan/weather/nasa_power/southwest_RH2M_20220101_20221231.json.gz",
+      "sha256": "334f3ca72d33993869c834441d886a2db1d18126bff02efc05c8f1f944102204"
+    },
+    {
+      "tile": "southwest",
+      "parameter": "RH2M",
+      "start": "20230101",
+      "end": "20231231",
+      "feature_count": 336,
+      "file": "data/raw/sudan/weather/nasa_power/southwest_RH2M_20230101_20231231.json.gz",
+      "sha256": "bb4cc1d8f4cec4dcbabeaaaac8c3b67305ec4eec574c7ddc161a6753486cfda1"
+    },
+    {
+      "tile": "southwest",
+      "parameter": "RH2M",
+      "start": "20240101",
+      "end": "20241231",
+      "feature_count": 336,
+      "file": "data/raw/sudan/weather/nasa_power/southwest_RH2M_20240101_20241231.json.gz",
+      "sha256": "a8eeeb92e52fe8b6ae56d3332614c4c905bba92b652c7b796c0cb7e23a417dde"
+    },
+    {
+      "tile": "southwest",
+      "parameter": "RH2M",
+      "start": "20250101",
+      "end": "20251231",
+      "feature_count": 336,
+      "file": "data/raw/sudan/weather/nasa_power/southwest_RH2M_20250101_20251231.json.gz",
+      "sha256": "055732af3c5026e25244a299d57a5d4529035be933a5b1bdb47a9e82a2f485c9"
+    },
+    {
+      "tile": "southwest",
+      "parameter": "WS10M",
+      "start": "20210101",
+      "end": "20211231",
+      "feature_count": 336,
+      "file": "data/raw/sudan/weather/nasa_power/southwest_WS10M_20210101_20211231.json.gz",
+      "sha256": "d89955a9390c30a5dec2ee54be38b3f6fa0eab44aa93962b29012fcc56712a36"
+    },
+    {
+      "tile": "southwest",
+      "parameter": "WS10M",
+      "start": "20220101",
+      "end": "20221231",
+      "feature_count": 336,
+      "file": "data/raw/sudan/weather/nasa_power/southwest_WS10M_20220101_20221231.json.gz",
+      "sha256": "d960424f0623206300d0f64ff060697e1e9d38e324132386172af8959f988f11"
+    },
+    {
+      "tile": "southwest",
+      "parameter": "WS10M",
+      "start": "20230101",
+      "end": "20231231",
+      "feature_count": 336,
+      "file": "data/raw/sudan/weather/nasa_power/southwest_WS10M_20230101_20231231.json.gz",
+      "sha256": "c5cb25610dbccafe9ea45f0af84397fc7643b074fe7bdd4fcf51f936eedce732"
+    },
+    {
+      "tile": "southwest",
+      "parameter": "WS10M",
+      "start": "20240101",
+      "end": "20241231",
+      "feature_count": 336,
+      "file": "data/raw/sudan/weather/nasa_power/southwest_WS10M_20240101_20241231.json.gz",
+      "sha256": "a702056d355206807d26a65d8953ebff61dd1ba8be62fafef87a4bfc72e3dfc1"
+    },
+    {
+      "tile": "southwest",
+      "parameter": "WS10M",
+      "start": "20250101",
+      "end": "20251231",
+      "feature_count": 336,
+      "file": "data/raw/sudan/weather/nasa_power/southwest_WS10M_20250101_20251231.json.gz",
+      "sha256": "2d07767fa1cd51372a4d451583650b8ef38ae0db67d5c2db923490672c13bae4"
+    },
+    {
+      "tile": "southwest",
+      "parameter": "PRECTOTCORR",
+      "start": "20210101",
+      "end": "20211231",
+      "feature_count": 336,
+      "file": "data/raw/sudan/weather/nasa_power/southwest_PRECTOTCORR_20210101_20211231.json.gz",
+      "sha256": "a1fbc7d2e6294e0ba595d479a0eddfac2a56612f39d7291e5f024e584f5077f1"
+    },
+    {
+      "tile": "southwest",
+      "parameter": "PRECTOTCORR",
+      "start": "20220101",
+      "end": "20221231",
+      "feature_count": 336,
+      "file": "data/raw/sudan/weather/nasa_power/southwest_PRECTOTCORR_20220101_20221231.json.gz",
+      "sha256": "59190e23002b1d41b0e3271ab3c30603791ea5802e914a6d263e57124b7a812e"
+    },
+    {
+      "tile": "southwest",
+      "parameter": "PRECTOTCORR",
+      "start": "20230101",
+      "end": "20231231",
+      "feature_count": 336,
+      "file": "data/raw/sudan/weather/nasa_power/southwest_PRECTOTCORR_20230101_20231231.json.gz",
+      "sha256": "ac16657faa98f819eebdce119ba9c007a5cb37d29424f1e343be306fefa91cb6"
+    },
+    {
+      "tile": "southwest",
+      "parameter": "PRECTOTCORR",
+      "start": "20240101",
+      "end": "20241231",
+      "feature_count": 336,
+      "file": "data/raw/sudan/weather/nasa_power/southwest_PRECTOTCORR_20240101_20241231.json.gz",
+      "sha256": "c9e00564c42dfb22a63692308afd6a4778e51b1443afedf873f5847d43cc1f8e"
+    },
+    {
+      "tile": "southwest",
+      "parameter": "PRECTOTCORR",
+      "start": "20250101",
+      "end": "20251231",
+      "feature_count": 336,
+      "file": "data/raw/sudan/weather/nasa_power/southwest_PRECTOTCORR_20250101_20251231.json.gz",
+      "sha256": "5aab709b31aa2ecc4863a74b9c91a76f3682f15ead10a63c95011b4f456d533f"
+    },
+    {
+      "tile": "southeast",
+      "parameter": "ALLSKY_SFC_SW_DWN",
+      "start": "20210101",
+      "end": "20211231",
+      "feature_count": 88,
+      "file": "data/raw/sudan/weather/nasa_power/southeast_ALLSKY_SFC_SW_DWN_20210101_20211231.json.gz",
+      "sha256": "ad393a79f468b22092b0f4e42bdfe1d782b4f29340336f2d5a3d11c0f2d41c0f"
+    },
+    {
+      "tile": "southeast",
+      "parameter": "ALLSKY_SFC_SW_DWN",
+      "start": "20220101",
+      "end": "20221231",
+      "feature_count": 88,
+      "file": "data/raw/sudan/weather/nasa_power/southeast_ALLSKY_SFC_SW_DWN_20220101_20221231.json.gz",
+      "sha256": "10973bfadb7f8ba570928448fa8258c9dd1f4283565e5798a2976cdebdb5d51d"
+    },
+    {
+      "tile": "southeast",
+      "parameter": "ALLSKY_SFC_SW_DWN",
+      "start": "20230101",
+      "end": "20231231",
+      "feature_count": 88,
+      "file": "data/raw/sudan/weather/nasa_power/southeast_ALLSKY_SFC_SW_DWN_20230101_20231231.json.gz",
+      "sha256": "71aba3dd0a8adaf12c0b88ac2238a9964b3cc946dca056c98653ecc04c448f62"
+    },
+    {
+      "tile": "southeast",
+      "parameter": "ALLSKY_SFC_SW_DWN",
+      "start": "20240101",
+      "end": "20241231",
+      "feature_count": 88,
+      "file": "data/raw/sudan/weather/nasa_power/southeast_ALLSKY_SFC_SW_DWN_20240101_20241231.json.gz",
+      "sha256": "f1962ff8d449bfe94883d48949022687c8e0c89f1a52f7df4126871c563a59d8"
+    },
+    {
+      "tile": "southeast",
+      "parameter": "ALLSKY_SFC_SW_DWN",
+      "start": "20250101",
+      "end": "20251231",
+      "feature_count": 88,
+      "file": "data/raw/sudan/weather/nasa_power/southeast_ALLSKY_SFC_SW_DWN_20250101_20251231.json.gz",
+      "sha256": "af4188e9e82e52dcdedcd952e845e4a2cc01e00ac843b58b2e6be28e2ce5f42f"
+    },
+    {
+      "tile": "southeast",
+      "parameter": "ALLSKY_SFC_SW_DNI",
+      "start": "20210101",
+      "end": "20211231",
+      "feature_count": 88,
+      "file": "data/raw/sudan/weather/nasa_power/southeast_ALLSKY_SFC_SW_DNI_20210101_20211231.json.gz",
+      "sha256": "76610d497c8942e78d6cdc98ebcdb5bab223c9c2646896c36fdeabe2cfe1d770"
+    },
+    {
+      "tile": "southeast",
+      "parameter": "ALLSKY_SFC_SW_DNI",
+      "start": "20220101",
+      "end": "20221231",
+      "feature_count": 88,
+      "file": "data/raw/sudan/weather/nasa_power/southeast_ALLSKY_SFC_SW_DNI_20220101_20221231.json.gz",
+      "sha256": "59cdb8f25d5c8a5e02313440c0ec3cad6827aa48fa68c4d2ffe79a496b3b7d33"
+    },
+    {
+      "tile": "southeast",
+      "parameter": "ALLSKY_SFC_SW_DNI",
+      "start": "20230101",
+      "end": "20231231",
+      "feature_count": 88,
+      "file": "data/raw/sudan/weather/nasa_power/southeast_ALLSKY_SFC_SW_DNI_20230101_20231231.json.gz",
+      "sha256": "32f427d6548b3935b9a846ca515ecad0a6b66d00121c3484139164dcb92950b4"
+    },
+    {
+      "tile": "southeast",
+      "parameter": "ALLSKY_SFC_SW_DNI",
+      "start": "20240101",
+      "end": "20241231",
+      "feature_count": 88,
+      "file": "data/raw/sudan/weather/nasa_power/southeast_ALLSKY_SFC_SW_DNI_20240101_20241231.json.gz",
+      "sha256": "a0b8ed13d7a51f66ae306e6c2ad37cd3adc3114c27ac246d5155712d81dce5a2"
+    },
+    {
+      "tile": "southeast",
+      "parameter": "ALLSKY_SFC_SW_DNI",
+      "start": "20250101",
+      "end": "20251231",
+      "feature_count": 88,
+      "file": "data/raw/sudan/weather/nasa_power/southeast_ALLSKY_SFC_SW_DNI_20250101_20251231.json.gz",
+      "sha256": "ac5ce2e401bd4678bcb04d57866619a42b2f3df97bf535882984b246a0ffd853"
+    },
+    {
+      "tile": "southeast",
+      "parameter": "ALLSKY_SFC_SW_DIFF",
+      "start": "20210101",
+      "end": "20211231",
+      "feature_count": 88,
+      "file": "data/raw/sudan/weather/nasa_power/southeast_ALLSKY_SFC_SW_DIFF_20210101_20211231.json.gz",
+      "sha256": "3ed86b985c4fb103b235887aa754bba3ec65b80cc4891a6797781c0e7298e32c"
+    },
+    {
+      "tile": "southeast",
+      "parameter": "ALLSKY_SFC_SW_DIFF",
+      "start": "20220101",
+      "end": "20221231",
+      "feature_count": 88,
+      "file": "data/raw/sudan/weather/nasa_power/southeast_ALLSKY_SFC_SW_DIFF_20220101_20221231.json.gz",
+      "sha256": "523a7c07741ac732a3cff89437bb7f10ac3364b709f88100cf93a828eb682b31"
+    },
+    {
+      "tile": "southeast",
+      "parameter": "ALLSKY_SFC_SW_DIFF",
+      "start": "20230101",
+      "end": "20231231",
+      "feature_count": 88,
+      "file": "data/raw/sudan/weather/nasa_power/southeast_ALLSKY_SFC_SW_DIFF_20230101_20231231.json.gz",
+      "sha256": "f8fce575e50ba9bdc5d9ae0638ee7b53a655851265a5022f8f528e326bd50096"
+    },
+    {
+      "tile": "southeast",
+      "parameter": "ALLSKY_SFC_SW_DIFF",
+      "start": "20240101",
+      "end": "20241231",
+      "feature_count": 88,
+      "file": "data/raw/sudan/weather/nasa_power/southeast_ALLSKY_SFC_SW_DIFF_20240101_20241231.json.gz",
+      "sha256": "33331bfbf34dcaa3455b6f1dacf689f0d823c59424022bd4629efb85c17bdfc9"
+    },
+    {
+      "tile": "southeast",
+      "parameter": "ALLSKY_SFC_SW_DIFF",
+      "start": "20250101",
+      "end": "20251231",
+      "feature_count": 88,
+      "file": "data/raw/sudan/weather/nasa_power/southeast_ALLSKY_SFC_SW_DIFF_20250101_20251231.json.gz",
+      "sha256": "c3deb93aa3e5191feb5e7137935d2e3c50c23df3af7cf75de927f895595e8eb6"
+    },
+    {
+      "tile": "southeast",
+      "parameter": "T2M",
+      "start": "20210101",
+      "end": "20211231",
+      "feature_count": 252,
+      "file": "data/raw/sudan/weather/nasa_power/southeast_T2M_20210101_20211231.json.gz",
+      "sha256": "f77432fdf42058a15735337f6897c1bbc1e404a820f93d76ae0eddc4a6952f0c"
+    },
+    {
+      "tile": "southeast",
+      "parameter": "T2M",
+      "start": "20220101",
+      "end": "20221231",
+      "feature_count": 252,
+      "file": "data/raw/sudan/weather/nasa_power/southeast_T2M_20220101_20221231.json.gz",
+      "sha256": "adbbf41f2af4198288cebe7fcd39eec8dd5555230a8a2780701ad78937dce440"
+    },
+    {
+      "tile": "southeast",
+      "parameter": "T2M",
+      "start": "20230101",
+      "end": "20231231",
+      "feature_count": 252,
+      "file": "data/raw/sudan/weather/nasa_power/southeast_T2M_20230101_20231231.json.gz",
+      "sha256": "2f921878a7acba01df766ce78d4dd0ba57e8ad914a18f61cd8db6381def4613f"
+    },
+    {
+      "tile": "southeast",
+      "parameter": "T2M",
+      "start": "20240101",
+      "end": "20241231",
+      "feature_count": 252,
+      "file": "data/raw/sudan/weather/nasa_power/southeast_T2M_20240101_20241231.json.gz",
+      "sha256": "4a1a1f088fafda22ab93e8f770c68b16c02f4592392cf03dc3b1af9d8e3fbd40"
+    },
+    {
+      "tile": "southeast",
+      "parameter": "T2M",
+      "start": "20250101",
+      "end": "20251231",
+      "feature_count": 252,
+      "file": "data/raw/sudan/weather/nasa_power/southeast_T2M_20250101_20251231.json.gz",
+      "sha256": "9bd814049c1cdfbfaae66467b2b9c3334c19b00fa0fc8016a25b07ae5908f420"
+    },
+    {
+      "tile": "southeast",
+      "parameter": "T2M_MAX",
+      "start": "20210101",
+      "end": "20211231",
+      "feature_count": 252,
+      "file": "data/raw/sudan/weather/nasa_power/southeast_T2M_MAX_20210101_20211231.json.gz",
+      "sha256": "77b44cef59ec98d0aaaba7d465fc2b475293c24c20453337e05731613a6adfee"
+    },
+    {
+      "tile": "southeast",
+      "parameter": "T2M_MAX",
+      "start": "20220101",
+      "end": "20221231",
+      "feature_count": 252,
+      "file": "data/raw/sudan/weather/nasa_power/southeast_T2M_MAX_20220101_20221231.json.gz",
+      "sha256": "a8a3a2d84d5f7f9565df05b9ca5479c9b3875942624082c991fdc853df006e2e"
+    },
+    {
+      "tile": "southeast",
+      "parameter": "T2M_MAX",
+      "start": "20230101",
+      "end": "20231231",
+      "feature_count": 252,
+      "file": "data/raw/sudan/weather/nasa_power/southeast_T2M_MAX_20230101_20231231.json.gz",
+      "sha256": "0e63d196c52a72e386fda9d3b9efa05db58c92d67c07551c2bc531679e429b33"
+    },
+    {
+      "tile": "southeast",
+      "parameter": "T2M_MAX",
+      "start": "20240101",
+      "end": "20241231",
+      "feature_count": 252,
+      "file": "data/raw/sudan/weather/nasa_power/southeast_T2M_MAX_20240101_20241231.json.gz",
+      "sha256": "a0b9844fdde2267547863f512e411410fbd7babee259000be5a9a4fc4538c3f0"
+    },
+    {
+      "tile": "southeast",
+      "parameter": "T2M_MAX",
+      "start": "20250101",
+      "end": "20251231",
+      "feature_count": 252,
+      "file": "data/raw/sudan/weather/nasa_power/southeast_T2M_MAX_20250101_20251231.json.gz",
+      "sha256": "3f5709e5d45b1405467e680d2ee003fb3bdad5537f9bb3dae72a1b466c93b07b"
+    },
+    {
+      "tile": "southeast",
+      "parameter": "T2M_MIN",
+      "start": "20210101",
+      "end": "20211231",
+      "feature_count": 252,
+      "file": "data/raw/sudan/weather/nasa_power/southeast_T2M_MIN_20210101_20211231.json.gz",
+      "sha256": "389b0655fc874a53ba0847e4f62dea9113392de14e282d5d1c36a9500783ee9d"
+    },
+    {
+      "tile": "southeast",
+      "parameter": "T2M_MIN",
+      "start": "20220101",
+      "end": "20221231",
+      "feature_count": 252,
+      "file": "data/raw/sudan/weather/nasa_power/southeast_T2M_MIN_20220101_20221231.json.gz",
+      "sha256": "24e31662989417f6414e1fd980c8eb6a973016a43d8f20e4bfff9c4935f70ce9"
+    },
+    {
+      "tile": "southeast",
+      "parameter": "T2M_MIN",
+      "start": "20230101",
+      "end": "20231231",
+      "feature_count": 252,
+      "file": "data/raw/sudan/weather/nasa_power/southeast_T2M_MIN_20230101_20231231.json.gz",
+      "sha256": "743a0b8f5004a8c7f5f156752ed34c1ba3cd68d00a293d52a5c2d41eaa761e3a"
+    },
+    {
+      "tile": "southeast",
+      "parameter": "T2M_MIN",
+      "start": "20240101",
+      "end": "20241231",
+      "feature_count": 252,
+      "file": "data/raw/sudan/weather/nasa_power/southeast_T2M_MIN_20240101_20241231.json.gz",
+      "sha256": "487949193182f16fe5a8a4b18249e653aaad0f1513fed6ac0ac9235b93271c35"
+    },
+    {
+      "tile": "southeast",
+      "parameter": "T2M_MIN",
+      "start": "20250101",
+      "end": "20251231",
+      "feature_count": 252,
+      "file": "data/raw/sudan/weather/nasa_power/southeast_T2M_MIN_20250101_20251231.json.gz",
+      "sha256": "0724aa229024aae40d23061b13f10d98c163540e680f10f27f9f3ca09554c922"
+    },
+    {
+      "tile": "southeast",
+      "parameter": "RH2M",
+      "start": "20210101",
+      "end": "20211231",
+      "feature_count": 252,
+      "file": "data/raw/sudan/weather/nasa_power/southeast_RH2M_20210101_20211231.json.gz",
+      "sha256": "b69fce5c2055587b0daa0f9680dc7a586d2f955e94a484c0efa4b79e89cf9c43"
+    },
+    {
+      "tile": "southeast",
+      "parameter": "RH2M",
+      "start": "20220101",
+      "end": "20221231",
+      "feature_count": 252,
+      "file": "data/raw/sudan/weather/nasa_power/southeast_RH2M_20220101_20221231.json.gz",
+      "sha256": "1cc0dc0afc8768ccfc5ca007c2db8fd658c4725827aeadf78cbbf058d706982a"
+    },
+    {
+      "tile": "southeast",
+      "parameter": "RH2M",
+      "start": "20230101",
+      "end": "20231231",
+      "feature_count": 252,
+      "file": "data/raw/sudan/weather/nasa_power/southeast_RH2M_20230101_20231231.json.gz",
+      "sha256": "5230217f820881fdea76cd1aa5e6d18df116e0e9ec2199c2bda8eb2f4bfe1022"
+    },
+    {
+      "tile": "southeast",
+      "parameter": "RH2M",
+      "start": "20240101",
+      "end": "20241231",
+      "feature_count": 252,
+      "file": "data/raw/sudan/weather/nasa_power/southeast_RH2M_20240101_20241231.json.gz",
+      "sha256": "46724b061d47c31d984971e268d1dbff164d9ee47af7e64fbf348d427b9da7ff"
+    },
+    {
+      "tile": "southeast",
+      "parameter": "RH2M",
+      "start": "20250101",
+      "end": "20251231",
+      "feature_count": 252,
+      "file": "data/raw/sudan/weather/nasa_power/southeast_RH2M_20250101_20251231.json.gz",
+      "sha256": "bc6298edb4a7b30853db2f1901e43b534143e99506c3a01cd0d540ddf75a69e0"
+    },
+    {
+      "tile": "southeast",
+      "parameter": "WS10M",
+      "start": "20210101",
+      "end": "20211231",
+      "feature_count": 252,
+      "file": "data/raw/sudan/weather/nasa_power/southeast_WS10M_20210101_20211231.json.gz",
+      "sha256": "d225888dc47efd2bac59c353a4aa339481489f24cff81459822c05b669b778f3"
+    },
+    {
+      "tile": "southeast",
+      "parameter": "WS10M",
+      "start": "20220101",
+      "end": "20221231",
+      "feature_count": 252,
+      "file": "data/raw/sudan/weather/nasa_power/southeast_WS10M_20220101_20221231.json.gz",
+      "sha256": "5160a6a51b4b69b1342b224192bb0bf87ec70058114fb192e5b70809d0e6d24b"
+    },
+    {
+      "tile": "southeast",
+      "parameter": "WS10M",
+      "start": "20230101",
+      "end": "20231231",
+      "feature_count": 252,
+      "file": "data/raw/sudan/weather/nasa_power/southeast_WS10M_20230101_20231231.json.gz",
+      "sha256": "f7a96b8607c9036844220e52bc508389c4a02e16488a8c3ba112c069e0e294df"
+    },
+    {
+      "tile": "southeast",
+      "parameter": "WS10M",
+      "start": "20240101",
+      "end": "20241231",
+      "feature_count": 252,
+      "file": "data/raw/sudan/weather/nasa_power/southeast_WS10M_20240101_20241231.json.gz",
+      "sha256": "f767a02daad296a8e59e48d942d77bb1a5e1a14a934ca7e399323bd1591853b7"
+    },
+    {
+      "tile": "southeast",
+      "parameter": "WS10M",
+      "start": "20250101",
+      "end": "20251231",
+      "feature_count": 252,
+      "file": "data/raw/sudan/weather/nasa_power/southeast_WS10M_20250101_20251231.json.gz",
+      "sha256": "04aff84bb726e5c5f74e0e70cf125eeb683f0774ab84cb5368297073451a0a5d"
+    },
+    {
+      "tile": "southeast",
+      "parameter": "PRECTOTCORR",
+      "start": "20210101",
+      "end": "20211231",
+      "feature_count": 252,
+      "file": "data/raw/sudan/weather/nasa_power/southeast_PRECTOTCORR_20210101_20211231.json.gz",
+      "sha256": "9a232bd9278db755898a93d3bd70685417e01edbc946412c7116fec3501668c9"
+    },
+    {
+      "tile": "southeast",
+      "parameter": "PRECTOTCORR",
+      "start": "20220101",
+      "end": "20221231",
+      "feature_count": 252,
+      "file": "data/raw/sudan/weather/nasa_power/southeast_PRECTOTCORR_20220101_20221231.json.gz",
+      "sha256": "e723fd2517025146a34001e58c80de5606e6eb6a25ca0ade34280dcb8d7aec8f"
+    },
+    {
+      "tile": "southeast",
+      "parameter": "PRECTOTCORR",
+      "start": "20230101",
+      "end": "20231231",
+      "feature_count": 252,
+      "file": "data/raw/sudan/weather/nasa_power/southeast_PRECTOTCORR_20230101_20231231.json.gz",
+      "sha256": "87def48c2f9ad742afc0d1cd91017d2782253cdb5c20b3da554e27e0e5d83ba0"
+    },
+    {
+      "tile": "southeast",
+      "parameter": "PRECTOTCORR",
+      "start": "20240101",
+      "end": "20241231",
+      "feature_count": 252,
+      "file": "data/raw/sudan/weather/nasa_power/southeast_PRECTOTCORR_20240101_20241231.json.gz",
+      "sha256": "8a5d00c4427ab50d2a02b1ddc216f8ff94f987773ba0a3d95b283af1c4b7743e"
+    },
+    {
+      "tile": "southeast",
+      "parameter": "PRECTOTCORR",
+      "start": "20250101",
+      "end": "20251231",
+      "feature_count": 252,
+      "file": "data/raw/sudan/weather/nasa_power/southeast_PRECTOTCORR_20250101_20251231.json.gz",
+      "sha256": "a5b757cbb4eb03f8c391c9a02c37f094e17d43da13a6615d1fdfaa9ba1a0143c"
+    },
+    {
+      "tile": "northwest",
+      "parameter": "ALLSKY_SFC_SW_DWN",
+      "start": "20210101",
+      "end": "20211231",
+      "feature_count": 66,
+      "file": "data/raw/sudan/weather/nasa_power/northwest_ALLSKY_SFC_SW_DWN_20210101_20211231.json.gz",
+      "sha256": "11a4c4d8ccd210262463e961899fa0c562c8580b229bf66aba334bcf24c51096"
+    },
+    {
+      "tile": "northwest",
+      "parameter": "ALLSKY_SFC_SW_DWN",
+      "start": "20220101",
+      "end": "20221231",
+      "feature_count": 66,
+      "file": "data/raw/sudan/weather/nasa_power/northwest_ALLSKY_SFC_SW_DWN_20220101_20221231.json.gz",
+      "sha256": "44b3969017b01e7fa715e77f82bdbd1beecb29babb91712166ebd9cf7a4edf2c"
+    },
+    {
+      "tile": "northwest",
+      "parameter": "ALLSKY_SFC_SW_DWN",
+      "start": "20230101",
+      "end": "20231231",
+      "feature_count": 66,
+      "file": "data/raw/sudan/weather/nasa_power/northwest_ALLSKY_SFC_SW_DWN_20230101_20231231.json.gz",
+      "sha256": "e4a18fb5d200375844bf00688062e60c571911a7818e7f9b232c0c407c748fd4"
+    },
+    {
+      "tile": "northwest",
+      "parameter": "ALLSKY_SFC_SW_DWN",
+      "start": "20240101",
+      "end": "20241231",
+      "feature_count": 66,
+      "file": "data/raw/sudan/weather/nasa_power/northwest_ALLSKY_SFC_SW_DWN_20240101_20241231.json.gz",
+      "sha256": "9dab063689f4c6f0580c95201306cb145c4fbfc028df06b0071de744de282d2b"
+    },
+    {
+      "tile": "northwest",
+      "parameter": "ALLSKY_SFC_SW_DWN",
+      "start": "20250101",
+      "end": "20251231",
+      "feature_count": 66,
+      "file": "data/raw/sudan/weather/nasa_power/northwest_ALLSKY_SFC_SW_DWN_20250101_20251231.json.gz",
+      "sha256": "531ae8518164a0d4537013f260564308217e3c6d37cdb1add435f03478829d16"
+    },
+    {
+      "tile": "northwest",
+      "parameter": "ALLSKY_SFC_SW_DNI",
+      "start": "20210101",
+      "end": "20211231",
+      "feature_count": 66,
+      "file": "data/raw/sudan/weather/nasa_power/northwest_ALLSKY_SFC_SW_DNI_20210101_20211231.json.gz",
+      "sha256": "89ab680d701c02a10244bedf21d361195cfadf3ffa1173796e614aaa9f120058"
+    },
+    {
+      "tile": "northwest",
+      "parameter": "ALLSKY_SFC_SW_DNI",
+      "start": "20220101",
+      "end": "20221231",
+      "feature_count": 66,
+      "file": "data/raw/sudan/weather/nasa_power/northwest_ALLSKY_SFC_SW_DNI_20220101_20221231.json.gz",
+      "sha256": "6e0587f128637cb86c448ac935fd6ec1f70582e779ec3dd65ea1dc2214db351d"
+    },
+    {
+      "tile": "northwest",
+      "parameter": "ALLSKY_SFC_SW_DNI",
+      "start": "20230101",
+      "end": "20231231",
+      "feature_count": 66,
+      "file": "data/raw/sudan/weather/nasa_power/northwest_ALLSKY_SFC_SW_DNI_20230101_20231231.json.gz",
+      "sha256": "3c297b64ea333549e28f459e34d4169ea6b09dfa4c5075c6151213f2f9581a8a"
+    },
+    {
+      "tile": "northwest",
+      "parameter": "ALLSKY_SFC_SW_DNI",
+      "start": "20240101",
+      "end": "20241231",
+      "feature_count": 66,
+      "file": "data/raw/sudan/weather/nasa_power/northwest_ALLSKY_SFC_SW_DNI_20240101_20241231.json.gz",
+      "sha256": "8b954b26db87a528ae3f227214d3ca1e47c313fe36ccc863c668a12547771e2c"
+    },
+    {
+      "tile": "northwest",
+      "parameter": "ALLSKY_SFC_SW_DNI",
+      "start": "20250101",
+      "end": "20251231",
+      "feature_count": 66,
+      "file": "data/raw/sudan/weather/nasa_power/northwest_ALLSKY_SFC_SW_DNI_20250101_20251231.json.gz",
+      "sha256": "8a03b59a621b7e68ae5c7d5c63b2ae50d7fe9245e5e49cfb35e8dce44a2b15bb"
+    },
+    {
+      "tile": "northwest",
+      "parameter": "ALLSKY_SFC_SW_DIFF",
+      "start": "20210101",
+      "end": "20211231",
+      "feature_count": 66,
+      "file": "data/raw/sudan/weather/nasa_power/northwest_ALLSKY_SFC_SW_DIFF_20210101_20211231.json.gz",
+      "sha256": "62e2809374ceef6fedcdc0ca0a63abc9add6e50dbccffe39fa679ac6415d22b1"
+    },
+    {
+      "tile": "northwest",
+      "parameter": "ALLSKY_SFC_SW_DIFF",
+      "start": "20220101",
+      "end": "20221231",
+      "feature_count": 66,
+      "file": "data/raw/sudan/weather/nasa_power/northwest_ALLSKY_SFC_SW_DIFF_20220101_20221231.json.gz",
+      "sha256": "c5efc85a353a5591166c602d834fb314ef62716091462b7c8ddb044a805844dc"
+    },
+    {
+      "tile": "northwest",
+      "parameter": "ALLSKY_SFC_SW_DIFF",
+      "start": "20230101",
+      "end": "20231231",
+      "feature_count": 66,
+      "file": "data/raw/sudan/weather/nasa_power/northwest_ALLSKY_SFC_SW_DIFF_20230101_20231231.json.gz",
+      "sha256": "47094e39fa935260dfa9f9a5172e5214a9cd3ed46bf8c68b1ee2cde2126819e8"
+    },
+    {
+      "tile": "northwest",
+      "parameter": "ALLSKY_SFC_SW_DIFF",
+      "start": "20240101",
+      "end": "20241231",
+      "feature_count": 66,
+      "file": "data/raw/sudan/weather/nasa_power/northwest_ALLSKY_SFC_SW_DIFF_20240101_20241231.json.gz",
+      "sha256": "892eac80c2a4c5f04e61a7ca224fabfe762f3bc07702366ff30bad9c0e5f95f8"
+    },
+    {
+      "tile": "northwest",
+      "parameter": "ALLSKY_SFC_SW_DIFF",
+      "start": "20250101",
+      "end": "20251231",
+      "feature_count": 66,
+      "file": "data/raw/sudan/weather/nasa_power/northwest_ALLSKY_SFC_SW_DIFF_20250101_20251231.json.gz",
+      "sha256": "b3387777f7c5e41175c1e1c258d133ad5ed3ee7c9e3212c3999348f133644dcb"
+    },
+    {
+      "tile": "northwest",
+      "parameter": "T2M",
+      "start": "20210101",
+      "end": "20211231",
+      "feature_count": 176,
+      "file": "data/raw/sudan/weather/nasa_power/northwest_T2M_20210101_20211231.json.gz",
+      "sha256": "8dee9e79b943f9b2162d97f6177d552cd475ef850310f8a2871660d987654bbd"
+    },
+    {
+      "tile": "northwest",
+      "parameter": "T2M",
+      "start": "20220101",
+      "end": "20221231",
+      "feature_count": 176,
+      "file": "data/raw/sudan/weather/nasa_power/northwest_T2M_20220101_20221231.json.gz",
+      "sha256": "4732bf92745134dcde03a7e3a047631f0243e6a2f2d55241728c25789001bc7d"
+    },
+    {
+      "tile": "northwest",
+      "parameter": "T2M",
+      "start": "20230101",
+      "end": "20231231",
+      "feature_count": 176,
+      "file": "data/raw/sudan/weather/nasa_power/northwest_T2M_20230101_20231231.json.gz",
+      "sha256": "b24afca9c68ed33648985cd452ed93b92968361e31ad33710abc7fee500f9f40"
+    },
+    {
+      "tile": "northwest",
+      "parameter": "T2M",
+      "start": "20240101",
+      "end": "20241231",
+      "feature_count": 176,
+      "file": "data/raw/sudan/weather/nasa_power/northwest_T2M_20240101_20241231.json.gz",
+      "sha256": "087a34238745fce889e020882d1d660e4304dbdf93c1f84cd00541ab650eb9dc"
+    },
+    {
+      "tile": "northwest",
+      "parameter": "T2M",
+      "start": "20250101",
+      "end": "20251231",
+      "feature_count": 176,
+      "file": "data/raw/sudan/weather/nasa_power/northwest_T2M_20250101_20251231.json.gz",
+      "sha256": "fb63fd028974c68ad765a9c8ae92bd23234234b9e822d3c04cc04b17ed03baff"
+    },
+    {
+      "tile": "northwest",
+      "parameter": "T2M_MAX",
+      "start": "20210101",
+      "end": "20211231",
+      "feature_count": 176,
+      "file": "data/raw/sudan/weather/nasa_power/northwest_T2M_MAX_20210101_20211231.json.gz",
+      "sha256": "bf468e190cbc1893c55767e7102e9686c2a618d0f6dc569ca715acf498dca917"
+    },
+    {
+      "tile": "northwest",
+      "parameter": "T2M_MAX",
+      "start": "20220101",
+      "end": "20221231",
+      "feature_count": 176,
+      "file": "data/raw/sudan/weather/nasa_power/northwest_T2M_MAX_20220101_20221231.json.gz",
+      "sha256": "5aa79bab0445940ae52b8a819d0a94d13ab20d88520d0ff849a9d68b6a1d02ef"
+    },
+    {
+      "tile": "northwest",
+      "parameter": "T2M_MAX",
+      "start": "20230101",
+      "end": "20231231",
+      "feature_count": 176,
+      "file": "data/raw/sudan/weather/nasa_power/northwest_T2M_MAX_20230101_20231231.json.gz",
+      "sha256": "fb0cd7845e7b689bfb509d6482bc465b7b9d264ae1623a0fddc4399314a0b1f7"
+    },
+    {
+      "tile": "northwest",
+      "parameter": "T2M_MAX",
+      "start": "20240101",
+      "end": "20241231",
+      "feature_count": 176,
+      "file": "data/raw/sudan/weather/nasa_power/northwest_T2M_MAX_20240101_20241231.json.gz",
+      "sha256": "5e9c21c4c0c575e5aba900bd5dcaf6dd9a2e8bb4c1045452794ea461df92b550"
+    },
+    {
+      "tile": "northwest",
+      "parameter": "T2M_MAX",
+      "start": "20250101",
+      "end": "20251231",
+      "feature_count": 176,
+      "file": "data/raw/sudan/weather/nasa_power/northwest_T2M_MAX_20250101_20251231.json.gz",
+      "sha256": "94881bbd2c05e97cf63050ec5318be34030a66f06a6904e2f5afd6d0489d832a"
+    },
+    {
+      "tile": "northwest",
+      "parameter": "T2M_MIN",
+      "start": "20210101",
+      "end": "20211231",
+      "feature_count": 176,
+      "file": "data/raw/sudan/weather/nasa_power/northwest_T2M_MIN_20210101_20211231.json.gz",
+      "sha256": "05802289aa798fdefb88300a120a2904b564d77d65f053f643550e65d944e856"
+    },
+    {
+      "tile": "northwest",
+      "parameter": "T2M_MIN",
+      "start": "20220101",
+      "end": "20221231",
+      "feature_count": 176,
+      "file": "data/raw/sudan/weather/nasa_power/northwest_T2M_MIN_20220101_20221231.json.gz",
+      "sha256": "d33435eabc4d9711d4179db3d100548ce7d40d4eb8af683538e6fa5a5dc0df31"
+    },
+    {
+      "tile": "northwest",
+      "parameter": "T2M_MIN",
+      "start": "20230101",
+      "end": "20231231",
+      "feature_count": 176,
+      "file": "data/raw/sudan/weather/nasa_power/northwest_T2M_MIN_20230101_20231231.json.gz",
+      "sha256": "66b80f49c5ff20fb44d108f634043c65e7b79bdb62724ee95c71983435f8fa0f"
+    },
+    {
+      "tile": "northwest",
+      "parameter": "T2M_MIN",
+      "start": "20240101",
+      "end": "20241231",
+      "feature_count": 176,
+      "file": "data/raw/sudan/weather/nasa_power/northwest_T2M_MIN_20240101_20241231.json.gz",
+      "sha256": "6431efc4782873454602c4c58fdbf9c9ea011ac907873b97b1364eb7422cb9cc"
+    },
+    {
+      "tile": "northwest",
+      "parameter": "T2M_MIN",
+      "start": "20250101",
+      "end": "20251231",
+      "feature_count": 176,
+      "file": "data/raw/sudan/weather/nasa_power/northwest_T2M_MIN_20250101_20251231.json.gz",
+      "sha256": "fb72bc10699ce5227d78a1f4d69201f54aabb9f98d5f4d1381ac4bbb8273c561"
+    },
+    {
+      "tile": "northwest",
+      "parameter": "RH2M",
+      "start": "20210101",
+      "end": "20211231",
+      "feature_count": 176,
+      "file": "data/raw/sudan/weather/nasa_power/northwest_RH2M_20210101_20211231.json.gz",
+      "sha256": "1f0eefba87d2a06da0a7cf6b8604b16d564481da65a215f71452c5fd4b14ec53"
+    },
+    {
+      "tile": "northwest",
+      "parameter": "RH2M",
+      "start": "20220101",
+      "end": "20221231",
+      "feature_count": 176,
+      "file": "data/raw/sudan/weather/nasa_power/northwest_RH2M_20220101_20221231.json.gz",
+      "sha256": "6924e2d77c1107914b057efa93b0040884df05b2b1e7bbcf4d268c6b62f1d938"
+    },
+    {
+      "tile": "northwest",
+      "parameter": "RH2M",
+      "start": "20230101",
+      "end": "20231231",
+      "feature_count": 176,
+      "file": "data/raw/sudan/weather/nasa_power/northwest_RH2M_20230101_20231231.json.gz",
+      "sha256": "10ecca54a385816a0d3186b7bde3e0b5f73a2da5be17d530c6c8507c61353648"
+    },
+    {
+      "tile": "northwest",
+      "parameter": "RH2M",
+      "start": "20240101",
+      "end": "20241231",
+      "feature_count": 176,
+      "file": "data/raw/sudan/weather/nasa_power/northwest_RH2M_20240101_20241231.json.gz",
+      "sha256": "7616f5bb9f96d44e135f50bd3951033f5f210f3ac082c954e9fd2466c0c0524e"
+    },
+    {
+      "tile": "northwest",
+      "parameter": "RH2M",
+      "start": "20250101",
+      "end": "20251231",
+      "feature_count": 176,
+      "file": "data/raw/sudan/weather/nasa_power/northwest_RH2M_20250101_20251231.json.gz",
+      "sha256": "93aefbd2cb92905870d69f224799dee226ea1bbdd24ce9cf7c44bb20b507d272"
+    },
+    {
+      "tile": "northwest",
+      "parameter": "WS10M",
+      "start": "20210101",
+      "end": "20211231",
+      "feature_count": 176,
+      "file": "data/raw/sudan/weather/nasa_power/northwest_WS10M_20210101_20211231.json.gz",
+      "sha256": "d2d6cdec58773925f087526ebed44468eddfb1edeff75c23d160496cfa714f5d"
+    },
+    {
+      "tile": "northwest",
+      "parameter": "WS10M",
+      "start": "20220101",
+      "end": "20221231",
+      "feature_count": 176,
+      "file": "data/raw/sudan/weather/nasa_power/northwest_WS10M_20220101_20221231.json.gz",
+      "sha256": "8d93d45c855b5940e4d9d438d433e7fc8839950469fbef7c86166b153f8b0014"
+    },
+    {
+      "tile": "northwest",
+      "parameter": "WS10M",
+      "start": "20230101",
+      "end": "20231231",
+      "feature_count": 176,
+      "file": "data/raw/sudan/weather/nasa_power/northwest_WS10M_20230101_20231231.json.gz",
+      "sha256": "0fa51b5ed8aeb825e5e58cfa5c255339415d740e9f1f0f01c1f3269afc44981b"
+    },
+    {
+      "tile": "northwest",
+      "parameter": "WS10M",
+      "start": "20240101",
+      "end": "20241231",
+      "feature_count": 176,
+      "file": "data/raw/sudan/weather/nasa_power/northwest_WS10M_20240101_20241231.json.gz",
+      "sha256": "74de122c6cb05a4f7db97066b2017c5d5c562e367e883d4a27158fd30453fffe"
+    },
+    {
+      "tile": "northwest",
+      "parameter": "WS10M",
+      "start": "20250101",
+      "end": "20251231",
+      "feature_count": 176,
+      "file": "data/raw/sudan/weather/nasa_power/northwest_WS10M_20250101_20251231.json.gz",
+      "sha256": "2909a9cc45ada587272116553a4f892feef6317526b924b4547b177a07a1e160"
+    },
+    {
+      "tile": "northwest",
+      "parameter": "PRECTOTCORR",
+      "start": "20210101",
+      "end": "20211231",
+      "feature_count": 176,
+      "file": "data/raw/sudan/weather/nasa_power/northwest_PRECTOTCORR_20210101_20211231.json.gz",
+      "sha256": "73ef22508f41ccb1f4d9edfa27173e1113c4d567d41817bd14c2f180ef84de8c"
+    },
+    {
+      "tile": "northwest",
+      "parameter": "PRECTOTCORR",
+      "start": "20220101",
+      "end": "20221231",
+      "feature_count": 176,
+      "file": "data/raw/sudan/weather/nasa_power/northwest_PRECTOTCORR_20220101_20221231.json.gz",
+      "sha256": "18b44235538160f262817c0eefebcadf51605fe347ec769c2456fe77add5ed53"
+    },
+    {
+      "tile": "northwest",
+      "parameter": "PRECTOTCORR",
+      "start": "20230101",
+      "end": "20231231",
+      "feature_count": 176,
+      "file": "data/raw/sudan/weather/nasa_power/northwest_PRECTOTCORR_20230101_20231231.json.gz",
+      "sha256": "94566cb7fdaeb300250306cc5d6a68bced57720dae17432c77ed3bdb5657383c"
+    },
+    {
+      "tile": "northwest",
+      "parameter": "PRECTOTCORR",
+      "start": "20240101",
+      "end": "20241231",
+      "feature_count": 176,
+      "file": "data/raw/sudan/weather/nasa_power/northwest_PRECTOTCORR_20240101_20241231.json.gz",
+      "sha256": "3c55c804f1088e307312b8912bc380818ef52bcd63f0330b453a82b79bf1f96e"
+    },
+    {
+      "tile": "northwest",
+      "parameter": "PRECTOTCORR",
+      "start": "20250101",
+      "end": "20251231",
+      "feature_count": 176,
+      "file": "data/raw/sudan/weather/nasa_power/northwest_PRECTOTCORR_20250101_20251231.json.gz",
+      "sha256": "d15c70989ae2c68f9ff8f44a364ff6e904e09d3fbc82d2b21b620565a352e5c8"
+    },
+    {
+      "tile": "northeast",
+      "parameter": "ALLSKY_SFC_SW_DWN",
+      "start": "20210101",
+      "end": "20211231",
+      "feature_count": 48,
+      "file": "data/raw/sudan/weather/nasa_power/northeast_ALLSKY_SFC_SW_DWN_20210101_20211231.json.gz",
+      "sha256": "7a61bb7fb49ca27fd6878e2d6f5777f17deeaf2338244ab3b0a79923f726a9b2"
+    },
+    {
+      "tile": "northeast",
+      "parameter": "ALLSKY_SFC_SW_DWN",
+      "start": "20220101",
+      "end": "20221231",
+      "feature_count": 48,
+      "file": "data/raw/sudan/weather/nasa_power/northeast_ALLSKY_SFC_SW_DWN_20220101_20221231.json.gz",
+      "sha256": "40d7dca3af7e77a52c42f903bcaeae404bcc9cf4129801b9b959901bc897b161"
+    },
+    {
+      "tile": "northeast",
+      "parameter": "ALLSKY_SFC_SW_DWN",
+      "start": "20230101",
+      "end": "20231231",
+      "feature_count": 48,
+      "file": "data/raw/sudan/weather/nasa_power/northeast_ALLSKY_SFC_SW_DWN_20230101_20231231.json.gz",
+      "sha256": "38dec30a003f2a620f025621cb66278e5138a0640f231bf14923605de3c8e393"
+    },
+    {
+      "tile": "northeast",
+      "parameter": "ALLSKY_SFC_SW_DWN",
+      "start": "20240101",
+      "end": "20241231",
+      "feature_count": 48,
+      "file": "data/raw/sudan/weather/nasa_power/northeast_ALLSKY_SFC_SW_DWN_20240101_20241231.json.gz",
+      "sha256": "b83f0173aa8ffe131113c0ce7908d1bf4eaa6017e31ed192a27346505fb63f96"
+    },
+    {
+      "tile": "northeast",
+      "parameter": "ALLSKY_SFC_SW_DWN",
+      "start": "20250101",
+      "end": "20251231",
+      "feature_count": 48,
+      "file": "data/raw/sudan/weather/nasa_power/northeast_ALLSKY_SFC_SW_DWN_20250101_20251231.json.gz",
+      "sha256": "2c35010296ad9bcd60400f6627927a96a21528826a0ca2e579d6d4620aa25f43"
+    },
+    {
+      "tile": "northeast",
+      "parameter": "ALLSKY_SFC_SW_DNI",
+      "start": "20210101",
+      "end": "20211231",
+      "feature_count": 48,
+      "file": "data/raw/sudan/weather/nasa_power/northeast_ALLSKY_SFC_SW_DNI_20210101_20211231.json.gz",
+      "sha256": "22d66b883a6b9a40c0a9cb052c1ac30fcdf97fd765b5d5af39a3e7a511cecb87"
+    },
+    {
+      "tile": "northeast",
+      "parameter": "ALLSKY_SFC_SW_DNI",
+      "start": "20220101",
+      "end": "20221231",
+      "feature_count": 48,
+      "file": "data/raw/sudan/weather/nasa_power/northeast_ALLSKY_SFC_SW_DNI_20220101_20221231.json.gz",
+      "sha256": "833fad12269f9427ea426d0855a2c023d5e0dba9db1c5e1f8dcf9ea6f8144116"
+    },
+    {
+      "tile": "northeast",
+      "parameter": "ALLSKY_SFC_SW_DNI",
+      "start": "20230101",
+      "end": "20231231",
+      "feature_count": 48,
+      "file": "data/raw/sudan/weather/nasa_power/northeast_ALLSKY_SFC_SW_DNI_20230101_20231231.json.gz",
+      "sha256": "214fa9708d041ea0700674de3c7492a22ad6654d92db6028d7c19aaf49ddd7b7"
+    },
+    {
+      "tile": "northeast",
+      "parameter": "ALLSKY_SFC_SW_DNI",
+      "start": "20240101",
+      "end": "20241231",
+      "feature_count": 48,
+      "file": "data/raw/sudan/weather/nasa_power/northeast_ALLSKY_SFC_SW_DNI_20240101_20241231.json.gz",
+      "sha256": "a1502cac1f5055b4fcc897395733a936bd74ef7bc6c294d29964ebfc8fe61cdc"
+    },
+    {
+      "tile": "northeast",
+      "parameter": "ALLSKY_SFC_SW_DNI",
+      "start": "20250101",
+      "end": "20251231",
+      "feature_count": 48,
+      "file": "data/raw/sudan/weather/nasa_power/northeast_ALLSKY_SFC_SW_DNI_20250101_20251231.json.gz",
+      "sha256": "fe3a7095b00ecc6bbc0776091c604ce72ae007d0edf5a4f1f82aead9edf69f1d"
+    },
+    {
+      "tile": "northeast",
+      "parameter": "ALLSKY_SFC_SW_DIFF",
+      "start": "20210101",
+      "end": "20211231",
+      "feature_count": 48,
+      "file": "data/raw/sudan/weather/nasa_power/northeast_ALLSKY_SFC_SW_DIFF_20210101_20211231.json.gz",
+      "sha256": "43649d58fc862803bc830e9cb0d760ad084e8c162cefe3dc3f95b202ac0a6165"
+    },
+    {
+      "tile": "northeast",
+      "parameter": "ALLSKY_SFC_SW_DIFF",
+      "start": "20220101",
+      "end": "20221231",
+      "feature_count": 48,
+      "file": "data/raw/sudan/weather/nasa_power/northeast_ALLSKY_SFC_SW_DIFF_20220101_20221231.json.gz",
+      "sha256": "7b8c7f5d724173d9976f130a9c10c1fb07a9e9c094a6677a89045204b5fbb709"
+    },
+    {
+      "tile": "northeast",
+      "parameter": "ALLSKY_SFC_SW_DIFF",
+      "start": "20230101",
+      "end": "20231231",
+      "feature_count": 48,
+      "file": "data/raw/sudan/weather/nasa_power/northeast_ALLSKY_SFC_SW_DIFF_20230101_20231231.json.gz",
+      "sha256": "9c1902aa4e296bf4413c54d7feaead0c34ca26447c72ff0b9d18c7ca1cd765a1"
+    },
+    {
+      "tile": "northeast",
+      "parameter": "ALLSKY_SFC_SW_DIFF",
+      "start": "20240101",
+      "end": "20241231",
+      "feature_count": 48,
+      "file": "data/raw/sudan/weather/nasa_power/northeast_ALLSKY_SFC_SW_DIFF_20240101_20241231.json.gz",
+      "sha256": "120483ffd2d89d6260f15e31fe4d1413af69443cae006bc065295de6953431e1"
+    },
+    {
+      "tile": "northeast",
+      "parameter": "ALLSKY_SFC_SW_DIFF",
+      "start": "20250101",
+      "end": "20251231",
+      "feature_count": 48,
+      "file": "data/raw/sudan/weather/nasa_power/northeast_ALLSKY_SFC_SW_DIFF_20250101_20251231.json.gz",
+      "sha256": "fd59a9471de142c30924dfbde875b01e69837394520af220a0e6a510ad16aefa"
+    },
+    {
+      "tile": "northeast",
+      "parameter": "T2M",
+      "start": "20210101",
+      "end": "20211231",
+      "feature_count": 132,
+      "file": "data/raw/sudan/weather/nasa_power/northeast_T2M_20210101_20211231.json.gz",
+      "sha256": "96a3dea578ae868beaa6eeaac073dda964d986734ea47e954f1dc7148e587604"
+    },
+    {
+      "tile": "northeast",
+      "parameter": "T2M",
+      "start": "20220101",
+      "end": "20221231",
+      "feature_count": 132,
+      "file": "data/raw/sudan/weather/nasa_power/northeast_T2M_20220101_20221231.json.gz",
+      "sha256": "4067fb0315c381ab54cb9105e51e4ce22e6e3434668135aca1db5e3b00197145"
+    },
+    {
+      "tile": "northeast",
+      "parameter": "T2M",
+      "start": "20230101",
+      "end": "20231231",
+      "feature_count": 132,
+      "file": "data/raw/sudan/weather/nasa_power/northeast_T2M_20230101_20231231.json.gz",
+      "sha256": "6a42ec3ad61c78c05f7ebd3523d0e7be3815326dfca487910867e628772e6f75"
+    },
+    {
+      "tile": "northeast",
+      "parameter": "T2M",
+      "start": "20240101",
+      "end": "20241231",
+      "feature_count": 132,
+      "file": "data/raw/sudan/weather/nasa_power/northeast_T2M_20240101_20241231.json.gz",
+      "sha256": "283cd307e29ca69c3abead8bf5cf29fd535bc115cf75feb9565a21c24010ea3b"
+    },
+    {
+      "tile": "northeast",
+      "parameter": "T2M",
+      "start": "20250101",
+      "end": "20251231",
+      "feature_count": 132,
+      "file": "data/raw/sudan/weather/nasa_power/northeast_T2M_20250101_20251231.json.gz",
+      "sha256": "f8da501b7eb1914ff9e5dae45c6872c37204a7bb0d73c8cafa1613c3db715a46"
+    },
+    {
+      "tile": "northeast",
+      "parameter": "T2M_MAX",
+      "start": "20210101",
+      "end": "20211231",
+      "feature_count": 132,
+      "file": "data/raw/sudan/weather/nasa_power/northeast_T2M_MAX_20210101_20211231.json.gz",
+      "sha256": "d047aa8d56725c7c3bca110222342db776725b3ef8f5359233d5c25c8835f17c"
+    },
+    {
+      "tile": "northeast",
+      "parameter": "T2M_MAX",
+      "start": "20220101",
+      "end": "20221231",
+      "feature_count": 132,
+      "file": "data/raw/sudan/weather/nasa_power/northeast_T2M_MAX_20220101_20221231.json.gz",
+      "sha256": "feb08fbd3def1397133259183dd7daf97dd5358641bdf5bea5b8c3b3c4d17a2e"
+    },
+    {
+      "tile": "northeast",
+      "parameter": "T2M_MAX",
+      "start": "20230101",
+      "end": "20231231",
+      "feature_count": 132,
+      "file": "data/raw/sudan/weather/nasa_power/northeast_T2M_MAX_20230101_20231231.json.gz",
+      "sha256": "d98c4d4e3e330743c75441740e3fb94af581e068409c825384460e3217427c18"
+    },
+    {
+      "tile": "northeast",
+      "parameter": "T2M_MAX",
+      "start": "20240101",
+      "end": "20241231",
+      "feature_count": 132,
+      "file": "data/raw/sudan/weather/nasa_power/northeast_T2M_MAX_20240101_20241231.json.gz",
+      "sha256": "e693654dc41d1d2e21ce1188a31ebeee37abe08749b30e2d942956197400a15f"
+    },
+    {
+      "tile": "northeast",
+      "parameter": "T2M_MAX",
+      "start": "20250101",
+      "end": "20251231",
+      "feature_count": 132,
+      "file": "data/raw/sudan/weather/nasa_power/northeast_T2M_MAX_20250101_20251231.json.gz",
+      "sha256": "1744281663ecf3eab2fd02bad3816270275a4c478df4bf4a60a7120fda4f83a6"
+    },
+    {
+      "tile": "northeast",
+      "parameter": "T2M_MIN",
+      "start": "20210101",
+      "end": "20211231",
+      "feature_count": 132,
+      "file": "data/raw/sudan/weather/nasa_power/northeast_T2M_MIN_20210101_20211231.json.gz",
+      "sha256": "1287e0d7528abe5076a01811f26f5159f38119b0a24d70694e5c57283d5850e5"
+    },
+    {
+      "tile": "northeast",
+      "parameter": "T2M_MIN",
+      "start": "20220101",
+      "end": "20221231",
+      "feature_count": 132,
+      "file": "data/raw/sudan/weather/nasa_power/northeast_T2M_MIN_20220101_20221231.json.gz",
+      "sha256": "45ec970297c98a6019a1b5f2e3a1bf5411d5175b54943a0107db6d5f8ab8f547"
+    },
+    {
+      "tile": "northeast",
+      "parameter": "T2M_MIN",
+      "start": "20230101",
+      "end": "20231231",
+      "feature_count": 132,
+      "file": "data/raw/sudan/weather/nasa_power/northeast_T2M_MIN_20230101_20231231.json.gz",
+      "sha256": "8a80790b4705915e3374eaa435625e7da80fc17eefad744dcad036d04950b0ce"
+    },
+    {
+      "tile": "northeast",
+      "parameter": "T2M_MIN",
+      "start": "20240101",
+      "end": "20241231",
+      "feature_count": 132,
+      "file": "data/raw/sudan/weather/nasa_power/northeast_T2M_MIN_20240101_20241231.json.gz",
+      "sha256": "ecdaac6d25a0b76074df55eca8c69b6ba677d1826600954a5bf0e0216fac89a6"
+    },
+    {
+      "tile": "northeast",
+      "parameter": "T2M_MIN",
+      "start": "20250101",
+      "end": "20251231",
+      "feature_count": 132,
+      "file": "data/raw/sudan/weather/nasa_power/northeast_T2M_MIN_20250101_20251231.json.gz",
+      "sha256": "ce70ed3852ca0bb1cacd897fb0a7a313c9068e423e64647aeb70c2138b27b332"
+    },
+    {
+      "tile": "northeast",
+      "parameter": "RH2M",
+      "start": "20210101",
+      "end": "20211231",
+      "feature_count": 132,
+      "file": "data/raw/sudan/weather/nasa_power/northeast_RH2M_20210101_20211231.json.gz",
+      "sha256": "77bc9d3796a023e68ffc29b043346bd6b2114ad9cb987e92bbd18fd22de194e4"
+    },
+    {
+      "tile": "northeast",
+      "parameter": "RH2M",
+      "start": "20220101",
+      "end": "20221231",
+      "feature_count": 132,
+      "file": "data/raw/sudan/weather/nasa_power/northeast_RH2M_20220101_20221231.json.gz",
+      "sha256": "7abc54aa1769b0418258c3e2a94f435214f3bc2232cc24f1063f80ff2c074032"
+    },
+    {
+      "tile": "northeast",
+      "parameter": "RH2M",
+      "start": "20230101",
+      "end": "20231231",
+      "feature_count": 132,
+      "file": "data/raw/sudan/weather/nasa_power/northeast_RH2M_20230101_20231231.json.gz",
+      "sha256": "0df5f427fa7883c719432678c12604e5527dc2121c57cc828fdffad0ba61027d"
+    },
+    {
+      "tile": "northeast",
+      "parameter": "RH2M",
+      "start": "20240101",
+      "end": "20241231",
+      "feature_count": 132,
+      "file": "data/raw/sudan/weather/nasa_power/northeast_RH2M_20240101_20241231.json.gz",
+      "sha256": "e81cf4e4bd1a901f825383a468524380bdf41de03b3c1471afa6bfe8d6234856"
+    },
+    {
+      "tile": "northeast",
+      "parameter": "RH2M",
+      "start": "20250101",
+      "end": "20251231",
+      "feature_count": 132,
+      "file": "data/raw/sudan/weather/nasa_power/northeast_RH2M_20250101_20251231.json.gz",
+      "sha256": "dd3178f42f9efd93aad5355b9a48863580f8aee95b8d4a6082c810a0b3e5ca92"
+    },
+    {
+      "tile": "northeast",
+      "parameter": "WS10M",
+      "start": "20210101",
+      "end": "20211231",
+      "feature_count": 132,
+      "file": "data/raw/sudan/weather/nasa_power/northeast_WS10M_20210101_20211231.json.gz",
+      "sha256": "c1bb5a7e634ff432d02a6d706cbf657079e8cae00f88568318998cd469407ebb"
+    },
+    {
+      "tile": "northeast",
+      "parameter": "WS10M",
+      "start": "20220101",
+      "end": "20221231",
+      "feature_count": 132,
+      "file": "data/raw/sudan/weather/nasa_power/northeast_WS10M_20220101_20221231.json.gz",
+      "sha256": "ea6317b42bb081c290d8fea2b4ba55395a85f28e5a1e8cef7f782e20810f95e3"
+    },
+    {
+      "tile": "northeast",
+      "parameter": "WS10M",
+      "start": "20230101",
+      "end": "20231231",
+      "feature_count": 132,
+      "file": "data/raw/sudan/weather/nasa_power/northeast_WS10M_20230101_20231231.json.gz",
+      "sha256": "3d0e03ae0ef51bfdf1ece3dda35cdd2ea8973afedfeca931fcfe22917e012dca"
+    },
+    {
+      "tile": "northeast",
+      "parameter": "WS10M",
+      "start": "20240101",
+      "end": "20241231",
+      "feature_count": 132,
+      "file": "data/raw/sudan/weather/nasa_power/northeast_WS10M_20240101_20241231.json.gz",
+      "sha256": "702f21f46bc8714ca3f0a226cd48eb77f89ec3afd44768fedeb978d2dbc0639b"
+    },
+    {
+      "tile": "northeast",
+      "parameter": "WS10M",
+      "start": "20250101",
+      "end": "20251231",
+      "feature_count": 132,
+      "file": "data/raw/sudan/weather/nasa_power/northeast_WS10M_20250101_20251231.json.gz",
+      "sha256": "a2dcd64bf033d460b0f27ef95e27302abb684f9cfb8eb9c3a6e02f6cb8a4086b"
+    },
+    {
+      "tile": "northeast",
+      "parameter": "PRECTOTCORR",
+      "start": "20210101",
+      "end": "20211231",
+      "feature_count": 132,
+      "file": "data/raw/sudan/weather/nasa_power/northeast_PRECTOTCORR_20210101_20211231.json.gz",
+      "sha256": "2dc2a9a5466829cfb28481244e5ddd105ca7c643ca66e72babb35981bbfe2e82"
+    },
+    {
+      "tile": "northeast",
+      "parameter": "PRECTOTCORR",
+      "start": "20220101",
+      "end": "20221231",
+      "feature_count": 132,
+      "file": "data/raw/sudan/weather/nasa_power/northeast_PRECTOTCORR_20220101_20221231.json.gz",
+      "sha256": "f8be54c8751d392b6a8452ca557bcb89a6a6dd95a774b0564176bd641a290bcb"
+    },
+    {
+      "tile": "northeast",
+      "parameter": "PRECTOTCORR",
+      "start": "20230101",
+      "end": "20231231",
+      "feature_count": 132,
+      "file": "data/raw/sudan/weather/nasa_power/northeast_PRECTOTCORR_20230101_20231231.json.gz",
+      "sha256": "a4543efbbac0f30beb898fed8063ebacf72c51173e21ba9958b23263db746247"
+    },
+    {
+      "tile": "northeast",
+      "parameter": "PRECTOTCORR",
+      "start": "20240101",
+      "end": "20241231",
+      "feature_count": 132,
+      "file": "data/raw/sudan/weather/nasa_power/northeast_PRECTOTCORR_20240101_20241231.json.gz",
+      "sha256": "a83d7a60b15b6eb3cebc28af8500eee4f5d028f9434c22d5fadc6cd4c643671c"
+    },
+    {
+      "tile": "northeast",
+      "parameter": "PRECTOTCORR",
+      "start": "20250101",
+      "end": "20251231",
+      "feature_count": 132,
+      "file": "data/raw/sudan/weather/nasa_power/northeast_PRECTOTCORR_20250101_20251231.json.gz",
+      "sha256": "a7cdbe2078d96b8a42a1c8a4c4cef11133c1b57a64460fb6dafa06dfc2ca785b"
+    }
+  ],
+  "acquired_utc": "2026-10-03T10:31:07.033272+00:00"
+}

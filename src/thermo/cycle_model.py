@@ -11,10 +11,34 @@ State points:
   6  Liquid NH3 leaving condenser (T_cond, P_high)
   7  Liquid NH3 entering evaporator after valve (T_evap, P_low)
   8  Vapor NH3 leaving evaporator (T_evap, P_low)
+
+2026-10-05 (Claude, per the Perplexity COP literature audit - see
+docs/PERPLEXITY-AI-01_COP_LITERATURE_AUDIT.md and the review comment on
+issue #1): added OPTIONAL, separately-reported pump-work and generator/
+piping heat-loss terms. Both default to 0.0 and the existing Q_gen_W / COP
+formulas below are UNCHANGED - at the defaults this file produces exactly
+the same numbers as before (COP = 0.424 at the nominal design point).
+
+What this still does NOT model (unchanged from before - do not infer these
+are solved just because the terms above exist):
+  - Rectification/dephlegmation: y_3 below is a single-equilibrium-stage
+    vapor composition in contact with the POOR solution. No separate
+    rectifying column is modeled. Water carryover into the refrigerant
+    path is therefore not quantified.
+  - Startup/transient behaviour: solve_cycle() is a steady-state solver.
+  - Whether a pump exists at all: that is OQ-0 (cycle architecture),
+    still OPEN in claude/PROJECT_GRAPH.json. Passing a nonzero W_pump_W
+    here does not decide OQ-0 - it only lets the continuous-cycle case
+    be reported honestly if/when that architecture is chosen.
 """
 
+import numpy as np
+import os
 import sys
-sys.path.insert(0, '/root/fridge/src/thermo')
+
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+if SCRIPT_DIR not in sys.path:
+    sys.path.insert(0, SCRIPT_DIR)
 
 from CoolProp.CoolProp import PropsSI
 from ziegler_trepp_props import (
@@ -30,11 +54,19 @@ DESIGN = {
     "T_evap":     -15.0,   # evaporator temperature (C)
     "T_cond":      40.0,   # condenser temperature (C)
     "T_gen":      135.0,   # generator temperature (C) - for solar
-    "T_abs":       30.0,   # absorber temperature (C)
+    "T_abs":      30.0,   # absorber temperature (C)
     "Q_evap_W":   200.0,   # cooling load (W)
     "x_rich":       0.40,  # NH3 mass fraction in rich solution
     "x_poor":       0.25,  # NH3 mass fraction in poor solution
     "eta_shx":      0.70,  # solution heat exchanger effectiveness
+    # --- Added 2026-10-05, both default to 0.0 (no effect on nominal result) ---
+    "W_pump_W":     0.0,   # solution pump electrical power, if OQ-0 resolves
+                            # to a continuous/pumped architecture. 0.0 for an
+                            # intermittent or diffusion/bubble-pump cycle.
+    "Q_loss_gen_W": 0.0,   # generator vessel + associated piping heat loss
+                            # to ambient. Not yet estimated anywhere in the
+                            # repo; set from a real insulation/ambient study
+                            # when one exists (relates to DB-02).
 }
 
 
@@ -55,6 +87,23 @@ def nh3_h(T_c, Q):
 # Cycle solver
 # ============================================================
 def solve_cycle(d):
+    # --------------------------------------------------------
+    # Input validation
+    # Keep invalid inputs out of CoolProp and mixture equations.
+    # This is a software-contract check; it does not alter the
+    # nominal thermodynamic model or design-point values.
+    # --------------------------------------------------------
+    required = (
+        "T_evap", "T_cond", "T_gen", "T_abs",
+        "Q_evap_W", "x_rich", "x_poor", "eta_shx",
+    )
+    for key in required:
+        if key not in d:
+            raise ValueError(f"Missing required design input: {key}")
+        value = d[key]
+        if not np.isfinite(value):
+            raise ValueError(f"{key} must be a finite number")
+
     T_e = d["T_evap"]
     T_c = d["T_cond"]
     T_g = d["T_gen"]
@@ -63,6 +112,35 @@ def solve_cycle(d):
     x_r = d["x_rich"]
     x_p = d["x_poor"]
     eta = d["eta_shx"]
+    # Added terms - .get() so callers/tests using the old dict shape still work.
+    W_pump_W = d.get("W_pump_W", 0.0)
+    Q_loss_gen_W = d.get("Q_loss_gen_W", 0.0)
+
+    if Q_e <= 0:
+        raise ValueError("Q_evap_W must be positive")
+
+    if not (0.0 <= x_p < x_r <= 1.0):
+        raise ValueError("mass fractions must satisfy 0 <= x_poor < x_rich <= 1")
+
+    if not (0.0 <= eta <= 1.0):
+        raise ValueError("eta_shx must be between 0 and 1")
+
+    if T_c <= T_e:
+        raise ValueError("T_cond must be greater than T_evap")
+
+    if T_g <= T_a:
+        raise ValueError("T_gen must be greater than T_abs")
+
+    # Existing model definition: high-side pressure is pure-NH3
+    # saturation pressure at the condenser temperature.
+    P_high_check = nh3_sat_P(T_c, 1)
+    T_bub_poor = bubble_temperature(P_high_check, x_p)
+
+    if T_g < T_bub_poor:
+        raise ValueError(
+            "T_gen is below the poor-solution bubble temperature "
+            f"({T_bub_poor:.3f} C)"
+        )
 
     # Pressures
     P_low  = nh3_sat_P(T_e, 1)
@@ -77,6 +155,8 @@ def solve_cycle(d):
     m_r = Q_e / ((h_8 - h_7) * 1000.0)   # kg/s
 
     # Vapor composition from generator
+    # NOTE (2026-10-05): single-equilibrium-stage assumption, no rectifier
+    # modeled - see module docstring.
     y_3 = vapor_ammonia_at_bubble(P_high, x_p)
     h_3 = vapor_enthalpy(T_g, y_3, P_bar=P_high)
 
@@ -101,7 +181,7 @@ def solve_cycle(d):
     Q_shx = m_rich * (h_2 - h_1)   # kW
     h_5 = h_4 - Q_shx / m_poor
 
-    # Energy balances (kW)
+    # Energy balances (kW) - UNCHANGED from the original model.
     Q_gen_kW  = m_r * h_3 + m_poor * h_4 - m_rich * h_2
     Q_abs_kW  = m_r * h_8 + m_poor * h_5 - m_rich * h_1
     Q_cond_kW = m_r * (h_3 - h_6)
@@ -112,7 +192,24 @@ def solve_cycle(d):
     Q_cond_W = Q_cond_kW * 1000.0
     Q_shx_W  = Q_shx * 1000.0
 
+    # COP: UNCHANGED definition and formula - still Q_evap / Q_gen (internal
+    # process duty only). At the defaults above this is byte-for-byte the
+    # same number as before this edit.
     COP = Q_e / Q_gen_W if Q_gen_W > 0 else 0.0
+
+    # --- New, separately-reported metrics (2026-10-05) ---
+    # Total heat that must be SUPPLIED to the generator, accounting for an
+    # (unmeasured, currently zero) vessel/piping loss. This is NOT folded
+    # into COP above - it is reported alongside it.
+    Q_gen_supplied_W = Q_gen_W + Q_loss_gen_W
+    COP_thermal_incl_gen_loss = Q_e / Q_gen_supplied_W if Q_gen_supplied_W > 0 else 0.0
+
+    # Pump electrical power is a different energy quality (electrical, not
+    # thermal) from Q_gen. Perplexity's literature audit (section 2) flags
+    # that it should be reported, not that it should be blended into one
+    # COP without a stated primary-energy-equivalence method - this repo
+    # does not yet have one, so it stays a separate figure.
+    W_pump_W_reported = W_pump_W
 
     return {
         "P_low": P_low, "P_high": P_high, "T_2": T_2,
@@ -122,6 +219,11 @@ def solve_cycle(d):
         "Q_evap_W": Q_e, "Q_gen_W": Q_gen_W,
         "Q_abs_W": Q_abs_W, "Q_cond_W": Q_cond_W,
         "Q_shx_W": Q_shx_W, "COP": COP,
+        # New fields - all additive, nothing above changed by their presence:
+        "Q_loss_gen_W": Q_loss_gen_W,
+        "Q_gen_supplied_W": Q_gen_supplied_W,
+        "COP_thermal_incl_gen_loss": COP_thermal_incl_gen_loss,
+        "W_pump_W": W_pump_W_reported,
     }
 
 
@@ -145,7 +247,8 @@ def print_results(r, d):
     print(f"    High:        {r['P_high']:>8.3f}")
     print(f"    Ratio:       {r['P_high']/r['P_low']:>8.2f}")
 
-    print("\n  Vapor composition at generator:")
+    print("\n  Vapor composition at generator (single-stage equilibrium,")
+    print("  no rectifier modeled - see module docstring):")
     print(f"    y_NH3 = {r['y_3']:.4f}  (mass fraction)")
 
     print("\n  State enthalpies (kJ/kg):")
@@ -165,7 +268,20 @@ def print_results(r, d):
     print(f"    Q_cond:      {r['Q_cond_W']:>8.1f}")
     print(f"    Q_shx:       {r['Q_shx_W']:>8.1f}")
 
-    print(f"\n  COP = Q_evap / Q_gen = {r['COP']:.3f}")
+    print(f"\n  COP = Q_evap / Q_gen = {r['COP']:.3f}   (unchanged definition)")
+
+    if r["Q_loss_gen_W"] or r["W_pump_W"]:
+        print("\n  Additional accounting (2026-10-05, separate from COP above):")
+        if r["Q_loss_gen_W"]:
+            print(f"    Generator/piping heat loss:   {r['Q_loss_gen_W']:>8.1f} W")
+            print(f"    Heat actually to be supplied: {r['Q_gen_supplied_W']:>8.1f} W")
+            print(f"    COP incl. generator loss:     {r['COP_thermal_incl_gen_loss']:>8.3f}")
+        if r["W_pump_W"]:
+            print(f"    Solution pump electrical:     {r['W_pump_W']:>8.1f} W  "
+                  f"(not blended into a thermal COP - different energy quality)")
+    else:
+        print("\n  Generator/piping heat loss and pump electrical power: not set "
+              "(both 0.0 - see DESIGN dict comments).")
 
     balance = r['Q_evap_W'] + r['Q_gen_W'] - r['Q_abs_W'] - r['Q_cond_W']
     print(f"\n  Energy balance closure: {balance:>+8.2f} W")

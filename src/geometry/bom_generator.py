@@ -154,10 +154,6 @@ BOM = [
      1, "lot", 80.0, "Certified test report"),
 
     # ---------- CONSUMABLES ----------
-    ("Consumables", "Silver brazing rods 5%",
-     "1.6 mm x 500 mm, flux-coated",
-     20, "pc", 5.0, "Copper-steel joints"),
-
     ("Consumables", "Thread sealant",
      "Ammonia-compatible, PTFE tape + paste",
      1, "set", 15.0, "For all NPT joints"),
@@ -293,7 +289,9 @@ def export_csv(bom, path):
 # Main
 # ============================================================
 if __name__ == "__main__":
-    out_dir = "/root/fridge/results"
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    repo_root = os.path.abspath(os.path.join(script_dir, "..", ".."))
+    out_dir = os.path.join(repo_root, "results")
     os.makedirs(out_dir, exist_ok=True)
     csv_path = os.path.join(out_dir, "bom.csv")
 

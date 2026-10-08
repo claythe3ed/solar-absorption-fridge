@@ -1,0 +1,20 @@
+#!/bin/bash
+cd "${0%/*}" || exit 1
+source ~/.openfoam_env
+
+echo "=== blockMesh ==="
+blockMesh 2>&1 | tee log.blockMesh
+
+echo "=== surfaceFeatureExtract ==="
+surfaceFeatureExtract 2>&1 | tee log.surfaceFeatureExtract
+
+echo "=== snappyHexMesh ==="
+snappyHexMesh -overwrite 2>&1 | tee log.snappyHexMesh
+
+echo "=== checkMesh ==="
+checkMesh 2>&1 | tee log.checkMesh
+
+echo "=== buoyantSimpleFoam ==="
+buoyantSimpleFoam 2>&1 | tee log.solver
+
+echo "=== Done ==="

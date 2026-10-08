@@ -1,0 +1,5 @@
+# Optional dependencies for Sudan geography and climate data preparation.
+cdsapi>=0.7
+geopandas>=1.0
+xarray>=2024.1
+netCDF4>=1.6

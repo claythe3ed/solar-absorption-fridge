@@ -2,11 +2,22 @@
 Generator/Solar Receiver 3D model.
 Cylinder: 200 mm OD, 2.5 mm wall, 4 m length.
 Four ports: vapor out, liquid in, rich in, poor out.
+
+2026-10-05 (Claude): added an ASME screening check before export (see
+src/engineering/pressure_vessel_checks.py). This does NOT change OD, WALL,
+or CAP_THICK below - those are still the project's existing, unapproved
+values. It only makes the existing gap (flat 5mm caps vs. either open
+design-pressure candidate, D-001) visible every time this script runs,
+instead of silently exporting a STEP file with no warning. Do not raise
+CAP_THICK here without a controlled engineering decision (see
+docs/DESIGN_BASIS.md, docs/DECISION_REGISTER.md D-001) - this hook is a
+check, not a fix.
 """
 
 import FreeCAD
 import Part
 import os
+import sys
 
 
 # ============================================================
@@ -110,3 +121,21 @@ print(f"  Ports: {len(ports)}")
 bb = body_with_ports.BoundBox
 print(f"  Bounding box: {bb.XLength:.0f} x {bb.YLength:.0f} x {bb.ZLength:.0f} mm")
 print("=" * 60)
+
+# ============================================================
+# ASME screening check (2026-10-05) - reports only, changes nothing above.
+# ============================================================
+try:
+    sys.path.insert(0, os.path.join(REPO_ROOT, "src", "engineering"))
+    from pressure_vessel_checks import check_generator
+    print("\nASME VIII-1 SCREENING (not a certification - see docs/DESIGN_BASIS.md)")
+    print("-" * 60)
+    results = check_generator(od_mm=OD, wall_mm=WALL, cap_thick_mm=CAP_THICK)
+    if any(not r["flat_cap_ok"] for r in results):
+        print("\n*** WARNING: exported STEP uses a flat end cap that FAILS the UG-34 ***")
+        print("*** screening at every open D-001 design-pressure candidate. This   ***")
+        print("*** export is geometry only - it is not cleared for fabrication.    ***")
+    print("-" * 60)
+except ImportError as exc:
+    print(f"\n[screening skipped: {exc} - run from repo root with "
+          f"src/engineering/pressure_vessel_checks.py present]")
