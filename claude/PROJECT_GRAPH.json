@@ -1,19 +1,31 @@
 {
-  "$comment": "Canonical structured project state for solar-absorption-fridge: claude/PROJECT_GRAPH.json. Preserve any other local copies unless they are explicitly reconciled. The repo's formal governance layer (Decision Register, Design Basis, Build Release Gate) is the canonical open-items tracker; this file carries supplemental context.",
+  "$comment": "CANONICAL PROJECT STATE: claude/PROJECT_GRAPH.json. This is the single authoritative structured project-state graph for solar-absorption-fridge and MUST be read by Claude, GitHub Copilot, and other AI/project agents before making project-state claims or proposing changes. Do not create or promote alternate PROJECT_GRAPH copies without explicit reconciliation. Formal engineering open-item governance remains in docs/DECISION_REGISTER.md, docs/DESIGN_BASIS.md, and docs/BUILD_RELEASE_GATE.md. This graph provides supplemental project context and is not engineering approval or sign-off.",
   "project": "solar-absorption-fridge",
   "repo": "https://github.com/claythe3ed/solar-absorption-fridge",
-  "last_updated": "2026-10-05",
+  "last_updated": "2026-10-08",
   "graph_reconciliation": {
     "canonical_path": "claude/PROJECT_GRAPH.json",
-    "other_local_copies": [
-      "PROJECT_GRAPH(1).json",
-      "Downloads/PROJECT_GRAPH.json"
+    "status": "RESOLVED",
+    "resolved_date": "2026-10-08",
+    "current_git_commit": "3d0f83b18136cbd2adb49c6156b0fc6425a48678",
+    "current_branch": "main",
+    "alternate_local_copy": "PROJECT_GRAPH(1).json",
+    "alternate_local_copy_status": "NON-CANONICAL HISTORICAL COPY",
+    "disposition": "Retained locally as historical evidence during reconciliation. It must not be treated as current project state or used to overwrite the canonical graph.",
+    "obsolete_state_removed": [
+      "path_reconciliation_needed claiming the graph had not been pushed",
+      "claim that origin/main was still at 9687f061",
+      "instruction to choose a canonical path"
     ],
-    "disposition": "This file is the copy being published. Other local copies have not been overwritten or deleted."
+    "historical_information_retained_from_alternate": [
+      "2026-09-28 GitHub/CoolProp/teqp verification record.",
+      "2026-09-29/30 archive review findings.",
+      "Provenance of the 60 mm V-101 port-protrusion value in src/geometry/production_cad.py.",
+      "2026-10-05 Copilot/reference-review evidence and source caveats."
+    ]
   },
   "mission": "Off-grid NH3-H2O solar absorption cooling for Sudan: households, and hospital/clinic cold chain for medicine during grid outages caused by the war.",
   "status": "HOLD - not approved for fabrication, pressure testing, ammonia charging, or operation. See docs/BUILD_RELEASE_GATE.md (the repo's own disposition, set 2026-09-30).",
-
   "governance_layer_2026_09_30": {
     "what_changed": "Between the 2026-09-29 ls snapshot and this 2026-09-30 archive, the repo gained a full governance layer: docs/DECISION_REGISTER.md (D-001..D-007, open conflicts), docs/DESIGN_BASIS.md (DB-01..DB-13, all TBD pending a licensed engineer), docs/BUILD_RELEASE_GATE.md (repo-wide HOLD disposition + evidence checklist), docs/ENGINEERING_VALIDATION_CALL.md (public call for outside review), .github/ISSUE_TEMPLATE/engineering-validation.yml (structured submission form). This now supersedes the OQ-1..OQ-9 list this file used to carry - track new open items against their D-/DB- numbers, not a parallel list here.",
     "authorship": "Produced by Google Antigravity (Gemini 3 agent IDE) per Clay, alongside the 13-sheet FreeCAD TechDraw 'revision B' drawing pack under private/Copilot/ and copilot_drowings/.",
@@ -27,7 +39,6 @@
     ],
     "cannot_verify_here": "This sandbox has no network, so CadQuery/iapws-backed scripts (production_cad.py, ammonia_water_iapws.py) could not be executed here - reviewed as source only. Clay or Antigravity need to actually run them locally to confirm they execute as written."
   },
-
   "simulation_validation_2026_10_04": {
     "track": "Simulation/model validation selected as the next software workstream; hardware remains on HOLD.",
     "cycle_model_changes": [
@@ -37,7 +48,6 @@
     "limitations": "These are software input checks, not physical/property validation. The baseline still uses the simplified Ziegler-Trepp/CoolProp assumptions described in docs/wiki/Thermodynamic-Model.md; D-007 remains OPEN and the overall project remains HOLD.",
     "pytorch": "Not found in tracked project manifests or code, and import fails in the project venv. No PyTorch dependency or ML calculation was added."
   },
-
   "reference_review_2026_10_04": {
     "reviewed_materials": [
       "ASME BPVC Section VIII, Division 1, 2017 edition: extracted searchable text across all 778 PDF pages.",
@@ -56,7 +66,6 @@
     "relief_guidance_caveat": "Google AI text supplied by the user proposing 37.8% operating margin, a 25-bar setpoint, generic chatter/backpressure thresholds, a specific thermal-relief valve size, or a selected two-phase method is unverified and must not be treated as a project decision or code requirement. 25 bar is not an approved MAWP; DB-05/DB-09 and D-001/D-006 remain OPEN.",
     "project_hold": "Reading references and adding model input guards do not close DB/D/build-release items or authorize fabrication, pressure testing, ammonia charging, or operation."
   },
-
   "sudan_geography_weather_foundation_2026_10_03": {
     "handoff": "claude/SUDAN_DATA_HANDOFF.md",
     "source_register_and_gate": "docs/SUDAN_GEOGRAPHY_AND_WEATHER_DATA.md",
@@ -100,7 +109,6 @@
     },
     "review_gate": "Claude source/code and data-quality review plus qualified local geospatial and climate/solar engineering review, including station comparisons and documented transformations, before any simulation inputs are approved."
   },
-
   "open_questions": [
     {
       "id": "OQ-0",
@@ -108,15 +116,25 @@
       "title": "Cycle architecture: intermittent batch vs. continuous-with-pump vs. true 3-fluid Einstein-Szilard",
       "status": "still open - confirmed by private/Copilot/data/02-V-102_Absorber...md itself: 'Absorber ports/internals: Not specified', 'Confirm low-side pressure design, solution distribution, drainage and venting with the engineer'. Matches BUILD_RELEASE_GATE.md's own 'V-102 integration' row.",
       "recommendation_unchanged": "Intermittent batch, single generator/absorber vessel, no solution pump - still the recommendation (no moving parts was the project's own session-1 goal; no pump is in the BOM; hospital 24h need is served by a small ice/PCM buffer, not continuous circulation). This is a genuine engineering decision the project needs, not something either Claude or Antigravity should silently assume.",
-      "cascades_to": ["V-102", "V-103", "V-104", "E-103", "drawings 2-13 of the revB pack"]
+      "cascades_to": [
+        "V-102",
+        "V-103",
+        "V-104",
+        "E-103",
+        "drawings 2-13 of the revB pack"
+      ]
     }
   ],
-
   "components": {
-    "V-101": {"name": "Generator / solar receiver", "status": "Rev B drawing + 2 STEP files (cad/step + cad/production, different port_protrusion) exist. Flat end caps confirmed failing UG-34 screening at both open design-pressure candidates - see cross-check above."},
-    "V-102": {"name": "Absorber", "status": "Rev B sheet drafted but explicitly TBD internals - blocked on OQ-0."}
+    "V-101": {
+      "name": "Generator / solar receiver",
+      "status": "Rev B drawing + 2 STEP files (cad/step + cad/production, different port_protrusion) exist. Flat end caps confirmed failing UG-34 screening at both open design-pressure candidates - see cross-check above."
+    },
+    "V-102": {
+      "name": "Absorber",
+      "status": "Rev B sheet drafted but explicitly TBD internals - blocked on OQ-0."
+    }
   },
-
   "tooling": {
     "freecad_local": "FreeCAD 1.0.2 AppImage. Google Antigravity (Gemini 3) drove it directly for the Rev B 13-sheet TechDraw pack (private/Copilot/revB-freecad/).",
     "production_cad": "New: src/geometry/production_cad.py, CadQuery-based, optional (pip install cadquery). Generates cad/production/V-101_generator.{step,stl}. Uses flat caps, 60mm port protrusion - differs from the legacy cad/scripts/generator.py (also flat caps, different protrusion value).",
@@ -124,5 +142,39 @@
     "audit_script": "src/audit/design_audit.py (give Claude's copy, not yet in the repo) - recomputes cycle, ASME shell/head/hydro stress at both D-001 candidates, mass, HX area, CPC geometry, hot-ambient margin. Run after any spec change.",
     "freecad_mcp_bridge": "Robust MCP Bridge (pip freecad-robust-mcp) - alternative for a local Claude Code session to drive FreeCAD directly. Setup steps given 2026-09-28, status unconfirmed.",
     "graphiti": "Researched 2026-09-29 as a shared-memory option across tools (Claude, Antigravity) via MCP. Needs a graph DB + its own LLM API key - real infrastructure. This file remains the zero-infrastructure alternative; worth it only if the project outgrows one JSON file."
-  }
+  },
+  "agent_read_instruction": {
+    "priority": "HIGH",
+    "instruction": "Before analyzing, modifying, reviewing, or describing the project, Claude and GitHub Copilot MUST read claude/PROJECT_GRAPH.json. Treat this file as the canonical structured project-state graph. For formal open decisions, design-basis items, release status, and fabrication authorization, defer to docs/DECISION_REGISTER.md, docs/DESIGN_BASIS.md, and docs/BUILD_RELEASE_GATE.md. AI-generated analysis, including statements by Claude or Copilot, does not constitute engineering approval.",
+    "canonical_file": "claude/PROJECT_GRAPH.json",
+    "formal_governance_files": [
+      "docs/DECISION_REGISTER.md",
+      "docs/DESIGN_BASIS.md",
+      "docs/BUILD_RELEASE_GATE.md"
+    ],
+    "current_repository_commit": "3d0f83b18136cbd2adb49c6156b0fc6425a48678",
+    "current_repository_state": "The previous graph-path reconciliation problem is resolved. Do not resurrect the obsolete path_reconciliation_needed state or the historical 9687f061 repository-tip claim.",
+    "alternate_graph": {
+      "path": "PROJECT_GRAPH(1).json",
+      "status": "NON-CANONICAL HISTORICAL COPY",
+      "instruction": "May be consulted for historical information, but must not override claude/PROJECT_GRAPH.json."
+    }
+  },
+  "historical_verification_recovered": [
+    {
+      "date": "2026-09-28",
+      "source": "PROJECT_GRAPH(1).json",
+      "summary": "GitHub repository root, CoolProp issue #341, and teqp issue #193 were directly checked; repository identity and reported maintainer quotes were recorded as verified."
+    },
+    {
+      "date": "2026-09-29/30",
+      "source": "PROJECT_GRAPH(1).json",
+      "summary": "Local archive review recorded STEP/V-101 drawing presence, 5 mm end-cap geometry in two code paths, and provenance of the 60 mm V-101 port-protrusion value to src/geometry/production_cad.py."
+    },
+    {
+      "date": "2026-10-05",
+      "source": "PROJECT_GRAPH(1).json",
+      "summary": "Copilot/reference-review evidence distinguished verified findings from explicitly unverified Google-AI numerical suggestions and documented source/edition limitations."
+    }
+  ]
 }
