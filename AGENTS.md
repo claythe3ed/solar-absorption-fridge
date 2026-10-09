@@ -127,23 +127,41 @@ to change design inputs or release status without further review.
 
 ## LOCAL WORKING LOCATIONS AND REFERENCE FILES
 
-The known local working-copy path is:
-
-    /home/clay/projects/solar-absorption-fridge
-
-The shell-shortened equivalent used in commands is:
+The current local repository path recorded in
+`docs/AI_CHAT_HANDOFF_PROTOCOL.md` is:
 
     ~/projects/solar-absorption-fridge
 
-These are two forms of the same local repository path, not two separate
-working copies. Confirm the actual current filesystem state before relying on
-either path; do not assume a local file is synchronized with GitHub.
+On the user's Ubuntu system this has also been expressed as:
 
-The following local PDF filenames have been used as reference material in the
-working repository; verify their actual paths/existence before use:
+    /home/clay/projects/solar-absorption-fridge
+
+These are two spellings of the same repository root, not two distinct
+locations. Verify local filesystem state when shell access is available; a
+GitHub read does not prove that the local tree is synchronized.
+
+The canonical `claude/PROJECT_GRAPH.json` records the Revision B 13-sheet
+FreeCAD TechDraw pack in two local locations:
+
+    private/Copilot/revB-freecad/
+    copilot_drowings/
+
+Treat both as local-workspace locations documented by the project graph.
+They are not present as directories in the current public GitHub tree, so do
+not claim their contents were inspected from GitHub. When local access exists,
+inspect both locations and reconcile their contents without overwriting or
+deleting either copy. Do not assume they are identical.
+
+Two local research PDF filenames used in the ongoing ammonia-water VLE work
+are:
 
     ammonia-water-system_compress.pdf
     Aqueous_Ammonia_Vapor_Liquid_Equilibria.pdf
+
+These PDFs are not tracked in the current public repository tree. Their exact
+local absolute paths have not been established from GitHub; locate and verify
+them in the local working tree before using or citing the files. Do not invent
+paths or claim the files were inspected if they were inaccessible.
 
 Do not overwrite, delete, stage, commit, stash, or otherwise modify local files
 unless the user explicitly authorizes the relevant operation. A direct GitHub
