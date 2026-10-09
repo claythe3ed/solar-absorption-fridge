@@ -52,7 +52,7 @@ Status: **NOT TESTED**. This chat has not invoked or verified the connector.
 
 Repository: https://github.com/claythe3ed/solar-absorption-fridge  
 Local path: `~/projects/solar-absorption-fridge`  
-Branch: `main`, reported synchronized with `origin/main` at `28fd206`; re-check before acting.
+Branch: `main`. At the time of the A0/A1 terminal runs, Clay reported it synchronized with `origin/main` at `28fd206`. Subsequent governance documentation commits were made directly on GitHub, latest verified here: `54b771a3700bfe0273103f44715dfccff28a3d7b`. Re-check live `main` before acting.
 
 The local working tree contains many untracked CAD/FreeCAD files, duplicate root-level Python files, notes and OpenFOAM files. They have not been audited or committed. Preserve them; do not use `git clean`, `git reset --hard`, or blanket `git add .`.
 
@@ -75,4 +75,4 @@ The local working tree contains many untracked CAD/FreeCAD files, duplicate root
 
 ### Handoff log
 
-- **2026-10-09 — ChatGPT:** A0 and A1 reproduced in the project virtual environment. The A1 CSV diff is empty when ignoring end-of-line differences. Baton Pass has not been invoked or verified.
+- **2026-10-09 — ChatGPT:** A0 and A1 reproduced in the project virtual environment. The A1 CSV diff is empty when ignoring end-of-line differences. Added this protocol and linked it from `AGENTS.md`, `CLAUDE.md`, `.github/copilot-instructions.md`, and the canonical graph. Baton Pass has not been invoked or verified.
