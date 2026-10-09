@@ -2,12 +2,12 @@
   "$comment": "CANONICAL PROJECT STATE: claude/PROJECT_GRAPH.json. This is the single authoritative structured project-state graph for solar-absorption-fridge and MUST be read by Claude, GitHub Copilot, and other AI/project agents before making project-state claims or proposing changes. Do not create or promote alternate PROJECT_GRAPH copies without explicit reconciliation. Formal engineering open-item governance remains in docs/DECISION_REGISTER.md, docs/DESIGN_BASIS.md, and docs/BUILD_RELEASE_GATE.md. This graph provides supplemental project context and is not engineering approval or sign-off.",
   "project": "solar-absorption-fridge",
   "repo": "https://github.com/claythe3ed/solar-absorption-fridge",
-  "last_updated": "2026-10-08",
+  "last_updated": "2026-10-09",
   "graph_reconciliation": {
     "canonical_path": "claude/PROJECT_GRAPH.json",
     "status": "RESOLVED",
     "resolved_date": "2026-10-08",
-    "current_git_commit": "3d0f83b18136cbd2adb49c6156b0fc6425a48678",
+    "current_git_commit": "Do not use as live HEAD; resolve current main tip from GitHub. This value is historical metadata only.",
     "current_branch": "main",
     "alternate_local_copy": "PROJECT_GRAPH(1).json",
     "alternate_local_copy_status": "NON-CANONICAL HISTORICAL COPY",
@@ -145,14 +145,14 @@
   },
   "agent_read_instruction": {
     "priority": "HIGH",
-    "instruction": "Before analyzing, modifying, reviewing, or describing the project, Claude and GitHub Copilot MUST read claude/PROJECT_GRAPH.json. Treat this file as the canonical structured project-state graph. For formal open decisions, design-basis items, release status, and fabrication authorization, defer to docs/DECISION_REGISTER.md, docs/DESIGN_BASIS.md, and docs/BUILD_RELEASE_GATE.md. AI-generated analysis, including statements by Claude or Copilot, does not constitute engineering approval.",
+    "instruction": "Before analyzing, modifying, reviewing, or describing the project, Claude and GitHub Copilot MUST read claude/PROJECT_GRAPH.json. Treat this file as the canonical structured project-state graph. For formal open decisions, design-basis items, release status, and fabrication authorization, defer to docs/DECISION_REGISTER.md, docs/DESIGN_BASIS.md, and docs/BUILD_RELEASE_GATE.md. AI-generated analysis, including statements by Claude or Copilot, does not constitute engineering approval. Every ChatGPT window/session must also read docs/AI_CHAT_HANDOFF_PROTOCOL.md and update it after meaningful work. Verify the current main tip dynamically; do not rely on this graph's commit fields as a live HEAD indicator.",
     "canonical_file": "claude/PROJECT_GRAPH.json",
     "formal_governance_files": [
       "docs/DECISION_REGISTER.md",
       "docs/DESIGN_BASIS.md",
       "docs/BUILD_RELEASE_GATE.md"
     ],
-    "current_repository_commit": "3d0f83b18136cbd2adb49c6156b0fc6425a48678",
+    "current_repository_commit": "Do not use as live HEAD; resolve current main tip from GitHub. This value is historical metadata only.",
     "current_repository_state": "The previous graph-path reconciliation problem is resolved. Do not resurrect the obsolete path_reconciliation_needed state or the historical 9687f061 repository-tip claim.",
     "alternate_graph": {
       "path": "PROJECT_GRAPH(1).json",
