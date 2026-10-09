@@ -70,3 +70,7 @@ or professional sign-off.
 
 When evidence is insufficient, report the gap rather than manufacturing
 certainty.
+
+## Cross-chat continuity
+
+Before each work session, read `docs/AI_CHAT_HANDOFF_PROTOCOL.md` as well as the canonical project graph and formal governance files. At the end of meaningful work, update the handoff with verified repository revision, actual commands/results, limitations, open blockers, and next action. Baton Pass is only a context-transfer aid; verify claims against GitHub. A new ChatGPT window is not guaranteed to read repository instructions automatically, so provide the handoff URL explicitly.
