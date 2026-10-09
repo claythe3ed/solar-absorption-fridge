@@ -5,6 +5,14 @@
 This repository is `solar-absorption-fridge`, a solar-powered NH3-H2O
 absorption refrigerator project intended for off-grid use in Sudan.
 
+## MANDATORY CROSS-CHAT HANDOFF PROTOCOL
+
+Every AI assistant working on this repository, including every ChatGPT window/session, MUST read:
+
+    docs/AI_CHAT_HANDOFF_PROTOCOL.md
+
+A fresh ChatGPT window does not necessarily load repository instructions automatically. The user or a prior handoff must provide the protocol URL and explicitly ask the assistant to read it. Do not claim automatic enforcement. At the start of work, verify the current GitHub state; at the end of meaningful work, update the handoff protocol with verified changes, test results, limitations, and the next action. Baton Pass may transport context, but it does not replace verification against the canonical repository.
+
 ## FIRST READ — CANONICAL PROJECT STATE
 
 Before analyzing, modifying, reviewing, testing, or describing this project,
