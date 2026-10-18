@@ -76,3 +76,6 @@ The local working tree contains many untracked CAD/FreeCAD files, duplicate root
 ### Handoff log
 
 - **2026-10-09 — ChatGPT:** A0 and A1 reproduced in the project virtual environment. The A1 CSV diff is empty when ignoring end-of-line differences. Added this protocol and linked it from `AGENTS.md`, `CLAUDE.md`, `.github/copilot-instructions.md`, and the canonical graph. Baton Pass has not been invoked or verified.
+
+
+- **2026-10-18 — ChatGPT: copyright-safe reference notes (branch `docs/copyright-safe-reference-notes`).** Created `docs/references/README.md` and preliminary notes for Rizvi & Heidemann (1987), Field & Combs (2002), and IAPWS G4-01 (2001). The notes are original summaries based only on the opening pages extracted by the owner; each explicitly states that the full source has not yet been reviewed. Recorded owner-reported local PDF SHA-256 values for traceability; no PDFs or full OCR text were uploaded. Branch created from `main`; note commits are on the review branch, not `main`. No engineering model, design input, or release decision changed. Current release remains **HOLD**. Next: review the complete relevant tables/equations locally, verify stable bibliographic links, then expand source notes and prepare a PR only after source checks.
