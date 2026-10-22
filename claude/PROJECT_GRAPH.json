@@ -2,7 +2,7 @@
   "$comment": "CANONICAL PROJECT STATE: claude/PROJECT_GRAPH.json. This is the single authoritative structured project-state graph for solar-absorption-fridge and MUST be read by Claude, GitHub Copilot, and other AI/project agents before making project-state claims or proposing changes. Do not create or promote alternate PROJECT_GRAPH copies without explicit reconciliation. Formal engineering open-item governance remains in docs/DECISION_REGISTER.md, docs/DESIGN_BASIS.md, and docs/BUILD_RELEASE_GATE.md. This graph provides supplemental project context and is not engineering approval or sign-off.",
   "project": "solar-absorption-fridge",
   "repo": "https://github.com/claythe3ed/solar-absorption-fridge",
-  "last_updated": "2026-10-09",
+  "last_updated": "2026-10-22",
   "graph_reconciliation": {
     "canonical_path": "claude/PROJECT_GRAPH.json",
     "status": "RESOLVED",
@@ -25,6 +25,12 @@
     ]
   },
   "mission": "Off-grid NH3-H2O solar absorption cooling for Sudan: households, and hospital/clinic cold chain for medicine during grid outages caused by the war.",
+  "owner_requirements_2026_10_22": {
+    "electricity_independence": "Owner states reduced or eliminated dependence on electricity is a central goal because of daily power outages in Sudan. Acceptance boundary remains OPEN: clarify no-grid dependence with dedicated PV/battery allowed versus zero electrically powered operating loads.",
+    "cooling_service": "Required end use, load profile, temperature limits, and autonomy duration remain to be defined with the owner.",
+    "provisional_architecture_study_priority": "Investigate three-fluid NH3-H2O-H2 diffusion-absorption refrigeration first as the closest candidate for reducing reliance on conventional electrically driven solution pumping. This is a study priority only, not architecture selection or engineering approval. Keep continuous pumped two-fluid and intermittent/batch two-fluid as separate alternatives.",
+    "evidence_limit": "Solar Polar/DAR evidence does not establish the project's 200 W Sudan service, complete electricity independence, safety, or suitability. See docs/ARCHITECTURE_REQUIREMENTS_AND_OPTIONS.md and docs/BENCHMARK-01_SOLAR_POLAR_EXTERNAL_REVIEW.md."
+  },
   "status": "HOLD - not approved for fabrication, pressure testing, ammonia charging, or operation. See docs/BUILD_RELEASE_GATE.md (the repo's own disposition, set 2026-09-30).",
   "governance_layer_2026_09_30": {
     "what_changed": "Between the 2026-09-29 ls snapshot and this 2026-09-30 archive, the repo gained a full governance layer: docs/DECISION_REGISTER.md (D-001..D-007, open conflicts), docs/DESIGN_BASIS.md (DB-01..DB-13, all TBD pending a licensed engineer), docs/BUILD_RELEASE_GATE.md (repo-wide HOLD disposition + evidence checklist), docs/ENGINEERING_VALIDATION_CALL.md (public call for outside review), .github/ISSUE_TEMPLATE/engineering-validation.yml (structured submission form). This now supersedes the OQ-1..OQ-9 list this file used to carry - track new open items against their D-/DB- numbers, not a parallel list here.",
@@ -114,8 +120,8 @@
       "id": "OQ-0",
       "severity": "blocking",
       "title": "Cycle architecture: intermittent batch vs. continuous-with-pump vs. true 3-fluid Einstein-Szilard",
-      "status": "still open - confirmed by private/Copilot/data/02-V-102_Absorber...md itself: 'Absorber ports/internals: Not specified', 'Confirm low-side pressure design, solution distribution, drainage and venting with the engineer'. Matches BUILD_RELEASE_GATE.md's own 'V-102 integration' row.",
-      "recommendation_unchanged": "Intermittent batch, single generator/absorber vessel, no solution pump - still the recommendation (no moving parts was the project's own session-1 goal; no pump is in the BOM; hospital 24h need is served by a small ice/PCM buffer, not continuous circulation). This is a genuine engineering decision the project needs, not something either Claude or Antigravity should silently assume.",
+      "status": "OPEN - absorber interfaces remain unresolved; owner has identified reduced or eliminated electricity dependence as a requirement. Define cooling service and electricity boundary, then compare architectures. See docs/ARCHITECTURE_REQUIREMENTS_AND_OPTIONS.md.",
+      "provisional_study_priority_not_selection": "Owner prioritizes reduced or zero electricity dependence. Investigate three-fluid NH3-H2O-H2 diffusion-absorption (DAR) first as a candidate; retain continuous pumped two-fluid and intermittent/batch two-fluid as separate alternatives. Clarify whether dedicated PV/battery is allowed and define cooling service/autonomy before any architecture decision. No architecture is selected; OQ-0 remains OPEN.",
       "cascades_to": [
         "V-102",
         "V-103",

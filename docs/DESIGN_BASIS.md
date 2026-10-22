@@ -20,6 +20,12 @@ The repository contains AI-assisted and preliminary engineering content. All inp
 | DB-12 | Solar resource and collector design envelope | TBD | Site irradiance/weather data and reviewed thermal/structural design conditions | TBD | OPEN |
 | DB-13 | Required cooling load and performance criteria | TBD | Verified application/load profile and approved measurement/acceptance method | TBD | OPEN |
 
+## Owner requirement captured — electricity independence (2026-10-22)
+
+The owner states that daily electricity outages in Sudan make reduced or eliminated dependence on electricity an important project goal. This is **not yet a quantified or approved design-basis value**. Clarify whether the requirement is (a) no dependence on the grid, with dedicated PV/battery power allowed, or (b) zero electrically powered operating loads. Also define the required cooling service, allowable temperature excursions, and autonomy duration. Account for pumps, fans, controls, sensors, monitoring, and other auxiliary loads. See [`ARCHITECTURE_REQUIREMENTS_AND_OPTIONS.md`](ARCHITECTURE_REQUIREMENTS_AND_OPTIONS.md).
+
+The provisional decision to study three-fluid NH3-H2O-H2 DAR first is only a research priority. Architecture remains open; Plans A and C remain alternatives. Do not use this note to close a DB/D item or alter the project HOLD status.
+
 ## Approval Record
 
 | Role | Name / qualification | Organization / jurisdiction | Signature / record | Date |

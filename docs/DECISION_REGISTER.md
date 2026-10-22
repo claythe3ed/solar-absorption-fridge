@@ -2,6 +2,8 @@
 
 **Status: HOLD.** These conflicts are unresolved. No row below authorizes fabrication or selects a design value.
 
+The owner has clarified that reduced or eliminated dependence on electricity is a central project goal. OQ-0 architecture selection remains **OPEN** while the exact electricity boundary and cooling/autonomy service are defined. A provisional DAR-first study priority is not a design selection; see [`ARCHITECTURE_REQUIREMENTS_AND_OPTIONS.md`](ARCHITECTURE_REQUIREMENTS_AND_OPTIONS.md).
+
 | ID | Item | Source A | Source B / missing evidence | Decision | Basis / evidence required | Approver | Date | Status |
 |---|---|---|---|---|---|---|---|---|
 | D-001 | V-101 high-side design pressure | 25 bar in `COMPONENT_SPECS.md` | 16 bar in `results/bom.csv`; maximum operating/upset envelope and code basis not approved | OPEN | Approved DB-01 through DB-06 and code-based pressure design review | TBD | TBD | OPEN |

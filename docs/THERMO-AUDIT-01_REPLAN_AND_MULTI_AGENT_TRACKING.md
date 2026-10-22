@@ -119,7 +119,15 @@ D-007 remains OPEN.
 
 ## 5. Architecture decision remains open
 
-OQ-0 must compare, using common metrics:
+### Owner requirement and provisional study priority — 2026-10-22
+
+The owner has identified reduced or eliminated electricity dependence as a central requirement for reliable refrigeration during Sudan power outages. The exact acceptance boundary remains **OPEN**: no grid dependence with dedicated PV/battery power may be acceptable, or the owner may require zero electrically powered operating loads. The required cooling service and autonomy duration are also not yet defined.
+
+**Provisional study priority, not an architecture selection:** investigate B (three-fluid NH3-H2O-H2 diffusion-absorption refrigeration) first because thermally driven bubble-pump circulation is the closest candidate in the current evidence set for reducing reliance on conventional electrically driven solution pumping. Keep A (continuous pumped two-fluid NH3-H2O) and C (intermittent/batch two-fluid NH3-H2O, potentially with cold/ice storage) as distinct alternatives. Do not call B electricity-free in all configurations, safe, or capable of the required service without evidence. Do not blend cycle assumptions or design a hybrid unless evidence supports it.
+
+Record the expanded owner requirement, source limits, and clarification questions in [`docs/ARCHITECTURE_REQUIREMENTS_AND_OPTIONS.md`](ARCHITECTURE_REQUIREMENTS_AND_OPTIONS.md). The repository's Solar Polar review reports 24–108 W experimental cooling from a nominal 100 W DAR unit, which is relevant evidence but does not demonstrate this project's 200 W target or Sudan operating service. See [`docs/BENCHMARK-01_SOLAR_POLAR_EXTERNAL_REVIEW.md`](BENCHMARK-01_SOLAR_POLAR_EXTERNAL_REVIEW.md).
+
+OQ-0 remains **OPEN** and must compare the alternatives using common service requirements and evidence:
 
 A. Continuous two-fluid NH3-H2O absorption  
 B. Three-fluid NH3-H2O-H2 diffusion absorption refrigeration  

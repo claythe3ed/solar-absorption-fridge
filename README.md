@@ -28,6 +28,20 @@ not independently demonstrated prototype results or a released build design.
 We welcome independent technical review from engineers and researchers
 worldwide. See the [engineering validation call](docs/ENGINEERING_VALIDATION_CALL.md).
 
+### Owner requirement and architecture study direction (provisional)
+
+Because daily grid outages are expected in the intended Sudan use case, the
+owner wants the refrigerator to reduce or eliminate dependence on electricity.
+The exact requirement—no grid dependence versus zero electrically powered
+operating loads—and the required cooling/autonomy service remain **OPEN**.
+The current study priority is to investigate three-fluid
+NH₃–H₂O–H₂ diffusion-absorption refrigeration (DAR) first, while retaining the
+continuous pumped two-fluid and intermittent/batch two-fluid cycles as separate
+alternatives. This is a research priority, **not an architecture selection**;
+the existing 200 W design target is not demonstrated by the DAR benchmark.
+See [Owner Requirement and Architecture Options](docs/ARCHITECTURE_REQUIREMENTS_AND_OPTIONS.md)
+and the [Solar Polar benchmark review](docs/BENCHMARK-01_SOLAR_POLAR_EXTERNAL_REVIEW.md).
+
 | Parameter | Value |
 |---|---|
 | Cooling capacity | 200 W |
